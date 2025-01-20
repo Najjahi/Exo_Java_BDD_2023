@@ -44,6 +44,7 @@ Oui C est compris entre A et B</p>
 <%-- Vérification de la parité pour la valeur 1 --%>
         <% if (intValeur1 % 2 == 0) { %>
             <p>intValeur1 : Le nombre est pair.</p>
+
         <% } else { %>
             <p>intValeur1 : Le nombre est impair.</p>
         <% } %>
@@ -51,13 +52,11 @@ Oui C est compris entre A et B</p>
         <%-- Vérification de la parité pour la valeur 2 --%>
         <% if (intValeur2 % 2 == 0) { %>
             <p>intValeur2 : Le nombre est pair.</p>
+
         <% } else { %>
             <p>intValeur2 : Le nombre est impair.</p>
         <% } %>
-<% } %>
-  
 
-<% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
