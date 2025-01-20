@@ -56,6 +56,7 @@ Oui C est compris entre A et B</p>
         <% } else { %>
             <p>intValeur2 : Le nombre est impair.</p>
         <% } %>
+<% } %>
 
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
