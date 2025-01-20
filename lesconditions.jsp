@@ -28,6 +28,13 @@
         <% } else { %>
             <p>Valeur 1 est égale à Valeur 2.</p>
         <% } %>
+
+        <%-- Condition if pour verifier si une valeur est paire ou implaire --%>
+        <% if (intValeur1 % 2 == 0) { %>
+            <p>Valeur 1 est paire.</p>
+        <% } else { %>
+            <p>Valeur 1 est impaire.</p>
+        <% } %>
    
     
 <h2>Exercice 1 : Comparaison 1</h2>
