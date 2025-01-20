@@ -41,12 +41,13 @@ Oui C est compris entre A et B</p>
 
 <h2>Exercice 2 : Pair ou Impair ?</h2>
 <p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
- int nombre = scanner.nextInt();
+  
+<% int nombre = scanner.nextInt(); %>
         
         // Vérifier si le nombre est pair ou impair
-        if (nombre % 2 == 0) {
+       <% if (nombre % 2 == 0) { %>
             System.out.println("Le nombre est pair.");
-        } else {
+        <%} else { %>
             System.out.println("Le nombre est impair.");
         }
         
