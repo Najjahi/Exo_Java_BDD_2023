@@ -16,7 +16,7 @@
         // Charger le pilote JDBC (pilote disponible dans WEB-INF/lib)
         Class.forName("org.mariadb.jdbc.Driver");
 
-        // Établir la connexion
+        // Établir la connexion //comm
         Connection conn = DriverManager.getConnection(url, user, password);
         // Exemple de requête SQL
         String sql = "SELECT idFilm, titre, annee FROM Film WHERE annee >= 2000";
