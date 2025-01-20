@@ -20,7 +20,6 @@
         <%-- Conversion des valeurs en entiers pour la comparaison --%>
         <% int intValeur1 = Integer.parseInt(valeur1); %>
         <% int intValeur2 = Integer.parseInt(valeur2); %>
-    <% } %>
         
         <%-- Condition if pour comparer les valeurs --%>
         <% if (intValeur1 > intValeur2) { %>
@@ -29,6 +28,14 @@
             <p>Valeur 1 est inférieure à Valeur 2.</p>
         <% } else { %>
             <p>Valeur 1 est égale à Valeur 2.</p>
+
+        <%-- Condition if pour comparer les valeurs --%>
+        <% if (intValeur1 % 2 == 0) { %>
+            <p>Valeur 1 est paire.</p>
+        
+        <% } else { %>
+            <p>Valeur 1 est impaire.</p>
+        <% } %>
         <% } %>
 
           
@@ -45,7 +52,7 @@ Oui C est compris entre A et B</p>
 <h2>Exercice 2 : Pair ou Impair ?</h2>
 <p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
 
-<% } %>
+
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
