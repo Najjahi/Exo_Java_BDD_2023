@@ -49,7 +49,7 @@ Oui C est compris entre A et B</p>
     <% String valeur2 = request.getParameter("valeur2"); %>
    
     <%-- Vérification de la condition entre les deux valeurs --%>
-    <% if (valeur1 != null && valeur2 != null && valeur3 != null)) { %>
+    <% if (valeur1 != null && valeur2 != null )) { %>
         <%-- Conversion des valeurs en entiers pour la comparaison --%>
         <% int intValeur1 = Integer.parseInt(valeur1); %>
         <% int intValeur2 = Integer.parseInt(valeur2); %>
