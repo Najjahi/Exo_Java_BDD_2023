@@ -512,3 +512,112 @@ int main(void)
 
     return 0;
 }
+                 
+/*############################## afficher une ligne de 1 et une ligne de 0  Jordan #############################
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  int valuser;    
+  printf("Veuillez saisir un chiffre : ");
+  scanf("%d", &valuser); 
+  
+  int stars;
+
+    for(int i=1; i<=valuser; i++){
+
+        if(i%2==0){
+            stars=0;
+        }else{
+            stars=1;
+        }
+
+        for(int j=1; j<=valuser; j++){
+            printf("%d",stars);
+        }
+        puts("");
+    }
+
+    return 0;
+}
+
+/*############################## correction boris ######################### 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  int valuser;    
+  printf("Veuillez saisir un chiffre : ");
+  scanf("%d", &valuser); 
+  
+  for(int j=1; j<=valuser; j++){
+        for(int i=1; i<=valuser; i++){
+       
+         if(j%2==0){
+             printf("%s", "0");
+        }else{
+            printf("%s", "1");
+        }
+       
+        }
+    puts("");
+  }
+    return 0;
+}
+/*############################## Les chaines de caractères  ##################
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char chaine1[] = "La maison bleue du village";
+    printf("%s\n", chaine1);
+
+    // La longueur d'une chaîne
+    printf("La chaine1 contient %lu caracteres\n", strlen(chaine1));
+
+    // Extraction d'un caractère
+    printf("Le quatrième caractère de la chaine1 est '%c'\n", chaine1[3]);
+
+    // Extraction d'un morceau de la chaîne
+    char morceau[7]; // Taille du morceau : (8 - 2) + 1 pour le '\0'
+    strncpy(morceau, chaine1 + 3, 6);
+    printf("Un morceau de la chaine1 : '%s'\n", morceau);
+
+    // Recherche d'un caractère
+    char recherche = 'i';
+    char *position = strchr(chaine1, recherche);
+    if (position != NULL) {
+        printf("La position du premier '%c' est l'indice : %ld\n", recherche, position - chaine1);
+    } else {
+        printf("Le caractère '%c' n'est pas présent dans la chaine1.\n", recherche);
+    }
+
+    return 0;
+}
+
+/*######################## Exercice 1 : Combien de 'e' dans notre chaine de charactère ?
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char chaine1[] = "La maison bleue du village";
+    printf("%s\n", chaine1);
+
+    int cpt=0;
+
+    for(int i=0; i<strlen(chaine1); i++){
+        
+        if (chaine1[i]== 'e') {cpt++;} 
+
+    }
+        
+    printf("Il y a %d lettres e", cpt);    
+    
+    return 0;
+}
+                 
