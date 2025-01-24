@@ -5,7 +5,7 @@ GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP
 C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
 Code, Compile, Run and Debug online from anywhere in world.
 
-*******************************************************************************/
+/********************************************************************************/
 //Exercice 2 : Les opérateurs
 //Exercice 3 : L'affichage
 /*#include <stdio.h>
@@ -23,7 +23,7 @@ int main()
     return 0;
 }
 
-//Exercice 3 : Les appels de fonctions
+/**##############################//Exercice 3 : Les appels de fonctions
 #include <stdio.h>
 
 // DC)finir la fonction addition avant main
@@ -56,7 +56,7 @@ int main() {
     return 0;
 }
 
-//Exercice 4 : Utilisation des return 
+/**##############################//Exercice 4 : Utilisation des return 
 #include <stdio.h>
 
 // DC)finir la fonction addition avant main
@@ -93,7 +93,8 @@ int main() {
       return 0;
 }
 
-//Les conditions
+/**##############################//Les conditions
+    
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -119,7 +120,7 @@ int main() {
     return 0;
 }
 
-// Exercice 1 : Précisez si le chiffre aléatoire est pair ou impair
+/**##############################// Exercice 1 : Précisez si le chiffre aléatoire est pair ou impair
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -146,7 +147,7 @@ int main() {
     return 0;
 }
 
-
+/**##############################
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -175,6 +176,7 @@ int main() {
 //Exercice : Demandez à l'utilisateur de saisir 3 valeurs (A, B et C)
 //Précisez si C est compris entre les valeurs A et B, ou non
 
+/**##############################
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -204,7 +206,9 @@ int main() {
     return 0;
     */
     //Exercice : Demandez à l'utilisateur de saisir 3 valeurs (A, B et C) //Précisez si C est compris entre les valeurs A et B, ou non
-
+        
+/**##############################
+        
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -232,6 +236,7 @@ int main() {
     return 0;
 }*/
 
+/**##############################       
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -273,7 +278,7 @@ int main() {
     return 0;
 } */
 
-############################## boucle dans une boucle  #############################
+/**############################## boucle dans une boucle  #############################
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -297,7 +302,28 @@ int main(void)
     
     return 0;
 }*/
-############################## trinagle droit  #############################
+
+/*############################## etoiles  #############################
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  int valuser;    
+  printf("Veuillez saisir un chiffre : ");
+  scanf("%d", &valuser); 
+  
+  for(int j=1; j<=valuser; j++){
+        for(int i=1; i<=valuser; i++){
+        printf("%s", "*");
+        }
+    puts("");
+  }
+
+    return 0;
+}
+/*############################## trinagle droit  #############################
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -316,7 +342,7 @@ int main(void)
 
     return 0;
 }*/
-##############################trinagle inverse #############################
+/*##############################trinagle inverse #############################
 #include <stdio.h> 
 #include <stdlib.h>
 
@@ -338,7 +364,7 @@ int main(void)
     return 0;
 }*/
 
-##############################trinagle inverse 2eme facon #############################
+/*##############################trinagle inverse 2eme facon #############################
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -361,7 +387,7 @@ int main(void)
     return 0;
 } */
 
-##############################trinagle inverse 3eme facon #############################
+/*##############################trinagle inverse 3eme facon #############################
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -384,7 +410,7 @@ int main(void)
     return 0;
 }*/
 
-##############################trinagle et triangle inverse 1ere facon #############################
+/*##############################trinagle et triangle inverse 1ere facon #############################
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -412,7 +438,7 @@ int main(void)
      return 0;
 }
 
-############################## calculatrice  #############################
+/*############################## table de multiplication  #############################
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -425,7 +451,61 @@ int main(void)
  
   for(int i=1; i<=10; i++){
         
-        printf("   %d x %d = %d\n ", valuser, i , valuser * i);
+        printf("   %d x %d = %d", valuser, i , valuser * i);
+       
+    puts("");
+  }
+
+    return 0;
+}
+
+
+/*############################## table de multiplication ajustée  #############################
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  int valuser;    
+  printf("Veuillez saisir un chiffre : ");
+  scanf("%d", &valuser); 
+  
+ 
+  for(int i=1; i<=valuser; i++){
+        
+        printf("   %d x %d = %d", valuser, i , valuser * i);
+       
+    puts("");
+  }
+
+    return 0;
+}
+
+
+/*############################## afficher une ligne de 1 et une ligne de 0  #############################
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  int valuser;    
+  printf("Veuillez saisir un chiffre : ");
+  scanf("%d", &valuser); 
+  
+  for(int i=1; i<=valuser; i++){
+      
+      if(i % 2 ==0) {
+          for(int i=1; i<=valuser; i++){
+        printf("%s", "0");
+        }
+      }
+        else {
+             for(int i=1; i<=valuser; i++){
+            printf("%s", "1");
+        }
+      }
        
     puts("");
   }
