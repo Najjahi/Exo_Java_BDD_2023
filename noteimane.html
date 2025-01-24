@@ -1,0 +1,434 @@
+/****************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+//Exercice 2 : Les opérateurs
+//Exercice 3 : L'affichage
+/*#include <stdio.h>
+
+int main()
+{
+    int a = 15;
+    int b = 10;
+
+    printf("La valeur de a+b: %d + %d = %d\n", a, b, a+b);
+    printf("La valeur de a+b: %d - %d = %d\n", a, b, a-b);
+    printf("La valeur de a+b: %d * %d = %d\n", a, b, a*b);
+    printf("La valeur de a+b: %d / %d = %d\n", a, b, a/b);
+
+    return 0;
+}
+
+//Exercice 3 : Les appels de fonctions
+#include <stdio.h>
+
+// DC)finir la fonction addition avant main
+void addition(int val1, int val2) {
+    printf("La valeur de %d + %d = %d \n", val1, val2, val1 + val2);
+}
+
+void soustraction (int val1, int val2) {
+    printf("La valeur de %d - %d = %d \n", val1, val2, val1 - val2);
+}
+
+void multiplication (int val1, int val2) {
+    printf("La valeur de %d * %d = %d \n", val1, val2, val1 * val2);
+}
+
+ void division (int val1, int val2) {
+    printf("La valeur de %d / %d = %d \n", val1, val2, val1 / val2);
+
+}
+
+int main() {
+    int a = 15;
+    int b = 10;
+
+    addition(a, b); // Appel de la fonction addition
+    soustraction(a, b); // Appel de la fonction soustraction
+    multiplication(a, b); // Appel de la fonction multiplication
+    division(a, b); // Appel de la fonction division
+
+    return 0;
+}
+
+//Exercice 4 : Utilisation des return 
+#include <stdio.h>
+
+// DC)finir la fonction addition avant main
+int addition(int val1, int val2) {
+
+      int resultat = val1 + val2;
+      return resultat;
+}
+int soustraction(int val1, int val2) {
+
+      int resultat = val1 - val2;
+      return resultat;
+}
+int multiplication(int val1, int val2) {
+
+      int resultat = val1 * val2;
+      return resultat;
+}
+int division(int val1, int val2) {
+
+      int resultat = val1 / val2;
+      return resultat;
+}
+
+int main() {
+      int a = 15;
+      int b = 10;
+
+      printf("Le resultat de %d + %d = %d \n", a, b, addition(a, b));
+      printf("Le resultat de %d - %d = %d \n", a, b, soustraction(a, b));
+      printf("Le resultat de %d * %d = %d \n", a, b, multiplication(a, b));
+      printf("Le resultat de %d / %d = %d \n", a, b, division(a, b));
+
+      return 0;
+}
+
+//Les conditions
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    // Initialiser le générateur de nombres aléatoires
+    srand(time(NULL)); // Utiliser le temps actuel comme graine
+
+    // Générer un nombre aléatoire entre 1 et 100
+    int nombre = (rand() % 100) + 1;
+
+    printf("Le nombre généré est : %d\n", nombre);
+
+    // Vérifier si le nombre est plus grand ou plus petit que 50
+    if (nombre > 50) {
+        printf("Le nombre est plus grand que 50.\n");
+    } else if (nombre < 50) {
+        printf("Le nombre est plus petit que 50.\n");
+    } else {
+        printf("Le nombre est égal à 50.\n");
+    }
+
+    return 0;
+}
+
+// Exercice 1 : Précisez si le chiffre aléatoire est pair ou impair
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    // Initialiser le générateur de nombres aléatoires
+    srand(time(NULL)); // Utiliser le temps actuel comme graine
+
+    // Générer un nombre aléatoire entre 1 et 100
+    int nombre = (rand() % 100) + 1;
+
+    printf("Le nombre généré est : %d\n", nombre);
+
+    // Vérifier si le nombre est pair ou impair
+    if (nombre % 2 == 0) {  // ou  if ((nombre / 2) * 2 == nombre) 
+        printf("Le nombre est pair.\n");
+    
+    } else {
+        
+        printf("Le nombre est impair.\n");
+    }
+    
+
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    
+    int nombre; // Variable pour stocker le nombre
+
+    printf("Veuillez entrer un chiffre : ");
+    scanf("%d", &nombre); // Lire l'entrée utilisateur et stocker dans la variable
+
+      // Vérifier si le nombre est plus grand ou plus petit que 50
+    if (nombre > 50) {
+        printf("Le nombre est plus grand que 50.\n");
+    } 
+    else if (nombre < 50) {
+        printf("Le nombre est plus petit que 50.\n");
+    } 
+    else {
+        printf("Le nombre est égal à 50.\n");
+    }
+
+    return 0;
+}
+
+//Exercice : Demandez à l'utilisateur de saisir 3 valeurs (A, B et C)
+//Précisez si C est compris entre les valeurs A et B, ou non
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    
+    int A, B, C; // Variable pour stocker le nombre
+
+    printf("Veuillez entrer une valeur pour A: ");
+    scanf("%d", &A); // Lire l'entrée utilisateur et stocker dans la variable
+    
+    printf("Veuillez entrer une valeur pour B : ");
+    scanf("%d", &B); // Lire l'entrée utilisateur et stocker dans la variable
+
+    printf("Veuillez entrer une valeur pour C : ");
+    scanf("%d", &C); // Lire l'entrée utilisateur et stocker dans la variable
+    
+      // Vérifier si le nombre est plus grand ou plus petit que 50
+    if ((C > A && C < B) || (C < A && C > B)) {
+        printf("Le nombre C (%d) est compris entre A (%d) et B (%d).\n", C, A, B);
+    } 
+   
+    else {
+        printf("Le nombre C (%d) n'est pas compris entre A (%d) et B (%d).\n", C, A, B);
+    }
+
+    return 0;
+    */
+    //Exercice : Demandez à l'utilisateur de saisir 3 valeurs (A, B et C) //Précisez si C est compris entre les valeurs A et B, ou non
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+    int main() {
+
+    int nombreA; 
+    int nombreB; 
+    int nombreC; 
+
+    printf("Veuillez entrer 3 chiffres : ");
+    scanf("%d", &nombreA );
+    scanf("%d", &nombreB );
+    scanf("%d", &nombreC );// Lire l'entrée utilisateur et stocker dans la variable
+
+      // Vérifier si le nombre est plus grand ou plus petit que 50
+    if (nombreC >=nombreA && nombreC< nombreB) {
+        printf("Le nombre est compris entre les deux autres valeurs.\n");
+    } 
+
+    else {
+        printf("Le nombre n'est compris entre les deux autres valeurs.\n\n");
+    }
+
+    return 0;
+}*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+   
+   int nombre_saisi;
+   int nombre_essais = 0; 
+    
+    // Initialiser le générateur de nombres aléatoires
+    srand(time(NULL)); // Utiliser le temps actuel comme graine
+
+    // Générer un nombre aléatoire entre 1 et 100
+    int nombre_aleatoire = (rand() % 100) + 1;
+
+    while (1) { // Boucle infinie
+        printf("Veuillez saisir le bon chiffre pour sortir du programme : ");
+        scanf("%d", &nombre_saisi); // Lire l'entrée utilisateur et stocker dans la variable
+        
+        nombre_essais++;
+
+        if (nombre_saisi > nombre_aleatoire) {
+            
+            printf("Votre chiffre est trop grand.\n\n");
+        }
+         else if (nombre_saisi < nombre_aleatoire) {
+            
+            printf("Votre chiffre est trop petit.\n\n");
+        }
+        
+        else {
+            printf("Vous avez gagné.\n\n");
+            printf("Vous avez gagné en %d essais !\n\n", nombre_essais); { break; } 
+        }
+            
+         
+        }
+
+    return 0;
+} */
+
+############################## boucle dans une boucle  #############################
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  int valuser;    
+  printf("Veuillez saisir un chiffre : ");
+  scanf("%d", &valuser); 
+  
+  for(int i=1; i<=valuser; i++){
+   
+    
+    for(int j=1; j<=valuser; j++){
+    printf("%s", "*");
+    
+  }
+  puts("");
+ 
+  }
+  
+    
+    return 0;
+}*/
+############################## trinagle droit  #############################
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  int valuser;    
+  printf("Veuillez saisir un chiffre : ");
+  scanf("%d", &valuser); 
+  
+  for(int j=1; j<=valuser; j++){
+        for(int i=1; i<=j; i++){
+        printf("%s", "*");
+        }
+    puts("");
+  }
+
+    return 0;
+}*/
+##############################trinagle inverse #############################
+#include <stdio.h> 
+#include <stdlib.h>
+
+int main(void)
+{
+  int valuser;    
+  printf("Veuillez saisir un chiffre : ");
+  scanf("%d", &valuser); 
+  
+  for(int i=1; i<=valuser; i++){
+        for(int j=1; j<=valuser-i+1; j++){
+           
+        printf("%s", "*");
+        }
+    puts("");
+ 
+  }
+  
+    return 0;
+}*/
+
+##############################trinagle inverse 2eme facon #############################
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  int valuser;    
+  printf("Veuillez saisir un chiffre : ");
+  scanf("%d", &valuser); 
+  
+  for(int i=valuser; i>=1; i--){
+        for(int j=1; j<=i; j++){
+           
+        printf("%s", "*");
+        }
+    puts("");
+ 
+  }
+  
+    return 0;
+} */
+
+##############################trinagle inverse 3eme facon #############################
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  int valuser;    
+  printf("Veuillez saisir un chiffre : ");
+  scanf("%d", &valuser); 
+  
+  for(int i=1; i<=valuser; i++){
+        for(int j=i; j<=valuser; j++){
+           
+        printf("%s", "*");
+        }
+    puts("");
+ 
+  }
+  
+    return 0;
+}*/
+
+##############################trinagle et triangle inverse 1ere facon #############################
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  int valuser;    
+  printf("Veuillez saisir un chiffre : ");
+  scanf("%d", &valuser); 
+  
+    for(int j=1; j<=valuser; j++){
+        for(int i=1; i<=j; i++){
+        printf("%s", "*");
+        }
+    puts("");
+  }
+  
+   for(int i=1; i<=valuser; i++){
+        for(int j=i; j<=valuser; j++){
+           
+        printf("%s", "*");
+        }
+    puts("");
+ 
+  }
+     return 0;
+}
+
+############################## calculatrice  #############################
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  int valuser;    
+  printf("Veuillez saisir un chiffre : ");
+  scanf("%d", &valuser); 
+  
+ 
+  for(int i=1; i<=10; i++){
+        
+        printf("   %d x %d = %d\n ", valuser, i , valuser * i);
+       
+    puts("");
+  }
+
+    return 0;
+}
