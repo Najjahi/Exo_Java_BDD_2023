@@ -620,4 +620,192 @@ int main() {
     
     return 0;
 }
-                 
+//Coller ce code et observez le résultat :
+
+#include <stdio.h>
+#include <string.h>
+    
+int main() {
+    char chaine1[] = "La maison bleue du village";
+   
+    for(int i=0; i<strlen(chaine1); i++){
+        
+     printf("La valeur de i = %d et la lettre correspond à cet indice est la lettre %c \n", i, chaine1[i]);    
+
+    }
+        
+    return 0;
+}
+
+//C'est à dire le résultat à l'ecran sera le suivant : egalliv ud euelb nosiam aL
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char chaine1[] = "La maison bleue du village";
+   
+    for(int i=(strlen(chaine1)-1); i>=0; i--){
+        
+     printf("La valeur de i = %d et la lettre correspond à cet indice est la lettre %c \n", i, chaine1[i]);    
+
+    }
+        
+    return 0;
+}
+
+// Exercice 2 : Combien de fois le lettre a ?
+    #include <stdio.h>
+#include <string.h>
+
+int main() {
+    char chaine1[] = "La maison bleue du village";
+    int cpt=0;
+    for(int i=(strlen(chaine1)-1); i>=0; i--){
+        
+        if (chaine1[i] == 'a'){cpt++;}
+        
+     }
+     
+     printf("il y a %d fois le lettre a", cpt);  
+        
+    return 0;
+}
+
+//Exercice 3 : Affichez uniquement les consonnes. 
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h> 
+
+int main() {
+    char chaine1[] = "La maison bleue du village";
+   
+    for(int i=(strlen(chaine1)-1); i>=0; i--){
+        
+        char c = chaine1[i];
+    
+if (isalpha(c)) {
+            
+            c = tolower(c); // Mettre la lettre en minuscule pour simplifier la comparaison
+            
+            if (c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u' && c != 'y') {
+                
+                printf("La valeur de i = %d et la lettre correspond à cet indice est la consonne %c \n", i, chaine1[i]);
+            }
+        }
+    }
+    return 0;
+}
+
+    //Exercice 3 : Affichez uniquement les consonnes. façon 2 
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>  // Pour la fonction isalpha()
+
+int main() {
+    char chaine1[] = "La maison bleue du village";
+   
+    char voyelles[] = "aeiouyAEIOUY";
+
+    for (int i = strlen(chaine1) - 1; i >= 0; i--) {
+        char c = chaine1[i];
+
+        // Vérifier si le caractère est une lettre
+        if (isalpha(c)) {
+            // Vérifier si le caractère est une voyelle
+            int est_voyelle = 0;  // Flag pour savoir si c'est une voyelle
+
+            for (int j = 0; voyelles[j] != '\0'; j++) {
+                if (c == voyelles[j]) {
+                    est_voyelle = 1;  // Si c'est une voyelle, changer le flag
+                    break;
+                }
+            }
+
+            // Si ce n'est pas une voyelle, c'est une consonne
+            if (!est_voyelle) {
+                printf("La valeur de i = %d et la lettre correspond à cet indice est la consonne %c \n", i, c);
+            }
+        }
+    }
+
+    return 0;
+}
+
+//Exercice 3 : Affichez uniquement les consonnes.
+    #include <stdio.h>
+#include <string.h>
+
+int main() {
+    char chaine1[] = "La maison bleue du village";
+   
+    // Boucle pour parcourir la chaîne à l'envers
+    for (int i = strlen(chaine1) - 1; i >= 0; i--) {
+        char c = chaine1[i];
+        
+        // Vérification si le caractère est une consonne
+        if ((c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z') && 
+            !(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y' ||
+              c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'Y')) {
+            // Si c'est une consonne, on l'affiche
+            printf("La valeur de i = %d et la lettre correspond à cet indice est la consonne %c \n", i, c);
+        }
+    }
+
+    return 0;
+}
+
+//Exercice 3 : Affichez uniquement les consonnes. façon Boris
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char chaine1[] = "La maison bleue du village";
+    char voyelles[] = "aeiouy";
+    int flag=0;
+    
+    for(int i=0; i<=strlen(chaine1); i++){
+        
+        for(int j=0; j<=strlen(voyelles); j++){
+            if (chaine1[i] == voyelles[j]){flag=1;}
+        }
+        
+        if (flag == 1){flag=0;}
+        else {printf("%c", chaine1[i]);}
+        
+     }
+        
+    return 0;
+}
+// Exercice 4 : Le palindrome Dites nous si votre chaine de caractères est un palindrome ou non. Exemple de palindrome RADAR, LAVAL, etc..
+
+    #include <stdio.h>
+#include <string.h>
+
+int main() {
+    char chaine1[] = "maison";
+    char chaine2[strlen(chaine1)];
+    int cpt=0;
+
+    for(int i=strlen(chaine1); i>=0; i--){
+        chaine2[i] = chaine1[strlen(chaine1) - i -1];
+    }
+    
+    
+    for(int i=0; i<=strlen(chaine1); i++){
+        if(chaine2[i]==chaine1[i]){cpt++;}
+    }
+    
+    if((cpt-1)==strlen(chaine1)){printf("Votre chaine est un palindrome");}
+    else{printf("Votre chaine n'est PAS un palindorme");}
+        
+    return 0;
+}
+
+
+
+    
+
+
+
