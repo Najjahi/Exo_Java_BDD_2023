@@ -990,6 +990,125 @@ int main(int compteur_arguments, char valeur_argument[])
 
     return 0;
 }
+ /*****************************************************/
+//ERCE 1 carre d etoiles 
+<% 
+    int cpt = Integer.parseInt(valeur); 
+%>
+<p>
+    <% 
+        for (int i = 1; i <= cpt; i++) { 
+            for (int j = 1; j <= cpt; j++) { 
+    %>
+                <%= "*" %> 
+    <% 
+            } 
+            out.print("<br>"); // Pour aller à la ligne après chaque ligne de '*' 
+        } 
+    %>
+</p>
+//ERCE 2 triangle rectangle aligne a gauche
+        <%-- Boucle for pour afficher un triangle rectangle aligné à gauche --%>     
+<% int cpt = Integer.parseInt(valeur); %>     
+<% for (int i = 1; i <= cpt; i++) { %>
+    <p>
+        <% for (int j = 1; j <= i; j++) { %> 
+            <%= "*" %> 
+        <% } %>
+    </p>
+<% } %>
+
+//ERCE 3 triangle rectangle aligne a gauche inverse
+<%-- Boucle for pour afficher un triangle rectangle inverse aligné à gauche --%>     
+<% int cpt = Integer.parseInt(valeur); %>     
+<% for (int i = cpt; i >= 1; i--) { %>
+    <p>
+        <% for (int j = 1; j <= i; j++) { %> 
+            <%= "*" %> 
+        <% } %>
+    </p>
+<% } %>
+
+//ERCE 4 triangle rectangle aligne a doite
+    <%-- Boucle for pour afficher un triangle rectangle aligné à droite --%>     
+<% int cpt = Integer.parseInt(valeur); %>     
+<% for (int i = 1; i <= cpt; i++) { %>
+    <p>
+        <% for (int j = 1; j <= cpt - i; j++) { %> 
+            <%= "&nbsp;" %>  <!-- Affiche des espaces -->
+        <% } %>
+        <% for (int j = 1; j <= i; j++) { %> 
+            <%= "*" %> 
+        <% } %>
+    </p>
+<% } %>
+//ERCE 5 triangle pyramide
+
+<p>
+    <% 
+        for (int i = 1; i <= cpt; i++) {
+            // Affiche les espaces pour aligner les étoiles à droite
+            for (int j = 1; j <= cpt - i; j++) {
+                out.print("&nbsp;"); // "nbsp;" est l'entité HTML pour un espace non sécable
+            }
+            // Affiche les étoiles
+            for (int j = 1; j <= i; j++) {
+                out.print("* ");
+            }
+            // Ajoute un saut de ligne après chaque ligne d'étoiles
+            out.print("<br>");
+        }
+    %>
+</p>
+
+//ERCE 6 Le demi losange
+<p>
+    <!-- Partie croissante -->
+    <% 
+        for (int i = 1; i <= cpt; i++) {
+            // Affiche les espaces pour aligner les étoiles à gauche
+            for (int j = 1; j <= cpt - i; j++) {
+                out.print("&nbsp;"); // "nbsp;" est l'entité HTML pour un espace non sécable
+            }
+            
+            for (int j = 1; j <= i; j++) {
+                out.print("*");
+            }
+            
+            out.print("<br>");
+        }
+        
+        // Partie décroissante
+        for (int i = cpt - 1; i >= 1; i--) {
+            // Affiche les espaces pour aligner les étoiles à gauche
+            for (int j = 1; j <= cpt - i; j++) {
+                out.print("&nbsp;");
+            }
+            // Affiche les étoiles
+            for (int j = 1; j <= i; j++) {
+                out.print("*");
+            }
+            // Ajoute un saut de ligne après chaque ligne d'étoiles
+            out.print("<br>");
+        }
+    %>
+</p>
+//Exercice 7 : La table de multiplication
+
+<%-- Boucle pour afficher la table de multiplication --%>     
+<% int n = Integer.parseInt(valeur); %>     
+<table border="1">
+<% for (int i = 1; i <= 10; i++) { %>
+    <tr>
+        <td><%= n %> × <%= i %> = </td>
+        <td><%= n * i %></td>
+    </tr>
+<% } %>
+</table>
+
+
+
+
 
 
     
