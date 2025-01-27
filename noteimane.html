@@ -802,7 +802,119 @@ int main() {
         
     return 0;
 }
+//Exercice 1 : Fonction carré
+Créer une fonction qui calcul le carré de l'argument saisie par l'utilisateur
+#include <stdio.h>
+#include <stdlib.h>
 
+int main(int compteur_arguments, char *valeur_argument[])
+{
+    printf("compteur_arguments est la quantité d'argument saisie par l'utilisateur : %d\n", compteur_arguments);
+    printf("Le premier argument saisie par l'utilisateur est : %s\n", valeur_argument[1]);
+    int Valeur = atoi(valeur_argument[1]); 
+    printf("atoi() est utilisé pour convertir %d en entier\n ", Valeur);
+    printf("La carre de %d est %d\n ", Valeur, Valeur * Valeur);
+    return 0;
+}
+
+    //Exercice 2 : Faites la somme de 2 arguments saisie par l'utilisateur
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int compteur_arguments, char *valeur_argument[])
+{
+    printf("compteur_arguments est la quantité d'argument saisie par l'utilisateur : %d\n", compteur_arguments);
+    
+    printf("Le premier argument saisie par l'utilisateur est : %s\n", valeur_argument[1]);
+    printf("Le deuxieme argument saisie par l'utilisateur est : %s\n", valeur_argument[2]);
+    
+    int Valeur1 = atoi(valeur_argument[1]); 
+    int Valeur2 = atoi(valeur_argument[2]); 
+    
+    int somme = Valeur1 + Valeur2;
+    
+    printf("atoi() est utilisé pour convertir %d en entier\n ", Valeur1, Valeur2);
+    printf("La somme des des arguments de %d et %d est %d\n ", Valeur1, Valeur2, somme);
+    return 0;
+}
+
+Exercice 3 : Faites la sommes de tous les arguments saisie par l'utilisateur
+    #include <stdio.h>
+    #include <stdlib.h>
+
+int main(int compteur_arguments, char *valeur_argument[])
+{   
+    int somme = 0;
+    
+    for (int i = 1; i < compteur_arguments; i++) {
+        int valeur = atoi(valeur_argument[i]);  
+        somme += valeur;  
+        printf("L'argument %d est : %s, converti en entier : %d\n", i, valeur_argument[i], valeur);
+    }
+
+   printf("La somme totale des arguments est : %d\n", somme);
+    
+    
+    return 0;
+}
+
+Exercice 3 : Faites la sommes de tous les arguments saisie par l'utilisateur facon boris
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int compteur_arguments, char *valeur_argument[])
+{
+    int somme_valeurs=atoi(valeur_argument[1]); //est le 1er argument passé par l'utilisateur (excluant le nom du programme), et atoi() le convertit en entier.
+    
+    for(int i=2; i<compteur_arguments; i++){ // (puisque valeur_argument[1] a déjà été pris en compte pour somme_valeurs), et elle continue jusqu'à ce que tous les arguments aient été traités.
+        somme_valeurs += atoi(valeur_argument[i]); 
+    }
+    
+    printf("La somme des arguments est égale à %d", somme_valeurs);
+
+    return 0;
+}
+
+
+//Exercice 4 : Trouvez le plus grand des arguments
+#include <stdio.h>
+#include <stdlib.h>
+  
+    int main(int compteur_arguments, char *valeur_argument[]) {  
+    int max_valeur = atoi(valeur_argument[1]);
+
+    for (int i = 2; i < compteur_arguments; i++) {
+        
+        int valeur_courante = atoi(valeur_argument[i]);
+        
+        if (valeur_courante > max_valeur) {
+            max_valeur = valeur_courante; 
+        }
+    }
+
+    printf("Le plus grand nombre parmi les arguments est : %d\n", max_valeur);
+    return 0;
+}
+// Exercice 4 : Trouvez le plus grand des arguments boris
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int compteur_arguments, char *valeur_argument[])
+{
+    int reference=atoi(valeur_argument[1]);
+    
+    for(int i=2; i<compteur_arguments; i++){
+        
+        if(atoi(valeur_argument[i])>reference){reference = atoi(valeur_argument[i]);}
+    }
+    
+    printf("La valeur la plus grande est  %d", reference);
+
+    return 0;
+}
 
 
     
