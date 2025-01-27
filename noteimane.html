@@ -916,6 +916,59 @@ int main(int compteur_arguments, char *valeur_argument[])
     return 0;
 }
 
+//Exercice 5 : Trouver la valeur la plus proche de 0 que la saisie soit positive ou négative
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int compteur_arguments, char *valeur_argument[])
+{
+    // Vérifier s'il y a des arguments
+    if (compteur_arguments < 2) {
+        printf("Erreur : Veuillez fournir au moins un argument.\n");
+        return 1;
+    }
+
+    // Initialiser la référence avec la première valeur (en valeur absolue)
+    int reference = abs(atoi(valeur_argument[1]));  // abs() permet de rendre le nombre positif
+    
+    // Parcourir les autres arguments
+    for (int i = 2; i < compteur_arguments; i++) {
+        // Convertir l'argument en entier
+        int current_value = abs(atoi(valeur_argument[i])); // Prendre la valeur absolue
+
+        // Trouver la valeur la plus proche de zéro
+        if (current_value < reference) {
+            reference = current_value;
+        }
+    }
+    
+    // Afficher la valeur la plus proche de zéro
+    printf("La valeur la plus proche de 0 est : %d\n", reference);
+
+    return 0;
+}
+
+//Exercice 5 : Trouver la valeur la plus proche de 0 que la saisie soit positive ou négative boris
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]){
+int absolut;
+int reference=atoi(argv[1]);
+
+for (int i=2; i<argc; i++){
+    absolut = atoi(argv[i])*atoi(argv[i]);
+    if (absolut <= reference*reference){
+        reference = atoi(argv[i]);
+    }
+}
+
+printf("Voici le résultat: %d\n", reference);
+return 0;
+}
+
+
 
     
 
