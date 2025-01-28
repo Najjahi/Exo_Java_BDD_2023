@@ -1212,7 +1212,186 @@ Ecrire un programme pour compter le nombre de lettre e dans votre chaine de char
         }
     %>
 Exercice 3 : Retour à la ligne La présence d'un espace provoque un retour à la ligne Exemple : L'hiver sera pluvieux
-    
+    <form method="post">
+        Entrez un texte : <input type="text" name="texte" required /><br>
+        <input type="submit" value="Afficher avec retour à la ligne" />
+    </form>
+    <br>
 
+    <% 
+        String texte = request.getParameter("texte");
 
+        if (texte != null && !texte.isEmpty()) {
+            out.println("<div class='text-vertical'>");
+            
+           for (int i = 0; i < texte.length(); i++) {
+                
+                if (texte.charAt(i) == ' ') {    // Si l'on rencontre un espace, ajouter un retour à la ligne
+                    out.println("<br>");  // Retour à la ligne à chaque espace
+                } else {
+                    out.print(texte.charAt(i));  // Afficher le caractère sans retour à la ligne
+                }
+            }
+            out.println("</div>");
+        }
+    %> 
 
+Exercice 4 : Afficher une lettre sur deux Ecrire le programme pour afficher seulement une lettre sur deux de votre texte
+Exemple : L'hiver sera pluvieux Lhvrsr lvex
+<form method="post">
+        Entrez un texte : <input type="text" name="texte" required /><br>
+        <input type="submit" value="Afficher une lettre sur deux" />
+    </form>
+    <br>
+
+    <% 
+        String texte = request.getParameter("texte");
+        
+        if (texte != null && !texte.isEmpty()) {
+            StringBuilder result = new StringBuilder(); 
+           //StringBuilder permet de modifiez la même instance de chaîne à chaque itération, ce qui est bien plus rapide. 
+            // Parcourir chaque caractère et afficher une lettre sur deux
+            for (int i = 0; i < texte.length(); i++) {
+                if (i % 2 == 0) {  // Afficher les caractères aux indices pairs
+                    result.append(texte.charAt(i));  //append : ajoute le contenu de son argument à la fin de l'objet
+                }
+            }
+
+            out.println("<div class='text-display'>");
+            out.println(result.toString());
+            out.println("</div>");
+        }
+    %>
+Exercice 5 : La phrase en verlant Ecrire le programme afin d'afficher le texte en verlant Ex: L'hiver sera pluvieux
+xueivulp ares revih'l
+ <form method="post">
+        Entrez un texte : <input type="text" name="texte" required /><br>
+        <input type="submit" value="Afficher en Verlan" />
+    </form>
+    <br>
+
+    <% 
+        String texte = request.getParameter("texte");
+        
+        if (texte != null && !texte.isEmpty()) {
+            
+            String[] mots = texte.split(" ");       // Séparer le texte en mots
+            StringBuilder result = new StringBuilder();
+            
+            for (String mot : mots) {
+               
+                StringBuilder motInversé = new StringBuilder(mot);
+                motInversé.reverse();  // Inverser les caractères du mot
+                result.append(motInversé.toString()).append(" ");  // Ajouter le mot inversé avec un espace
+            }
+
+            out.println("<div class='text-display'>");
+            out.println(result.toString().trim());  // Utiliser trim() pour enlever le dernier espace
+            out.println("</div>");
+        }
+    %>
+Exercice 6 : Consonnes et voyelles Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte
+<form method="post">
+        Entrez un texte : <input type="text" name="texte" required /><br>
+        <input type="submit" value="Compter voyelles et consonnes" />
+    </form>
+    <br>
+
+    <% 
+        
+        String texte = request.getParameter("texte");
+        
+        if (texte != null && !texte.isEmpty()) {
+            
+            texte = texte.toLowerCase();
+            
+            int voyelles = 0;
+            int consonnes = 0;
+            
+            for (int i = 0; i < texte.length(); i++) {
+                char c = texte.charAt(i);
+                
+                if (Character.isLetter(c)) {
+                    
+                    if ("aeiouy".indexOf(c) != -1) {
+                        voyelles++;  
+                    } else {
+                        consonnes++;  
+                    }
+                }
+            }
+
+            // Afficher le résultat
+            out.println("<div class='result'>");
+            out.println("Nombre de voyelles : " + voyelles + "<br>");
+            out.println("Nombre de consonnes : " + consonnes);
+            out.println("</div>");
+        }
+
+/*************** les tableaux *********************/
+Exercice 1 : La carré de la première valeur Ecrire un programme afin d'afficher le carré de la première valeur
+<form method="post">
+        Entrez la première valeur : <input type="number" name="valeur1" required /><br><br>
+        Entrez la deuxième valeur : <input type="number" name="valeur2" required /><br><br>
+        Entrez la troisième valeur : <input type="number" name="valeur3" required /><br><br>
+        <input type="submit" value="Calculer le carré de la première valeur" />
+    </form>
+
+    <br>
+
+    <% 
+        String valeur1 = request.getParameter("valeur1");
+        String valeur2 = request.getParameter("valeur2");
+        String valeur3 = request.getParameter("valeur3");
+   
+        if (valeur1 != null && valeur2 != null && valeur3 != null) {
+            try {
+                // Convertir les valeurs saisies en nombres
+                int valeur1 = Integer.parseInt(valeur1Str);
+                int valeur2 = Integer.parseInt(valeur2Str);
+                int valeur3 = Integer.parseInt(valeur3Str);
+               
+                int carreVal1 = valeur1 * valeur1;
+                
+                out.println("<div class='result'>");
+                out.println("Le carré de la première valeur (" + valeur1 + ") est : " + carreVal1);
+                out.println("</div>");
+            } catch (NumberFormatException e) {
+                out.println("<div class='result' style='color:red;'>");
+                out.println("Erreur : Veuillez entrer des nombres valides.");
+                out.println("</div>");
+            }
+        }
+    %>
+    Exercice 2 : La somme des 2 premières valeurs Ecrire un programme afin d'afficher la somme des deux premières valeurs  
+
+        <form method="post">
+        Entrez la première valeur : <input type="number" name="valeur1" required /><br><br>
+        Entrez la deuxième valeur : <input type="number" name="valeur2" required /><br><br>
+        <input type="submit" value="Calculer la somme" />
+    </form>  <br>
+    <% 
+        
+        String valeur1Str = request.getParameter("valeur1");
+        String valeur2Str = request.getParameter("valeur2");
+         
+        if (valeur1Str != null && valeur2Str != null) {
+            try {
+                 
+                int valeur1 = Integer.parseInt(valeur1Str);
+                int valeur2 = Integer.parseInt(valeur2Str);
+                 
+                int somme = valeur1 + valeur2;
+                 
+                out.println("<div class='result'>");
+                out.println("La somme des deux premières valeurs (" + valeur1 + " et " + valeur2 + ") est : " + somme);
+                out.println("</div>");
+            } catch (NumberFormatException e) {
+                out.println("<div class='result' style='color:red;'>");
+                out.println("Erreur : Veuillez entrer des nombres valides.");
+                out.println("</div>");
+            }
+        }
+    %>
+
+    Exercice 3 : La somme de toutes les valeurs Ecrire un programme afin de faire la somme de toutes les valeurs saisie par l'utilisateur
