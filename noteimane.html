@@ -1395,3 +1395,190 @@ Exercice 1 : La carré de la première valeur Ecrire un programme afin d'affiche
     %>
 
     Exercice 3 : La somme de toutes les valeurs Ecrire un programme afin de faire la somme de toutes les valeurs saisie par l'utilisateur
+
+        <form method="post">
+        Entrez des valeurs (séparées par des espaces) : <input type="text" name="valeurs" required /><br><br>
+        <input type="submit" value="Calculer la somme" />
+    </form>
+
+    <br>
+
+    <% 
+        
+        String valeursStr = request.getParameter("valeurs");
+        
+        if (valeursStr != null && !valeursStr.trim().isEmpty()) {
+            try {
+                String[] valeursArray = valeursStr.split("\\s+"); // Séparer la chaîne de valeurs en un tableau (espace comme séparateur)
+                  
+                int somme = 0;
+
+                for (String valeur : valeursArray) {
+                    
+                    somme += Integer.parseInt(valeur);
+                }
+
+                out.println("<div class='result'>");
+                out.println("La somme des valeurs saisies est : " + somme);
+                out.println("</div>");
+            } catch (NumberFormatException e) {
+                out.println("<div class='result' style='color:red;'>");
+                out.println("Erreur : Veuillez entrer uniquement des nombres valides séparés par des espaces.");
+                out.println("</div>");
+            }
+        }
+    %>
+Exercice 4 : La valeur maximum Ecrire un programme pour afficher la valeur maximale saisie par l'utilisateur
+<form method="post">
+        Entrez des valeurs (séparées par des espaces) : <input type="text" name="valeurs" required /><br><br>
+        <input type="submit" value="Trouver la valeur maximale" />
+    </form>
+
+    <br>
+
+    <% 
+        String valeursStr = request.getParameter("valeurs");
+        
+        if (valeursStr != null && !valeursStr.trim().isEmpty()) {
+            try {
+                String[] valeursArray = valeursStr.split("\\s+");
+                
+                int maxValue = Integer.MIN_VALUE;
+                
+                for (String valeur : valeursArray) {
+                    
+                    int currentValue = Integer.parseInt(valeur);
+                    if (currentValue > maxValue) {
+                        maxValue = currentValue;  // Mettre à jour la valeur maximale
+                    }
+                }
+                
+                out.println("<div class='result'>");
+                out.println("La valeur maximale saisie est : " + maxValue);
+                out.println("</div>");
+            } catch (NumberFormatException e) {
+                out.println("<div class='result' style='color:red;'>");
+                out.println("Erreur : Veuillez entrer uniquement des nombres valides séparés par des espaces.");
+                out.println("</div>");
+            }
+        }
+    %>
+
+   Exercice 5 : La valeur minimale Ecrire un programme pour afficher la valeur minimale saisie par l'utilisateur
+<form method="post">
+        Entrez des valeurs (séparées par des espaces) : <input type="text" name="valeurs" required /><br><br>
+        <input type="submit" value="Trouver la valeur minimale" />
+    </form> <br>
+
+    <% 
+        String valeursStr = request.getParameter("valeurs");
+        
+        if (valeursStr != null && !valeursStr.trim().isEmpty()) {
+            try {
+                
+                String[] valeursArray = valeursStr.split("\\s+");
+                
+                int minValue = Integer.MAX_VALUE;
+                
+                for (String valeur : valeursArray) {
+                    
+                    int currentValue = Integer.parseInt(valeur);
+                    if (currentValue < minValue) {
+                        minValue = currentValue;  // Mettre à jour la valeur minimale
+                    }
+                }
+
+                out.println("<div class='result'>");
+                out.println("La valeur minimale saisie est : " + minValue);
+                out.println("</div>");
+            } catch (NumberFormatException e) {
+                out.println("<div class='result' style='color:red;'>");
+                out.println("Erreur : Veuillez entrer uniquement des nombres valides séparés par des espaces.");
+                out.println("</div>");
+            }
+        }
+    %>
+  Exercice 6 : La valeur le plus proche de 0 Trouvez la valeur la plus proche de 0 (chiffres positifs ou négatifs)    
+     <form method="post">
+        Entrez des valeurs (séparées par des espaces) : <input type="text" name="valeurs" required /><br><br>
+        <input type="submit" value="Trouver la valeur la plus proche de 0" />
+    </form>
+
+    <br>
+
+    <% 
+        String valeursStr = request.getParameter("valeurs");
+       
+        if (valeursStr != null && !valeursStr.trim().isEmpty()) {
+            try {
+                String[] valeursArray = valeursStr.split("\\s+");
+                
+                double closestValue = Double.MAX_VALUE;
+                
+                for (String valeur : valeursArray) {
+                    
+                    double currentValue = Double.parseDouble(valeur);
+                    
+                    if (Math.abs(currentValue) < Math.abs(closestValue)) {
+                        closestValue = currentValue;
+                    }
+                }
+                out.println("<div class='result'>");
+                out.println("La valeur la plus proche de 0 saisie est : " + closestValue);
+                out.println("</div>");
+            } catch (NumberFormatException e) {
+                out.println("<div class='result' style='color:red;'>");
+                out.println("Erreur : Veuillez entrer uniquement des nombres valides séparés par des espaces.");
+                out.println("</div>");
+            }
+        }
+    %>
+Exercice 7 : La valeur le plus proche de 0 (2° version) Trouvez la valeur la plus proche de 0 (chiffres positifs ou négatifs)
+<form method="post">
+        Entrez des valeurs (séparées par des espaces) : <input type="text" name="valeurs" required /><br><br>
+        <input type="submit" value="Trouver la valeur la plus proche de 0" />
+    </form>
+
+    <br>
+
+    <% 
+        // Récupérer la chaîne de valeurs saisie par l'utilisateur
+        String valeursStr = request.getParameter("valeurs");
+
+        // Vérifier si des valeurs ont été saisies
+        if (valeursStr != null && !valeursStr.trim().isEmpty()) {
+            try {
+                // Séparer la chaîne de valeurs en un tableau en utilisant l'espace comme séparateur
+                String[] valeursArray = valeursStr.split("\\s+");
+
+                // Initialiser la variable pour la valeur la plus proche de 0
+                double closestValue = Double.MAX_VALUE;
+
+                // Parcourir chaque valeur pour trouver la valeur la plus proche de 0
+                for (String valeur : valeursArray) {
+                    // Convertir la valeur en double
+                    double currentValue = Double.parseDouble(valeur);
+
+                    // Comparer l'écart par rapport à 0 et mettre à jour la valeur la plus proche de 0
+                    // Si deux valeurs ont la même distance par rapport à 0, on garde la positive
+                    if (Math.abs(currentValue) < Math.abs(closestValue) || 
+                        (Math.abs(currentValue) == Math.abs(closestValue) && currentValue > 0)) {
+                        closestValue = currentValue;
+                    }
+                }
+
+                // Afficher le résultat
+                out.println("<div class='result'>");
+                out.println("La valeur la plus proche de 0 saisie est : " + closestValue);
+                out.println("</div>");
+            } catch (NumberFormatException e) {
+                out.println("<div class='result' style='color:red;'>");
+                out.println("Erreur : Veuillez entrer uniquement des nombres valides séparés par des espaces.");
+                out.println("</div>");
+            }
+        }
+    %>
+
+                        
+
+En cas d'égalité entre un chiffre positif et négatif, affichez le chiffre positif
