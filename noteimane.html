@@ -1106,11 +1106,112 @@ int main(int compteur_arguments, char valeur_argument[])
 <% } %>
 </table>
 
+    //************ condition ***************/
+Exercice 1 : Comparaison 1 ecrire un programme qui demande à l'utilisateur de saisir 3 valeurs (des chiffres),
+A, B et C et dites nous si la valeur de C est comprise entre A et B.
+    
+    <form method="post">  <!-- Formulaire de saisie des valeurs -->
+        A : <input type="number" name="A" required /><br>
+        B : <input type="number" name="B" required /><br>
+        C : <input type="number" name="C" required /><br>
+        <input type="submit" value="Vérifier" />
+    </form>
 
+    <br>
 
+    <%  // Récupération des valeurs saisies par l'utilisateur
+        String a = request.getParameter("A");
+        String b = request.getParameter("B");
+        String c = request.getParameter("C");
 
+        if (a != null && b != null && c != null) {
+            try {
+                // Conversion des entrées en entiers
+                int A = Integer.parseInt(a);
+                int B = Integer.parseInt(b);
+                int C = Integer.parseInt(c);
+             
+                if ((C > A && C < B) || (C > B && C < A)) {
+                    out.println("<p>Oui, C (" + C + ") est compris entre A (" + A + ") et B (" + B + ").</p>");
+                } else {
+                    out.println("<p>Non, C (" + C + ") n'est pas compris entre A (" + A + ") et B (" + B + ").</p>");
+                }
+            } catch (NumberFormatException e) {
+                out.println("<p>Veuillez entrer des nombres valides.</p>");
+            }
+        }
+    %>
+Exercice 2 : Pair ou Impair ? Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if
+Valeur 1 est impaire.
 
+ <form method="post">
+        Entrez un nombre : <input type="number" name="nombre" required /><br>
+        <input type="submit" value="Vérifier" />
+    </form>
+    <br>
+    <% 
+        
+        String valeur1 = request.getParameter("valeur1");
 
+        if (valeur1 != null) {
+            try {
+                int valeur1 = Integer.parseInt(valeur1);
+                
+                if (nombre % 2 == 0) {
+                    out.println("<p>La valeur 1 " + valeur1 + " est pair.</p>");
+                } else {
+                    out.println("<p>La valeur 1 " + valeur1 + " est impair.</p>");
+                }
+            } catch (NumberFormatException e) {
+                out.println("<p>Veuillez entrer une valeur valide.</p>");
+            }
+        }
+    %>
+//Exercice 1 : Combien de 'e' dans notre chaine de charactère ?
+Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères
+<form method="post">
+        Entrez une chaîne de caractères : <input type="text" name="chaine" required /><br>
+        <input type="submit" value="Compter les 'e'" />
+    </form>
+    <br>
+    <% 
+        String chaine = request.getParameter("chaine");
+
+        if (chaine != null) {
+            int count = 0;
+       
+            chaine = chaine.toLowerCase(); // Convertir la chaîne en minuscules
+            
+            for (int i = 0; i < chaine.length(); i++) {
+                if (chaine.charAt(i) == 'e') {  // pour recuperer le e selon son index
+                    count++;
+                }
+            }
+            out.println("<p>Le nombre de lettres 'e' dans la chaîne est : " + count + "</p>");
+        }
+    %>
+
+//Exercice 2 : Affichage verticale Ecrire le programme pour afficher le texte en vertical Exemple : Bonjour
+
+    <form method="post">
+        Entrez un texte : <input type="text" name="texte" required /><br>
+        <input type="submit" value="Afficher en vertical" />
+    </form>
+    <br>
+
+    <% 
+        String texte = request.getParameter("texte");
+
+        if (texte != null && !texte.isEmpty()) {
+            out.println("<div class='vertical-text'>");
+            // Afficher chaque caractère sur une ligne séparée
+            for (int i = 0; i < texte.length(); i++) {
+                out.println(texte.charAt(i) + "<br>");
+            }
+            out.println("</div>");
+        }
+    %>
+Exercice 3 : Retour à la ligne La présence d'un espace provoque un retour à la ligne Exemple : L'hiver sera pluvieux
     
 
 
