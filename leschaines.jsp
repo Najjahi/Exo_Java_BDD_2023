@@ -110,10 +110,6 @@ Lhvrsr lvex</p>
 <p>Affichage d'une lettre sur deux de la chaîne est :</p>
 <p><%= output.toString() %></p> <!-- Affiche la chaîne filtrée -->
 
-<p>Affichage d'une lettre sur deux de la chaîne est :</p>
-<p><%= output.toString() %></p> <!-- Affiche la chaîne filtrée -->
-<p>affichage d une lettre sur deux de la chaîne est :  <%= chr %>"</p>
-
 <h2>Exercice 5 : La phrase en verlant</h2>
 <p>Ecrire le programme afin d'afficher le texte en verlant </br>
 Exemple : L'hiver sera pluvieux</br>
@@ -125,8 +121,7 @@ xueivulp ares revih'l</p>
         char chr = chaine.charAt(i); // Récupérer le caractère à l'indice i
         output.append(chr); // Ajouter ce caractère à la sortie
     }
-    <p><%= output.toString() %></p> // Afficher le résultat de la chaîne inversée
-%>
+    %>
 
 <p>Affichage de la phrase en verlan est :</p>
 <p><%= output.toString() %></p> <!-- Afficher la chaîne inversée --> 
