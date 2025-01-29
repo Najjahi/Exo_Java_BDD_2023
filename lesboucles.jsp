@@ -78,8 +78,9 @@
     *
   <% } %>
 
-</p><br>         
+<br>         
 <% } %> 
+</p>
 
 
 <h2>Exercice 5 : Triangle isocele</h2>
