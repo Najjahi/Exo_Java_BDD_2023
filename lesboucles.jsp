@@ -71,14 +71,15 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>
  
-    <% for (int i = 0; i < cpt; i++) { %>
+    <% for (int i = 1; i < cpt; i++) { %>
             
-            
- <% for (int k= i; k>= cpt; k--) { %>
-                <%= "*" %> 
+           
+ <% for (int j= 1; j<= cpt-i; j++) { %>
+                <%= " " %> 
            <% } %> 
-            <% for (int j = i+1; j < cpt; j++) { %>
-                 <%= " " %> 
+
+            <% for (int k = 1; k <= i; k++) { %>
+                 <%= "*" %> 
             
              <% } %>
      <br>
