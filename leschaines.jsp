@@ -41,12 +41,13 @@
     <br>
     
         <% 
-            int count = 0;
-                    
-            <% for (int i = 0; i < chaine.length(); i++) { %>
+            
+                for (int i = 0; i < chaine.length(); i++) { %>
                 char count = chaine.charAt(i)
+                if(count == 'e'){
                 cout++;
-                } %>
+            
+                } 
             } %>
             <%= "<p>Le nombre de lettres 'e' dans la chaîne est : " + count + "</p>" %>
         <%  } %>
@@ -61,7 +62,17 @@ j</br>
 o</br>
 u</br>
 r</p>
-
+<% 
+            int count = 0;
+                    
+            <% for (int i = 0; i < chaine.length(); i++) { %>
+                char count = chaine.charAt(i)
+                cout++;
+                } %>
+            } %>
+            <%= "<p>Le nombre de lettres 'e' dans la chaîne est : " + count + "</p>" %>
+        <%  } %>
+    %>
 <h2>Exercice 3 : Retour à la ligne</h2>
 <p>La présence d'un espace provoque un retour à la ligne </br>
 Exemple : L'hiver sera pluvieux</br>
