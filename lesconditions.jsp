@@ -40,23 +40,23 @@ B = 20</br>
 C = 15</br>
 Oui C est compris entre A et B</p>
   <form method="post">  
-       Saisir la valeur A : <input type="number" name="A" required /><br>
-       Saisir la valeur B : <input type="number" name="B" required /><br>
-       Saisir la valeur C : <input type="number" name="C" required /><br>
+       Saisir la valeur A : <input type="number" id="inputA" name="inputA">><br>
+       Saisir la valeur B : <input type="number" id="inputB" name="inputB">><br>
+       Saisir la valeur C : <input type="number" id="inputC" name="inputC">><br>
         <input type="submit" value="Afficher" />
     </form>
 
     <br>
 
-     <%  String A = request.getParameter("A"); %> 
-     <%  String B = request.getParameter("B"); %>
-     <%  String C = request.getParameter("C"); %>
+     <%  String A = request.getParameter("inputA"); %> 
+     <%  String B = request.getParameter("inputB"); %>
+     <%  String C = request.getParameter("inputC"); %>
 
-       <% if (A != null && B != null && C != null) { %>
+       <% if (inputA != null && inputB != null && inputC != null) { %>
            
-               <% int intA = Integer.parseInt(A); %>
-               <% int intB = Integer.parseInt(B); %>
-               <% int intC = Integer.parseInt(C); %>
+               <% int A = Integer.parseInt(inputA); %>
+               <% int B = Integer.parseInt(inputB); %>
+               <% int C = Integer.parseInt(inputC); %>
              
                <% if ((C > A && C < B) || (C > B && C < A)) { %>
                      <p>Oui, C (<%= C %>) est compris entre A (<%= A %>) et B (<%= B %>).</p>
@@ -71,11 +71,11 @@ Oui C est compris entre A et B</p>
 <h2>Exercice 2 : Pair ou Impair ?</h2>
 <p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
 <form action="#" method="post">
-    <p>Saisir la valeur : <input type="text" id="exo2Input" name="exo2Input">
+    <p>Saisir la valeur : <input type="text" id="inputvaleur3" name="inputvaleur3">
     <p><input type="submit" value="Afficher">
 </form>
 <p>
-<%-- Condition if pour comparer les valeurs --%>
+<%  String inputvaleur3 = request.getParameter("inputvaleur3"); %>
         <% if (intValeur1 % 2 == 0) { %>
             <p>Valeur 1 est paire.</p>
         
