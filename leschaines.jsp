@@ -86,6 +86,7 @@ pluvieux</p>
             output.append(chr); // Sinon, ajout du caractère à la sortie
         }
     }
+    <p>affichage verticale de la chaîne est :</p>
     out.print(output.toString()); // Affiche le résultat
 %>
 
