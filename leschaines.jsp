@@ -38,7 +38,7 @@
 
         <% 
             
-                for (int i = 0; i < chaine.length(); i++) { %>
+                for (int j = 0; j < chaine.length(); j++) { %>
                 char count = chaine.charAt(i)
                 if(count == 'e'){
                     count++;
