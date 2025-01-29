@@ -10,16 +10,15 @@
     <p><input type="submit" value="Afficher">
 </form>
 <%-- Récupération des valeurs --%>
+    <% String chaine = request.getParameter("chaine"); %>
     
-    String chaine = request.getParameter("chaine");
-    int count = 0;
     <% if (chaine != null) { %>
 
-    
+    <%-- Obtention de la longueur de la chaîne --%>
     <% int longueurChaine = chaine.length(); %>
     <p>La longueur de votre chaîne est de <%= longueurChaine %> caractères</p>
 
-    
+    <%-- Extraction du 3° caractère dans votre chaine --%>
     <% char caractereExtrait = chaine.charAt(2); %>
     <p>Le 3° caractère de votre chaine est la lettre <%= caractereExtrait %></p>
 
@@ -32,7 +31,7 @@
        int position = chaine.indexOf(recherche); %>
     <p>Votre premier "e" est en : <%= position %></p>
 
-    
+        
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
 <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
 
