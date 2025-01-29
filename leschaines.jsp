@@ -81,11 +81,13 @@ pluvieux</p>
         for(int i = 0; i < chaine.length(); i++){
             char chr = chaine.charAt(i);
             if(chr == ' '){
-                chr += "<br>";
-            }
-
-       }
-    %>
+                 output.append("<br>"); // Ajout de la balise <br> pour les espaces
+        } else {
+            output.append(chr); // Sinon, ajout du caractère à la sortie
+        }
+    }
+    out.print(output.toString()); // Affiche le résultat
+%>
 <p>affichage verticale de la chaîne est :  <%= chr %></p>
 
 <h2>Exercice 4 : Afficher une lettre sur deux</h2>
