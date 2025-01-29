@@ -59,10 +59,10 @@ Oui C est compris entre A et B</p>
                <% int C = Integer.parseInt(inputC); %>
              
                <% if ((C > A && C < B) || (C > B && C < A)) { %>
-                     <p>Oui, C (<%= C %>) est compris entre A (<%= A %>) et B (<%= B %>).</p>
+                     <%=<p>Oui, C (<%= C %>) est compris entre A (<%= A %>) et B (<%= B %>).</p>%>
                   
                  <% } else { %>
-                      <p>Oui, C (<%= C %>) n'est pas compris entre A (<%= A %>) et B (<%= B %>).</p>  
+                      <%=<p>Oui, C (<%= C %>) n'est pas compris entre A (<%= A %>) et B (<%= B %>).</p> %> 
                 <% } %>
            
          <% } %>
