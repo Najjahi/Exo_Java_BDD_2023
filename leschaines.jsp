@@ -77,7 +77,7 @@ sera</br>
 pluvieux</p>
 
 <% 
-        
+        StringBuilder output = new StringBuilder();
         for(int i = 0; i < chaine.length(); i++){
             char chr = chaine.charAt(i);
             if(chr == ' '){
