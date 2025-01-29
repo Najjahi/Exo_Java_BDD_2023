@@ -87,7 +87,7 @@ pluvieux</p>
         }
     }
     <p>affichage verticale de la chaîne est :</p>
-    out.print(output.toString()); // Affiche le résultat
+    <p><%= output.toString() %></p>
 %>
 
 
@@ -103,7 +103,7 @@ Lhvrsr lvex</p>
             output.append(chr); // Ajouter le caractère à la sortie
         }
     }
-    out.print(output.toString()); // Affiche le résultat de la chaîne avec une lettre sur deux
+    <p><%= output.toString() %></p> // Affiche le résultat de la chaîne avec une lettre sur deux
 %>
 <p>Affichage d'une lettre sur deux de la chaîne est :</p>
 <p><%= output.toString() %></p> <!-- Affiche la chaîne filtrée -->
@@ -123,7 +123,7 @@ xueivulp ares revih'l</p>
         char chr = chaine.charAt(i); // Récupérer le caractère à l'indice i
         output.append(chr); // Ajouter ce caractère à la sortie
     }
-    out.print(output.toString()); // Afficher le résultat de la chaîne inversée
+    <p><%= output.toString() %></p> // Afficher le résultat de la chaîne inversée
 %>
 
 <p>Affichage de la phrase en verlan est :</p>
