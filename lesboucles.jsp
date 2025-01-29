@@ -70,7 +70,7 @@
 <% for (int i = 1; i <= cpt; i++) { %>
       
 
-  <p><% for (int k = 1; k <= ((cpt-i)*2); k++) { %>&nbsp;<% } %></p>
+  <p><% for (int k = 1; k <= ((cpt-i)*2); k++) { %>e<% } %></p>
 
 
   <p><% for (int j= 1; j<= i; j++) { %>*<% } %></p><br>         
