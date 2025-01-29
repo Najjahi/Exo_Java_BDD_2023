@@ -40,13 +40,14 @@
     </form>
     <br>
     
-        int count = 0;
+        <% 
+            int count = 0;
                     
             <% for (int i = 0; i < chaine.length(); i++) { %>
-                if (chaine.charAt(i) == 'e') {  
-                    count++;
-              <%   } %>
-           <%  } %>
+                char count = chaine.charAt(i)
+                cout++;
+                } %>
+            } %>
             <%= "<p>Le nombre de lettres 'e' dans la chaîne est : " + count + "</p>" %>
         <%  } %>
     %>
