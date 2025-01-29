@@ -61,7 +61,7 @@
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>*****</br>****</br>***</br>**</br>*</p>
-<%int cpt = Integer.parseInt(valeur); %>
+<%int cpt = 0; %>
 <p>
     <% for (int i = cpt; i >= 1; i--) { %>    
         <% for (int j = 1; j <= i; j++) { %> 
@@ -91,6 +91,7 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;***</br>&nbsp;****</br>*****</p>
 <p>
+ <% int cpt = (valeur != null && !valeur.isEmpty()) ? Integer.parseInt(valeur) : 5; %>
     <% for (int i = 1; i <= cpt; i++) { %>
             
             <% for (int j = 1; j <= cpt - i; j++) { %>
