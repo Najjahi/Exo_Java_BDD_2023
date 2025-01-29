@@ -123,14 +123,15 @@ xueivulp ares revih'l</p>
         for(int i = 0; i < chaine.length(); i++){
             char chr = chaine.charAt(i);
             for(int j = 0; j < voyelles.length(); j++){
-                char cv = voyelles.charAt(j);
-                if(c == cv){
+                char voy = voyelles.charAt(j);
+                if(chr == voy){
                     voyellesNbre +=1;
                 }
             }
         }
     %>
 <% } %>
+<p>affichage de La phrase en verlant est :  <%= chr %> </p> 
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
