@@ -81,14 +81,15 @@ pluvieux</p>
         for(int i = 0; i < chaine.length(); i++){
             char chr = chaine.charAt(i);
             if(chr == ' '){
-                 output.append("<br>"); // Ajout de la balise <br> pour les espaces
+                 output.append("<br>"); 
         } else {
-            output.append(chr); // Sinon, ajout du caractère à la sortie
+            output.append(chr); 
         }
     }
+%>
     <p>affichage verticale de la chaîne est :</p>
     <p><%= output.toString() %></p>
-%>
+
 
 
 <h2>Exercice 4 : Afficher une lettre sur deux</h2>
@@ -103,8 +104,9 @@ Lhvrsr lvex</p>
             output.append(chr); // Ajouter le caractère à la sortie
         }
     }
-    <p><%= output.toString() %></p> // Affiche le résultat de la chaîne avec une lettre sur deux
 %>
+    <p><%= output.toString() %></p> // Affiche le résultat de la chaîne avec une lettre sur deux
+
 <p>Affichage d'une lettre sur deux de la chaîne est :</p>
 <p><%= output.toString() %></p> <!-- Affiche la chaîne filtrée -->
 
