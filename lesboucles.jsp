@@ -70,18 +70,16 @@
 <% for (int i = 1; i <= cpt; i++) { %>
       
 
-  <% for (int k = 1; k <= cpt-i; k++) { %>
+  <% for (int k = 1; k <= ((cpt-i)*2); k++) { %>
     &nbsp; 
     <% } %>
 
 
   <% for (int j= 1; j<= i; j++) { %>
     *
-<% } %> 
-
-            
+<% } %>          
               
-      <br>
+   <br>
      <% } %> 
     </p>
 
@@ -94,6 +92,23 @@
 </p>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;***</br>&nbsp;****</br>*****</p>
+
+<p>
+  <% for (int i = 1; i <= cpt; i++) { %>
+        
+  
+    <% for (int k = 1; k <= cpt-i; k++) { %>
+      &nbsp; 
+      <% } %>
+  
+  
+    <% for (int j= 1; j<= i; j++) { %>
+      *
+  <% } %>          
+                
+     <br>
+       <% } %> 
+      </p>
 
 <h2>Exercice 6 : Le demi losange</h2>
 <p>Ecrire le code afin de produire un losange</p>
