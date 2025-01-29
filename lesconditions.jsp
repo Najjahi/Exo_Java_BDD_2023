@@ -31,17 +31,6 @@
 <h2>Exercice 1 : Comparaison 1</h2>
 <p>Ecrire un programme qui demande à l'utilisateur de saisir 3 valeurs (des chiffres),</br>
 A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
-Exemple :</br>
-
-    
-    <h2>Résultat de l'exercice : Comparaison de C entre A et B</h2>
-    <%-- Vérification si C est compris entre A et B --%>
-    <% if ((intValeurC > intValeurA && intValeurC < intValeurB) || (intValeurC > intValeurB && intValeurC < intValeurA)) { %>
-        <p>Oui, C (valeur <%= intValeurC %>) est compris entre A (valeur <%= intValeurA %>) et B (valeur <%= intValeurB %>).</p>
-    <% } else { %>
-        <p>Non, C (valeur <%= intValeurC %>) n'est pas compris entre A (valeur <%= intValeurA %>) et B (valeur <%= intValeurB %>).</p>
-    <% } %>
-<% } %>
 
 
 <h2>Exercice 2 : Pair ou Impair ?</h2>
