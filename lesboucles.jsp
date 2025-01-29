@@ -94,7 +94,7 @@
  
     <% for (int i = 0; i <= cpt; i++) { %>
             
-            <% for (int j = i+1; j <= cpt - i; j++) { %>
+            <% for (int j = i+1; j <= cpt; j++) { %>
                  <%= " " %>  
             }
             
