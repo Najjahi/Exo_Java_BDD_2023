@@ -62,7 +62,7 @@ r</p>
               StringBuilder output = new StringBuilder();                  
              for (int i = 0; i < chaine.length(); i++) {
                 char chr = chaine.charAt(i)
-                result.append(chr).append("<br>");;
+                result.append(chr).append("<br>");
                
          } 
     %>
