@@ -144,7 +144,7 @@
 <p>5 x 4 = 20</p>
 <p>5 x 5 = 25</p>
 
-<% } %>
+<h3><% } %></h3>
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
