@@ -59,11 +59,11 @@ u</br>
 r</p>
 
 <% 
-                                
+              StringBuilder output = new StringBuilder();                  
              for (int i = 0; i < chaine.length(); i++) {
                 char chr = chaine.charAt(i)
+                result.append(chr).append("<br>");;
                
-                chr +="<br>"
          } 
     %>
 <p>affichage verticale de la chaîne est :  <%= chr %></p>
