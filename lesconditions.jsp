@@ -5,7 +5,7 @@
 </head>
 <body bgcolor=white>
 <h1>Exercices sur les conditions</h1>
-<form action="#" method="post">
+<form action="111" method="post">
     <p>Saisir la valeur 1 : <input type="text" id="inputValeur" name="valeur1">
     <p>Saisir la valeur 2 : <input type="text" id="inputValeur" name="valeur2">
     <p><input type="submit" value="Afficher">
@@ -33,7 +33,7 @@
 A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
 
 Exemple :</br>
-<form action="#" method="post">
+<form action="22" method="post">
     <p>Saisir la valeur A : <input type="text" id="inputValeurA" name="valeurA"></p>
     <p>Saisir la valeur B : <input type="text" id="inputValeurB" name="valeurB"></p>
     <p>Saisir la valeur C : <input type="text" id="inputValeurC" name="valeurC"></p>
