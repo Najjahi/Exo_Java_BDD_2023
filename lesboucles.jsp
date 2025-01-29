@@ -84,13 +84,7 @@
 <h2>Exercice 7 : La table de multiplication</h2>
 <p>Ecrire le code afin de créser une table de multiplication</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
-<p>
-<% for (int i = 1; i <= cpt; i++) { %>
-       <% System.out.printf("%d x %d = %d\n", cpt, i, cpt * i) %>
-         <% } %>
-  <br>
-<% } %>
-</p>
+
 <p>5 x 1 = 5</p>
 <p>5 x 2 = 10</p>
 <p>5 x 3 = 15</p>
