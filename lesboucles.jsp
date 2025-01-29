@@ -41,7 +41,7 @@
 <% if (valeur1 != null && !valeur1.isEmpty()) { %>
 
 <%-- Boucle for pour afficher une ligne d'étoiles --%>
-   <% int cpt = Integer.parseInt(valeur1); %>
+   <% int cpt1 = Integer.parseInt(valeur1); %>
 <p>
     <% 
         for (int i = 1; i <= cpt1; i++) { 
