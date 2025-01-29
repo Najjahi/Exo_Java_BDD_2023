@@ -54,8 +54,6 @@
             <%= "*" %> 
         <% } %>
     </p>
-<% } %>
-
 
 <h2>Exercice 4 : Triangle rectangle 2</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la droite</p>
