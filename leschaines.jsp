@@ -39,7 +39,7 @@
         <% 
             
                 for (int j = 0; j < chaine.length(); j++) { %>
-                char count = chaine.charAt(i)
+                char count = chaine.charAt(i);
                 if(count == 'e'){
                     count++;
                 } 
