@@ -70,12 +70,9 @@
 <% for (int i = 1; i <= cpt; i++) { %>
       
 
-  <p><% for (int k = 1; k <= ((cpt-i)*2); k++) { %>e<% } %></p>
-
-
-  <p><% for (int j= 1; j<= i; j++) { %>*<% } %></p><br>         
-
-     <% } %> 
+  <p><% for (int k = 1; k <= ((cpt-i)*2); k++) { %>e<% } %>
+  <% for (int j= 1; j<= i; j++) { %>*<% } %></p><br>         
+<% } %> 
 
 
 <h2>Exercice 5 : Triangle isocele</h2>
