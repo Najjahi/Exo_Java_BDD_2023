@@ -104,9 +104,10 @@
     <% for (int j= 1; j<= i; j++) { %>
       *
   <% } %>          
-</p>               
+              
      <br>
        <% } %> 
+    </p> 
      
 
 <h2>Exercice 6 : Le demi losange</h2>
