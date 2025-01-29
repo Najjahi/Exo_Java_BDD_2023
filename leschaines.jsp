@@ -95,12 +95,21 @@ pluvieux</p>
 <p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>
 Exemple : L'hiver sera pluvieux</br>
 Lhvrsr lvex</p>
-%
-       
-        for(int i = 0; i < chaine.length(); i += 2){
+<%
+    StringBuilder output = new StringBuilder();                  
+    for (int i = 0; i < chaine.length(); i++) {
+        if (i % 2 == 0) { // Afficher une lettre sur deux
             char chr = chaine.charAt(i);
+            output.append(chr); // Ajouter le caractère à la sortie
         }
-    %>
+    }
+    out.print(output.toString()); // Affiche le résultat de la chaîne avec une lettre sur deux
+%>
+<p>Affichage d'une lettre sur deux de la chaîne est :</p>
+<p><%= output.toString() %></p> <!-- Affiche la chaîne filtrée -->
+
+<p>Affichage d'une lettre sur deux de la chaîne est :</p>
+<p><%= output.toString() %></p> <!-- Affiche la chaîne filtrée -->
 <p>affichage d une lettre sur deux de la chaîne est :  <%= chr %>"</p>
 
 <h2>Exercice 5 : La phrase en verlant</h2>
@@ -109,32 +118,35 @@ Exemple : L'hiver sera pluvieux</br>
 xueivulp ares revih'l</p>
 
  <%
-        
-        for(int i = chaine.length(); i > 0; i--){
-            char chr = chaine.charAt(i-1);
-            
-        }
-    %>
+    StringBuilder output = new StringBuilder();                  
+    for (int i = chaine.length() - 1; i >= 0; i--) { // Boucle inversée pour le verlan
+        char chr = chaine.charAt(i); // Récupérer le caractère à l'indice i
+        output.append(chr); // Ajouter ce caractère à la sortie
+    }
+    out.print(output.toString()); // Afficher le résultat de la chaîne inversée
+%>
 
-<p>affichage de La phrase en verlant est :  <%= chr %> </p> 
+<p>Affichage de la phrase en verlan est :</p>
+<p><%= output.toString() %></p> <!-- Afficher la chaîne inversée --> 
 
 <h2>Exercice 6 : Consonnes et voyelles</h2>
 <p>Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte</p>
 
 <%
-        int voyellesNbre = 0;
-        String voyelles = "aeiouyAEIOUY";
-        for(int i = 0; i < chaine.length(); i++){
-            char chr = chaine.charAt(i);
-            for(int j = 0; j < voyelles.length(); j++){
-                char voy = voyelles.charAt(j);
-                if(chr == voy){
-                    voyellesNbre +=1;
-                }
+    String voyelles = "aeiouyAEIOUY";
+    int voyellesNbre = 0; // Variable pour compter les voyelles
+    for (int i = 0; i < chaine.length(); i++) {
+        char chr = chaine.charAt(i);
+        for (int k = 0; k < voyelles.length(); k++) { // Renommer 'j' en 'k'
+            char voy = voyelles.charAt(k);
+            if (chr == voy) {
+                voyellesNbre += 1; // Incrémenter le nombre de voyelles
             }
         }
-    %>
-<% } %>
+    }
+    out.print("Nombre de voyelles : " + voyellesNbre); // Afficher le résultat
+%>
+
 <p>affichage de La phrase en verlant est :  <%= chr %> </p> 
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
