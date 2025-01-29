@@ -34,7 +34,27 @@
     
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
 <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
+<form method="post">
+        Entrez une chaîne de caractères : <input type="text" name="chaine" required /><br>
+        <input type="submit" value="Compter les 'e'" />
+    </form>
+    <br>
+    <% 
+        String chaine = request.getParameter("chaine");
 
+        <% if (chaine != null) {  %>
+            int count = 0;
+       
+            chaine = chaine.toLowerCase(); 
+            
+            <% for (int i = 0; i < chaine.length(); i++) { %>
+                if (chaine.charAt(i) == 'e') {  
+                    count++;
+                }
+            }
+            <%= "<p>Le nombre de lettres 'e' dans la chaîne est : " + count + "</p>" %>
+         }
+    %>
 <h2>Exercice 2 : Affichage verticale</h2>
 <p>Ecrire le programme pour afficher le texte en vertical</br>
 Exemple : Bonjour</br>
