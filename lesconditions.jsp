@@ -49,7 +49,7 @@ Oui C est compris entre A et B</p>
                      <p>Oui, C (<%= intValeur3 %>) est compris entre A (<%= intValeur1 %>) et B (<%= intValeur2 %>).</p>
                   
                  <% } else { %>
-                      <p>Oui, C (<%= intValeur3 %>) n 'est pas compris entre A (<%= intValeur1 %>) et B (<%= intValeur2 %>).</p>
+                      <p>Non, C (<%= intValeur3 %>) n 'est pas compris entre A (<%= intValeur1 %>) et B (<%= intValeur2 %>).</p>
                 <% } %>
            
          
@@ -59,12 +59,12 @@ Oui C est compris entre A et B</p>
 <p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
 
 <p>
-<%  String inputvaleur3 = request.getParameter("inputvaleur3"); %>
+
         <% if (intValeur1 % 2 == 0) { %>
-            <p>Valeur 1 est paire.</p>
+            <p>Valeur 1 (<%= intValeur1 %>) est paire.</p>
         
         <% } else { %>
-            <p>Valeur 1 est impaire.</p>
+            <p>Valeur 1 (<%= intValeur1 %>) est impaire.</p>
         <% } %>
        
        <% } %>
