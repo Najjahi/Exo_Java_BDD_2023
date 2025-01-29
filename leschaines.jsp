@@ -139,11 +139,10 @@ xueivulp ares revih'l</p>
             }
         }
     }
-    out.print("Nombre de voyelles : " + voyellesNbre); 
+    
 %>
 
-<p>affichage de La phrase en verlant est :  </p> 
-<p><%= output.toString() %></p> 
+<p>Nombre de voyelles : <%= voyellesNbre %></p>
 <p><a href="index.html">Retour au sommaire</a></p>
 <%}%>
 </body>
