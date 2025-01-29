@@ -36,23 +36,19 @@
 </form>
 
 <%-- Récupération de la valeur saisie par l'utilisateur --%>
-<% String valeur = request.getParameter("valeur"); %>
+<% String valeur1 = request.getParameter("valeur1"); %>
     
-<% if (valeur != null && !valeur.isEmpty()) { %>
+<% if (valeur1 != null && !valeur1.isEmpty()) { %>
 
 <%-- Boucle for pour afficher une ligne d'étoiles --%>
-   <% int cpt = Integer.parseInt(valeur); %>
+   <% int cpt = Integer.parseInt(valeur1); %>
 <p>
     <% 
         for (int i = 1; i <= cpt; i++) { 
             for (int j = 1; j <= cpt; j++) { 
     %>
                 <%= "*" %> 
-    <% 
-            } 
-            out.print("<br>"); // Pour aller à la ligne après chaque ligne de '*' 
-        } 
-    %>
+    <%  }  out.print("<br>");   }   %>// Pour aller à la ligne après chaque ligne de '*'  
 </p>
 
 <h2>Exercice 2 : Triangle rectangle gauche</h2>
