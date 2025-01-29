@@ -35,7 +35,7 @@ Ecrire un programme afin de faire la somme de toutes les valeurs saisie par l'ut
 <% 
         int valeur3 = Integer.parseInt(tableauDeChiffres[0]);
         for(int i = 1; i < tableauDeChiffres.length; i++){
-            exo3 += Integer.parseInt(tableauDeChiffres[i]);
+            valeur3 += Integer.parseInt(tableauDeChiffres[i]);
         }
     %>
 <h2>Exercice 4 : La valeur maximum</h2>
@@ -72,7 +72,7 @@ Ecrire un programme afin de faire la somme de toutes les valeurs saisie par l'ut
 
             abs = Integer.parseInt(tableauDeChiffres[i])*Integer.parseInt(tableauDeChiffres[i]);
 
-            if(abs < (exo6 * exo6)){
+            if(abs < (valeur6 * valeur6)){
                 valeur6 = Integer.parseInt(tableauDeChiffres[i]);
             }
         }
@@ -88,7 +88,7 @@ Ecrire un programme afin de faire la somme de toutes les valeurs saisie par l'ut
             abs = Integer.parseInt(tableauDeChiffres[i]) * Integer.parseInt(tableauDeChiffres[i]);
 
             if (abs < (valeur7 * valeur7)) {
-                exo7 = Integer.parseInt(tableauDeChiffres[i]);
+                valeur7 = Integer.parseInt(tableauDeChiffres[i]);
             } else if (abs == (valeur7 * valeur7)) {
                 if (valeur7 < 0) {
                     valeur7 = Integer.parseInt(tableauDeChiffres[i]);
