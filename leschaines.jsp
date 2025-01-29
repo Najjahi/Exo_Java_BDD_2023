@@ -88,7 +88,7 @@ pluvieux</p>
     }
     out.print(output.toString()); // Affiche le résultat
 %>
-<p>affichage verticale de la chaîne est :  <%= chr %></p>
+
 
 <h2>Exercice 4 : Afficher une lettre sur deux</h2>
 <p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>
