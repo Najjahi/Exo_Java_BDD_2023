@@ -81,10 +81,12 @@
 <p>Ecrire le code afin de créser une table de multiplication</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>
-<% for (int i = 0; i <= cpt; i++) { %>
+<% for (int i = 1; i <= cpt; i++) { %>
        <%= cpt %> x <%= i %> = <%= cpt * i %>
 
          <% } %>
+<br>
+<% } %>
 
 </p>
 
