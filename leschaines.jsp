@@ -40,12 +40,9 @@
                 for (int i = 0; i < chaine.length(); i++) { %>
                 char count = chaine.charAt(i)
                 if(count == 'e'){
-                cout++;
-            
+                    cout++;
                 } 
-            } 
-            
-         } 
+          } 
     %>
 <p>Le nombre de lettres 'e' dans la chaîne est :  <%= count %> </p>
 <h2>Exercice 2 : Affichage verticale</h2>
@@ -58,6 +55,7 @@ j</br>
 o</br>
 u</br>
 r</p>
+
 <% 
             int count = 0;
                     
