@@ -56,7 +56,7 @@ Oui C est compris entre A et B</p>
            
                <% int intA = Integer.parseInt(A); %>
                <% int intB = Integer.parseInt(B); %>
-               <% int intC = Integer.parseInt(c); %>
+               <% int intC = Integer.parseInt(C); %>
              
                <% if ((C > A && C < B) || (C > B && C < A)) { %>
                      <p>Oui, C (<%= C %>) est compris entre A (<%= A %>) et B (<%= B %>).</p>
@@ -70,7 +70,11 @@ Oui C est compris entre A et B</p>
 
 <h2>Exercice 2 : Pair ou Impair ?</h2>
 <p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
-
+<form action="#" method="post">
+    <p>Saisir la valeur : <input type="text" id="exo2Input" name="exo2Input">
+    <p><input type="submit" value="Afficher">
+</form>
+<p>
 <%-- Condition if pour comparer les valeurs --%>
         <% if (intValeur1 % 2 == 0) { %>
             <p>Valeur 1 est paire.</p>
