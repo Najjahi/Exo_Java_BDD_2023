@@ -65,13 +65,13 @@ r</p>
 <% 
             int count = 0;
                     
-            <% for (int i = 0; i < chaine.length(); i++) { %>
+             for (int i = 0; i < chaine.length(); i++) {
                 char count = chaine.charAt(i)
                 cout++;
-                } %>
-            } %>
-            <%= "<p>Le nombre de lettres 'e' dans la chaîne est : " + count + "</p>" %>
-        <%  } %>
+                } 
+            } 
+            <%= "<p>affichage verticale de la chaîne est : " + count + "</p>" %>
+         } 
     %>
 <h2>Exercice 3 : Retour à la ligne</h2>
 <p>La présence d'un espace provoque un retour à la ligne </br>
@@ -80,6 +80,17 @@ L'hiver</br>
 sera</br>
 pluvieux</p>
 
+<% 
+        
+        for(int i = 0; i < chaine.length(); i++){
+            char ch = chaine.charAt(i);
+            if(ch == ' '){
+                ch += "<br>";
+            }
+
+            ch++;
+        }
+    %>
 <h2>Exercice 4 : Afficher une lettre sur deux</h2>
 <p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>
 Exemple : L'hiver sera pluvieux</br>
