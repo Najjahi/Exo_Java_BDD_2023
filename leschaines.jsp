@@ -99,14 +99,13 @@ Lhvrsr lvex</p>
 <%
                    
     for (int i = 0; i < chaine.length(); i++) {
-        if (i % 2 == 0) { // Afficher une lettre sur deux
+        if (i % 2 == 0) { 
             char chr = chaine.charAt(i);
-            output.append(chr); // Ajouter le caractère à la sortie
+            output.append(chr); 
         }
     }
 %>
-    <p><%= output.toString() %></p> // Affiche le résultat de la chaîne avec une lettre sur deux
-
+    <p><%= output.toString() %></p> 
 <p>Affichage d'une lettre sur deux de la chaîne est :</p>
 <p><%= output.toString() %></p> <!-- Affiche la chaîne filtrée -->
 
@@ -117,10 +116,9 @@ xueivulp ares revih'l</p>
 
  <%
                    
-    for (int i = chaine.length() - 1; i >= 0; i--) { // Boucle inversée pour le verlan
-        char chr = chaine.charAt(i); // Récupérer le caractère à l'indice i
-        output.append(chr); // Ajouter ce caractère à la sortie
-    }
+    for (int i = chaine.length() - 1; i >= 0; i--) { 
+        char chr = chaine.charAt(i); 
+        output.append(chr); 
     %>
 
 <p>Affichage de la phrase en verlan est :</p>
@@ -131,17 +129,17 @@ xueivulp ares revih'l</p>
 
 <%
     String voyelles = "aeiouyAEIOUY";
-    int voyellesNbre = 0; // Variable pour compter les voyelles
+    int voyellesNbre = 0; 
     for (int i = 0; i < chaine.length(); i++) {
         char chr = chaine.charAt(i);
-        for (int k = 0; k < voyelles.length(); k++) { // Renommer 'j' en 'k'
+        for (int k = 0; k < voyelles.length(); k++) { 
             char voy = voyelles.charAt(k);
             if (chr == voy) {
-                voyellesNbre += 1; // Incrémenter le nombre de voyelles
+                voyellesNbre += 1; 
             }
         }
     }
-    out.print("Nombre de voyelles : " + voyellesNbre); // Afficher le résultat
+    out.print("Nombre de voyelles : " + voyellesNbre); 
 %>
 
 <p>affichage de La phrase en verlant est :  <%= chr %> </p> 
