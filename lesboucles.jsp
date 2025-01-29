@@ -28,6 +28,12 @@
 <h2>Exercice 1 : Le carré d'étoiles</h2>
 <p>Ecrire le code afin de produire un carré d'étoile</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
+  <% for (int i = 1; i <= cpt; i++) { %>
+    <% for (int j = 1; j <= i; j++) { %>
+      <%= "*" %>
+              <% } %>
+<% } %>
+
 <p>*****</br>*****</br>*****</br>*****</br>*****</p>
 
  
