@@ -31,9 +31,8 @@
 
 <p>*****</br>*****</br>*****</br>*****</br>*****</p>
 <p>
-    <% 
-        for (int i = 1; i <= cpt; i++) {  %>
-            for (int j = 1; j <= cpt; j++) {   %>
+    <%  for (int i = 1; i <= cpt; i++) {  %>
+          <%=  for (int j = 1; j <= cpt; j++) {   %>
                 <%= "*" %> 
     <% } %>  
         <br>
