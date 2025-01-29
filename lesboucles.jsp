@@ -31,7 +31,7 @@
 <p>*****</br>*****</br>*****</br>*****</br>*****</p>
 <form action="#" method="post">
     <label for="inputValeur">Saisir le nombre d'étoiles : </label>
-    <input type="text" id="inputValeur" name="valeur">
+    <input type="text" id="inputValeur1" name="valeur">
     <input type="submit" value="Afficher">
 </form>
 
