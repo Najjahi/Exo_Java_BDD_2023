@@ -78,9 +78,9 @@ pluvieux</p>
 
 <% 
         
-        for(int i = 0; i < chaine.length(); i++){
+        for(int i = 0; i < chaine.length(); i++){%>
             char chr = chaine.charAt(i);
-            if(chr == ' '){
+            <% if(chr == ' '){%>
                  output.append("<br>"); 
         } else {
             output.append(chr); 
