@@ -9,19 +9,23 @@
     <p>Saisir la valeur 1 : <input type="text" id="inputValeur1" name="valeur1"></p>
     <p>Saisir la valeur 2 : <input type="text" id="inputValeur2" name="valeur2"></p>
     <p>Saisir la valeur 3 : <input type="text" id="inputValeur3" name="valeur3"></p>
-    
     <p><input type="submit" value="Afficher">
 </form>
 <%-- Récupération des valeurs --%>
     <% String valeur1 = request.getParameter("valeur1"); %>
     <% String valeur2 = request.getParameter("valeur2"); %>
+    <% String valeur3 = request.getParameter("valeur3"); %>
 
     <%-- Vérification de la condition entre les deux valeurs --%>
-    <% if (valeur1 != null && valeur2 != null) { %>
-        <%-- Conversion des valeurs en entiers pour la comparaison --%>
-        <% int intValeur1 = Integer.parseInt(valeur1); %>
-        <% int intValeur2 = Integer.parseInt(valeur2); %>
+    <% if (valeur1 != null && valeur2 != null && valeur3 != null) { %>
         
+    <%-- Conversion des valeurs en entiers pour la comparaison --%>
+        <% 
+            int intValeur1 = Integer.parseInt(valeur1); 
+            int intValeur2 = Integer.parseInt(valeur2); 
+            int intValeur3 = Integer.parseInt(valeur3);
+        %>
+
         <%-- Condition if pour comparer les valeurs --%>
         <% if (intValeur1 > intValeur2) { %>
             <p>Valeur 1 est supérieure à Valeur 2.</p>
@@ -40,28 +44,15 @@ A = 10</br>
 B = 20</br>
 C = 15</br>
 Oui C est compris entre A et B</p>
- 
-
-    <br>
-
-     <%  String inputA = request.getParameter("inputValeur1"); %> 
-     <%  String inputB = request.getParameter("inputValeur2"); %>
-     <%  String inputC = request.getParameter("inputValeur3"); %>
-
-       <% if (inputA != null && inputB != null && inputC != null) { %>
-           
-               <% int A = Integer.parseInt(inputA); %>
-               <% int B = Integer.parseInt(inputB); %>
-               <% int C = Integer.parseInt(inputC); %>
-             
-               <% if ((C > A && C < B) || (C > B && C < A)) { %>
-                     <p>Oui, C (<%= C %>) est compris entre A (<%= A %>) et B (<%= B %>).</p>
+                
+               <% if ((intValeurC > intValeurA && intValeurC < intValeurB) || (intValeurC > intValeurB && intValeurC < intValeurA)) { %>
+                     <p>Oui, C (<%= intValeurC %>) est compris entre A (<%= intValeurA %>) et B (<%= intValeurB %>).</p>
                   
                  <% } else { %>
-                      "<p>Oui, C (<%= C %>) n'est pas compris entre A (<%= A %>) et B (<%= B %>).</p>
+                      "<p>Oui, C (<%= intValeurC %>) n'est pas compris entre A (<%= intValeurA %>) et B (<%= intValeurB %>).</p>
                 <% } %>
            
-         <% } %>
+         
 
 
 <h2>Exercice 2 : Pair ou Impair ?</h2>
