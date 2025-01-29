@@ -48,8 +48,9 @@
             for (int j = 1; j <= cpt; j++) { 
     %>
                 <%= "*" %> 
-    <%  }  out.print("<br>");   }   %>// Pour aller à la ligne après chaque ligne de '*'  
+    <%  }  out.print("<br>");  }  %>                
 </p>
+<% } %>
 
 <h2>Exercice 2 : Triangle rectangle gauche</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
