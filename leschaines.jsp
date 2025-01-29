@@ -38,13 +38,13 @@
         <% 
             
                 for (int i = 0; i < chaine.length(); i++) { %>
-                char chr = chaine.charAt(i)
-                if(chr == 'e'){
-                    chr++;
+                char count = chaine.charAt(i)
+                if(count == 'e'){
+                    count++;
                 } 
           } 
     %>
-<p>Le nombre de lettres 'e' dans la chaîne est :  <%= chr %> </p>
+<p>Le nombre de lettres 'e' dans la chaîne est :  <%= count %> </p>
 
 <h2>Exercice 2 : Affichage verticale</h2>
 <p>Ecrire le programme pour afficher le texte en vertical</br>
