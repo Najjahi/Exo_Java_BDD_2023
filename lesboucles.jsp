@@ -61,7 +61,7 @@
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>*****</br>****</br>***</br>**</br>*</p>
-<%int cpt = 0; %>
+
 <p>
     <% for (int i = cpt; i >= 1; i--) { %>    
         <% for (int j = 1; j <= i; j++) { %> 
