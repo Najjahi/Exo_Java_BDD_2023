@@ -37,7 +37,7 @@
 <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
 
         <% 
-            
+                StringBuilder output = new StringBuilder();  
                 for (int j = 0; j < chaine.length(); j++) { %>
                 char count = chaine.charAt(i);
                 if(count == 'e'){
@@ -59,7 +59,7 @@ u</br>
 r</p>
 
 <% 
-              StringBuilder output = new StringBuilder();                  
+             StringBuilder output = new StringBuilder();                  
              for (int i = 0; i < chaine.length(); i++) {
                 char chr = chaine.charAt(i);
                 result.append(chr).append("<br>");
