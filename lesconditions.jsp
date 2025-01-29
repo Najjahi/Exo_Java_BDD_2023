@@ -72,8 +72,28 @@ Exemple :</br>
 
 <h2>Exercice 2 : Pair ou Impair ?</h2>
 <p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
+
+<form action="#" method="post">
+    <p>Saisir la valeur 1 : <input type="text" id="inputValeurP1" name="valeurP1"></p>
+    <p>Saisir la valeur 2 : <input type="text" id="inputValeurP2" name="valeurP2"></p>
+    <p><input type="submit" value="Vérifier"></p>
+</form>
+
+<%-- Récupération des valeurs A, B et C --%>
+<% 
+    String valeurP1 = request.getParameter("valeurP1");
+    String valeurP2 = request.getParameter("valeurP2");
+%>
+
+<% if (valeurP1 != null && valeurP2 != null) { %>
+    <%-- Conversion des valeurs en entiers --%>
+    <% 
+        int intValeurP1 = Integer.parseInt(valeurP1); 
+        int intValeurP2 = Integer.parseInt(valeurP2); 
+    %>
+
 <%-- Vérification de la parité pour la valeur 1 --%>
-        <% if (intValeur1 % 2 == 0) { %>
+        <% if (intValeurP1 % 2 == 0) { %>
             <p>intValeur1 : Le nombre est pair.</p>
 
         <% } else { %>
@@ -81,14 +101,14 @@ Exemple :</br>
         <% } %>
 
         <%-- Vérification de la parité pour la valeur 2 --%>
-        <% if (intValeur2 % 2 == 0) { %>
+        <% if (intValeurP2 % 2 == 0) { %>
             <p>intValeur2 : Le nombre est pair.</p>
 
         <% } else { %>
             <p>intValeur2 : Le nombre est impair.</p>
         <% } %>
+     <% } %>
 
-        
 <h2>Exercice 3</h2>
 
 <p><a href="index.html">Retour au sommaire</a></p>
