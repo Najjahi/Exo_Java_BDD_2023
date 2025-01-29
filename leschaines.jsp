@@ -38,13 +38,14 @@
         <% 
             
                 for (int i = 0; i < chaine.length(); i++) { %>
-                char count = chaine.charAt(i)
-                if(count == 'e'){
-                    cout++;
+                char chr = chaine.charAt(i)
+                if(chr == 'e'){
+                    chr++;
                 } 
           } 
     %>
-<p>Le nombre de lettres 'e' dans la chaîne est :  <%= count %> </p>
+<p>Le nombre de lettres 'e' dans la chaîne est :  <%= chr %> </p>
+
 <h2>Exercice 2 : Affichage verticale</h2>
 <p>Ecrire le programme pour afficher le texte en vertical</br>
 Exemple : Bonjour</br>
@@ -57,17 +58,15 @@ u</br>
 r</p>
 
 <% 
-            int count = 0;
-                    
+                                
              for (int i = 0; i < chaine.length(); i++) {
-                char count = chaine.charAt(i)
-                cout++;
-                } 
-            } 
-            
+                char chr = chaine.charAt(i)
+                chr++;
+                chr +="<br>"
          } 
     %>
-<%= "<p>affichage verticale de la chaîne est : " + count + "</p>" %>
+<p>affichage verticale de la chaîne est :  <%= chr %></p>
+
 <h2>Exercice 3 : Retour à la ligne</h2>
 <p>La présence d'un espace provoque un retour à la ligne </br>
 Exemple : L'hiver sera pluvieux</br>
@@ -78,15 +77,16 @@ pluvieux</p>
 <% 
         
         for(int i = 0; i < chaine.length(); i++){
-            char ch = chaine.charAt(i);
-            if(cha == ' '){
-                cha += "<br>";
+            char chr = chaine.charAt(i);
+            if(chr == ' '){
+                chr += "<br>";
             }
 
-            cha ++;
+            chr ++;
         }
     %>
-<%= "<p>affichage verticale de la chaîne est : " + cha + "</p>" %>
+<p>affichage verticale de la chaîne est :  <%= chr %></p>
+
 <h2>Exercice 4 : Afficher une lettre sur deux</h2>
 <p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>
 Exemple : L'hiver sera pluvieux</br>
@@ -94,18 +94,42 @@ Lhvrsr lvex</p>
 %
        
         for(int i = 0; i < chaine.length(); i += 2){
-            char ch = chaine.charAt(i);
-            
+            char chr = chaine.charAt(i);
         }
     %>
+<p>affichage d une lettre sur deux de la chaîne est :  <%= chr %>"</p>
+
 <h2>Exercice 5 : La phrase en verlant</h2>
 <p>Ecrire le programme afin d'afficher le texte en verlant </br>
 Exemple : L'hiver sera pluvieux</br>
 xueivulp ares revih'l</p>
 
+ <%
+        
+        for(int i = chaine.length(); i > 0; i--){
+            char chr = chaine.charAt(i-1);
+            
+        }
+    %>
+
+<p>affichage de La phrase en verlant est :  <%= chr %> </p> 
+
 <h2>Exercice 6 : Consonnes et voyelles</h2>
 <p>Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte</p>
 
+<%
+        int voyellesNbre = 0;
+        String voyelles = "aeiouyAEIOUY";
+        for(int i = 0; i < chaine.length(); i++){
+            char chr = chaine.charAt(i);
+            for(int j = 0; j < voyelles.length(); j++){
+                char cv = voyelles.charAt(j);
+                if(c == cv){
+                    voyellesNbre +=1;
+                }
+            }
+        }
+    %>
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
