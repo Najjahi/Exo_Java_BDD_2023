@@ -28,6 +28,43 @@
         <% } else { %>
             <p>Valeur 1 est égale à Valeur 2.</p>
         <% } %>
+<h2>Exercice 1 : Comparaison 1</h2>
+<p>Ecrire un programme qui demande à l'utilisateur de saisir 3 valeurs (des chiffres),</br>
+A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
+Exemple :</br>
+
+    
+    <h2>Résultat de l'exercice : Comparaison de C entre A et B</h2>
+    <%-- Vérification si C est compris entre A et B --%>
+    <% if ((intValeurC > intValeurA && intValeurC < intValeurB) || (intValeurC > intValeurB && intValeurC < intValeurA)) { %>
+        <p>Oui, C (valeur <%= intValeurC %>) est compris entre A (valeur <%= intValeurA %>) et B (valeur <%= intValeurB %>).</p>
+    <% } else { %>
+        <p>Non, C (valeur <%= intValeurC %>) n'est pas compris entre A (valeur <%= intValeurA %>) et B (valeur <%= intValeurB %>).</p>
+    <% } %>
+<% } %>
+
+
+<h2>Exercice 2 : Pair ou Impair ?</h2>
+<p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
+<%-- Vérification de la parité pour la valeur 1 --%>
+        <% if (intValeur1 % 2 == 0) { %>
+            <p>intValeur1 : Le nombre est pair.</p>
+
+        <% } else { %>
+            <p>intValeur1 : Le nombre est impair.</p>
+        <% } %>
+
+        <%-- Vérification de la parité pour la valeur 2 --%>
+        <% if (intValeur2 % 2 == 0) { %>
+            <p>intValeur2 : Le nombre est pair.</p>
+
+        <% } else { %>
+            <p>intValeur2 : Le nombre est impair.</p>
+        <% } %>
+<h2>Exercice 3</h2>
+
+<% } %>
+
    
     
 
