@@ -130,8 +130,8 @@ xueivulp ares revih'l</p>
 <%
     String voyelles = "aeiouyAEIOUY";
     int voyellesNbre = 0; 
-    for (int i = 0; i < chaine.length(); i++) {
-        char chr = chaine.charAt(i);
+    for (int l = 0; l < chaine.length(); l++) {
+        char chr = chaine.charAt(l);
         for (int k = 0; k < voyelles.length(); k++) { 
             char voy = voyelles.charAt(k);
             if (chr == voy) {
