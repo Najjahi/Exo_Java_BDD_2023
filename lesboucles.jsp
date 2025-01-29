@@ -70,7 +70,7 @@
 <% for (int i = 1; i <= cpt; i++) { %>
       
   <% for (int j= 1; j<= i; j++) { %>
-    *
+    s
 <% } %> 
 
   <% for (int k = 1; k < cpt-i; k++) { %>
