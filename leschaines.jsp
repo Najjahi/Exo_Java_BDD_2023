@@ -11,7 +11,7 @@
 </form>
 <%-- Récupération des valeurs --%>
     
-    
+    String chaine = request.getParameter("chaine");
     <% if (chaine != null) { %>
 
     
