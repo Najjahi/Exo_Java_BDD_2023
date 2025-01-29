@@ -45,11 +45,11 @@ B = 20</br>
 C = 15</br>
 Oui C est compris entre A et B</p>
                 
-               <% if ((intValeurC > intValeurA && intValeurC < intValeurB) || (intValeurC > intValeurB && intValeurC < intValeurA)) { %>
-                     <p>Oui, C (<%= intValeurC %>) est compris entre A (<%= intValeurA %>) et B (<%= intValeurB %>).</p>
+               <% if ((intValeur3 > intValeur1 && intValeur3 < intValeur2) || (intValeur3 > intValeur2 && intValeur3 < intValeur1)) { %>
+                     <p>Oui, C (<%= intValeur3 %>) est compris entre A (<%= intValeur1 %>) et B (<%= intValeur2 %>).</p>
                   
                  <% } else { %>
-                      "<p>Oui, C (<%= intValeurC %>) n'est pas compris entre A (<%= intValeurA %>) et B (<%= intValeurB %>).</p>
+                      <p>Oui, C (<%= intValeur3 %>) n 'est pas compris entre A (<%= intValeur1 %>) et B (<%= intValeur2 %>).</p>
                 <% } %>
            
          
