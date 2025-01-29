@@ -30,7 +30,7 @@
             <p>Valeur 1 est égale à Valeur 2.</p>
         <% } %>
    
-   
+        <% } %>
 
     
 <h2>Exercice 1 : Comparaison 1</h2>
