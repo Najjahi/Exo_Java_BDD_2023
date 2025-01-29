@@ -59,7 +59,7 @@ u</br>
 r</p>
 
 <% 
-             StringBuilder output = new StringBuilder();                  
+                           
              for (int i = 0; i < chaine.length(); i++) {
                 char chr = chaine.charAt(i);
                 result.append(chr).append("<br>");
@@ -77,7 +77,7 @@ sera</br>
 pluvieux</p>
 
 <% 
-        StringBuilder output = new StringBuilder();
+        
         for(int i = 0; i < chaine.length(); i++){
             char chr = chaine.charAt(i);
             if(chr == ' '){
@@ -97,7 +97,7 @@ pluvieux</p>
 Exemple : L'hiver sera pluvieux</br>
 Lhvrsr lvex</p>
 <%
-    StringBuilder output = new StringBuilder();                  
+                   
     for (int i = 0; i < chaine.length(); i++) {
         if (i % 2 == 0) { // Afficher une lettre sur deux
             char chr = chaine.charAt(i);
@@ -120,7 +120,7 @@ Exemple : L'hiver sera pluvieux</br>
 xueivulp ares revih'l</p>
 
  <%
-    StringBuilder output = new StringBuilder();                  
+                   
     for (int i = chaine.length() - 1; i >= 0; i--) { // Boucle inversée pour le verlan
         char chr = chaine.charAt(i); // Récupérer le caractère à l'indice i
         output.append(chr); // Ajouter ce caractère à la sortie
