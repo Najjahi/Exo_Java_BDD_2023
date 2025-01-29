@@ -12,6 +12,7 @@
 <%-- Récupération des valeurs --%>
     
     String chaine = request.getParameter("chaine");
+    int count = 0;
     <% if (chaine != null) { %>
 
     
