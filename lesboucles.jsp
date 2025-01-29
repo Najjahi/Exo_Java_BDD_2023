@@ -89,6 +89,21 @@
 <h2>Exercice 6 : Le demi losange</h2>
 <p>Ecrire le code afin de produire un losange</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
+<p>
+     <% for (int i = 0; i < cpt; i++) { %>
+            
+           <% for (int j = i+1; j < cpt ; j++) {  %> 
+                 <%= " " %>  
+            <% } %> 
+            
+            for (int j = i; j >= i; j--) {
+                <%= "*" %> 
+             <% } %>
+ <% for (int i = 0; i < cpt; i++) { %>
+            
+           <% for (int j = 0; j < i ; j++) {  %> 
+                 <%= " " %>  
+            <% } %> 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
 
