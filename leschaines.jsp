@@ -62,7 +62,7 @@ r</p>
                                 
              for (int i = 0; i < chaine.length(); i++) {
                 char chr = chaine.charAt(i)
-                chr++;
+               
                 chr +="<br>"
          } 
     %>
