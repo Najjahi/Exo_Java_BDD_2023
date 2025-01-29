@@ -83,8 +83,7 @@ pluvieux</p>
                 chr += "<br>";
             }
 
-            chr ++;
-        }
+       }
     %>
 <p>affichage verticale de la chaîne est :  <%= chr %></p>
 
