@@ -49,9 +49,10 @@
             
                 } 
             } %>
-            <%= "<p>Le nombre de lettres 'e' dans la chaîne est : " + count + "</p>" %>
+            
         <%  } %>
     %>
+<%= "<p>Le nombre de lettres 'e' dans la chaîne est : " + count + "</p>" %>
 <h2>Exercice 2 : Affichage verticale</h2>
 <p>Ecrire le programme pour afficher le texte en vertical</br>
 Exemple : Bonjour</br>
@@ -70,9 +71,10 @@ r</p>
                 cout++;
                 } 
             } 
-            <%= "<p>affichage verticale de la chaîne est : " + count + "</p>" %>
+            
          } 
     %>
+<%= "<p>affichage verticale de la chaîne est : " + count + "</p>" %>
 <h2>Exercice 3 : Retour à la ligne</h2>
 <p>La présence d'un espace provoque un retour à la ligne </br>
 Exemple : L'hiver sera pluvieux</br>
@@ -84,18 +86,25 @@ pluvieux</p>
         
         for(int i = 0; i < chaine.length(); i++){
             char ch = chaine.charAt(i);
-            if(ch == ' '){
-                ch += "<br>";
+            if(cha == ' '){
+                cha += "<br>";
             }
 
-            ch++;
+            cha ++;
         }
     %>
+<%= "<p>affichage verticale de la chaîne est : " + cha + "</p>" %>
 <h2>Exercice 4 : Afficher une lettre sur deux</h2>
 <p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>
 Exemple : L'hiver sera pluvieux</br>
 Lhvrsr lvex</p>
-
+%
+       
+        for(int i = 0; i < chaine.length(); i += 2){
+            char ch = chaine.charAt(i);
+            
+        }
+    %>
 <h2>Exercice 5 : La phrase en verlant</h2>
 <p>Ecrire le programme afin d'afficher le texte en verlant </br>
 Exemple : L'hiver sera pluvieux</br>
