@@ -94,18 +94,18 @@ Exemple :</br>
 
 <%-- Vérification de la parité pour la valeur 1 --%>
         <% if (intValeurP1 % 2 == 0) { %>
-            <p>intValeur1 : Le nombre est pair.</p>
+            <p>Valeur1 : Le nombre est pair.</p>
 
         <% } else { %>
-            <p>intValeur1 : Le nombre est impair.</p>
+            <p>Valeur1 : Le nombre est impair.</p>
         <% } %>
 
         <%-- Vérification de la parité pour la valeur 2 --%>
         <% if (intValeurP2 % 2 == 0) { %>
-            <p>intValeur2 : Le nombre est pair.</p>
+            <p>Valeur2 : Le nombre est pair.</p>
 
         <% } else { %>
-            <p>intValeur2 : Le nombre est impair.</p>
+            <p>Valeur2 : Le nombre est impair.</p>
         <% } %>
      <% } %>
 
