@@ -33,7 +33,7 @@
 A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
 
 Exemple :</br>
-<form action="#" method="post">
+<form action="##" method="post">
     <p>Saisir la valeur A : <input type="text" id="inputValeurA" name="valeurA"></p>
     <p>Saisir la valeur B : <input type="text" id="inputValeurB" name="valeurB"></p>
     <p>Saisir la valeur C : <input type="text" id="inputValeurC" name="valeurC"></p>
