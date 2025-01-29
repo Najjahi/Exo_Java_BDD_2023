@@ -48,19 +48,18 @@ Oui C est compris entre A et B</p>
 
     <br>
 
-    <%  
-        String a = request.getParameter("A");
-        String b = request.getParameter("B");
-        String c = request.getParameter("C");
+     <%  String a = request.getParameter("A"); %> 
+     <%  String b = request.getParameter("B"); %>
+     <%  String c = request.getParameter("C"); %>
 
-        if (a != null && b != null && c != null) {
+       <% if (a != null && b != null && c != null) { %>
            
-                int A = Integer.parseInt(a);
-                int B = Integer.parseInt(b);
-                int C = Integer.parseInt(c);
+               <% int A = Integer.parseInt(a); %>
+               <% int B = Integer.parseInt(b); %>
+               <% int C = Integer.parseInt(c); %>
              
-                if ((C > A && C < B) || (C > B && C < A)) { %>
-                     <p>Oui, C (<%= C %>) est compris entre A (<%= A %>) et B (<%= B %>).</p> 
+               <% if ((C > A && C < B) || (C > B && C < A)) { %>
+                     <p>Oui, C (<%= C %>) est compris entre A (<%= A %>) et B (<%= B %>).</p>
                   
                  <% } else { %>
                       <p>Oui, C (<%= C %>) n'est pas compris entre A (<%= A %>) et B (<%= B %>).</p>  
