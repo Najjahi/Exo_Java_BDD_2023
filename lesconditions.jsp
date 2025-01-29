@@ -43,7 +43,7 @@ Oui C est compris entre A et B</p>
         A : <input type="number" name="A" required /><br>
         B : <input type="number" name="B" required /><br>
         C : <input type="number" name="C" required /><br>
-        <input type="submit" value="Vérifier" />
+        <input type="submit" value="Verifier" />
     </form>
 
     <br>
