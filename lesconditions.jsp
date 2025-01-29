@@ -70,6 +70,26 @@ Exemple :</br>
 <% } %>
 
 
+<h2>Exercice 2 : Pair ou Impair ?</h2>
+<p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
+<%-- Vérification de la parité pour la valeur 1 --%>
+        <% if (intValeur1 % 2 == 0) { %>
+            <p>intValeur1 : Le nombre est pair.</p>
+
+        <% } else { %>
+            <p>intValeur1 : Le nombre est impair.</p>
+        <% } %>
+
+        <%-- Vérification de la parité pour la valeur 2 --%>
+        <% if (intValeur2 % 2 == 0) { %>
+            <p>intValeur2 : Le nombre est pair.</p>
+
+        <% } else { %>
+            <p>intValeur2 : Le nombre est impair.</p>
+        <% } %>
+
+        
+<h2>Exercice 3</h2>
 
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
