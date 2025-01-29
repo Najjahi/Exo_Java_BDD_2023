@@ -92,11 +92,11 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;***</br>&nbsp;****</br>*****</p>
 <p>
  
-    <% for (int i = 0; i <= cpt; i++) { %>
+    <% for (int i = 0 i <= cpt; i++) { %>
             
             <% for (int j = i+1; j <= cpt; j++) { %>
                  <%= " " %>  
-            }
+           <% } %> 
             
              <% for (int k= i; k>= 0; k--) { %>
                 <%= "*" %> 
