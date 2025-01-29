@@ -31,7 +31,7 @@
     <% char recherche = 'e'; 
        int position = chaine.indexOf(recherche); %>
     <p>Votre premier "e" est en : <%= position %></p>
-
+<%}%>
         
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
 <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
@@ -141,7 +141,7 @@ xueivulp ares revih'l</p>
     }
     
 %>
-<% } %>
+
 <p>Nombre de voyelles : <%= voyellesNbre %></p>
 <p><a href="index.html">Retour au sommaire</a></p>
 
