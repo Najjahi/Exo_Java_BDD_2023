@@ -44,8 +44,8 @@
    <% int cpt = Integer.parseInt(valeur1); %>
 <p>
     <% 
-        for (int i = 1; i <= cpt; i++) { 
-            for (int j = 1; j <= cpt; j++) { 
+        for (int i = 1; i <= cpt1; i++) { 
+            for (int j = 1; j <= cpt1; j++) { 
     %>
                 <%= "*" %> 
     <% } %>  
