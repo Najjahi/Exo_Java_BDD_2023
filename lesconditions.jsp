@@ -8,6 +8,7 @@
 <form action="#" method="post">
     <p>Saisir la valeur 1 : <input type="text" id="inputValeur1" name="valeur1"></p>
     <p>Saisir la valeur 2 : <input type="text" id="inputValeur2" name="valeur2"></p>
+    <p>Saisir la valeur 3 : <input type="text" id="inputValeur3" name="valeur3"></p>
     
     <p><input type="submit" value="Afficher">
 </form>
@@ -39,18 +40,13 @@ A = 10</br>
 B = 20</br>
 C = 15</br>
 Oui C est compris entre A et B</p>
-  <form method="post">  
-       Saisir la valeur A : <input type="number" id="inputA" name="inputA">><br>
-       Saisir la valeur B : <input type="number" id="inputB" name="inputB">><br>
-       Saisir la valeur C : <input type="number" id="inputC" name="inputC">><br>
-        <input type="submit" value="Afficher" />
-    </form>
+ 
 
     <br>
 
-     <%  String inputA = request.getParameter("inputA"); %> 
-     <%  String inputB = request.getParameter("inputB"); %>
-     <%  String inputC = request.getParameter("inputC"); %>
+     <%  String inputA = request.getParameter("inputValeur1"); %> 
+     <%  String inputB = request.getParameter("inputValeur2"); %>
+     <%  String inputC = request.getParameter("inputValeur3"); %>
 
        <% if (inputA != null && inputB != null && inputC != null) { %>
            
