@@ -34,12 +34,15 @@
     
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
 <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
-<% int compteurE = 0;
-       for (int i = 0; i < chaine.length(); i++) {
-           if (chaine.charAt(i) == 'e') {
-               compteurE++;
-           }
-       }
+
+<% 
+                StringBuilder output = new StringBuilder();  
+                for (int i = 0; i < chaine.length(); i++) { 
+                char count = chaine.charAt(i);
+                if(count == 'e'){
+                    count++;
+                } 
+          } 
     %>
 
 <h2>Exercice 2 : Affichage verticale</h2>
