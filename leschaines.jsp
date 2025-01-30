@@ -11,8 +11,7 @@
 </form>
 <%-- Récupération des valeurs --%>
     <% String chaine = request.getParameter("chaine"); %>
-    <% StringBuilder result = new StringBuilder(); %>
-    <% int count = 0; %>
+    
     <% if (chaine != null) { %>
 
     <%-- Obtention de la longueur de la chaîne --%>
@@ -23,7 +22,7 @@
     <% char caractereExtrait = chaine.charAt(2); %>
     <p>Le 3° caractère de votre chaine est la lettre <%= caractereExtrait %></p>
 
-    
+    <%-- Obtention d'une sous-chaîne --%>
     <% String sousChaine = chaine.substring(2, 6); %>
     <p>Une sous chaine de votre texte : <%= sousChaine %></p>
 
@@ -31,20 +30,19 @@
     <% char recherche = 'e'; 
        int position = chaine.indexOf(recherche); %>
     <p>Votre premier "e" est en : <%= position %></p>
-<%}%>
-        
+
+    
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
 <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
-    <%
-    
+<%
+    int count = 0; // Déclaration du compteur en dehors de la boucle
     for (int i = 0; i < chaine.length(); i++) { 
         if (chaine.charAt(i) == 'e') {
             count++; // On incrémente correctement le compteur
         } 
     } 
-    %>
+%>
 <p>Le nombre de lettres 'e' dans la chaîne est : <%= count %></p>
-     
 
 <h2>Exercice 2 : Affichage verticale</h2>
 <p>Ecrire le programme pour afficher le texte en vertical</br>
@@ -67,13 +65,14 @@ r</p>
 <p>Votre texte affiché en vertical :</p>
 <p><%= result.toString() %></p>
 
-
 <h2>Exercice 3 : Retour à la ligne</h2>
 <p>La présence d'un espace provoque un retour à la ligne </br>
 Exemple : L'hiver sera pluvieux</br>
 L'hiver</br>
 sera</br>
 pluvieux</p>
+
+<p>La présence d'un espace provoque un retour à la ligne</p>
 
 <%
     StringBuilder output = new StringBuilder(); // Déclaration de output
@@ -95,26 +94,12 @@ pluvieux</p>
 <p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>
 Exemple : L'hiver sera pluvieux</br>
 Lhvrsr lvex</p>
-<%    
-     result.setLength(0);
-     char chr = chaine.charAt(i);               
-     for (int i = 0; i < chaine.length(); i++) {
-        if (i % 2 == 0) { 
-           
-            output.append(chr); 
-        }
-    }
-%>
-    <p><%= output.toString() %></p> 
-<p>Affichage d'une lettre sur deux de la chaîne est :</p>
-<p><%= output.toString() %></p> <!-- Affiche la chaîne filtrée -->
 
 <h2>Exercice 5 : La phrase en verlant</h2>
 <p>Ecrire le programme afin d'afficher le texte en verlant </br>
 Exemple : L'hiver sera pluvieux</br>
 xueivulp ares revih'l</p>
-
- <%
+<%
     StringBuilder outputVerlan = new StringBuilder(); // Déclare la variable StringBuilder pour stocker l'inversée
 
     // Boucle pour parcourir la chaîne de la fin vers le début
@@ -128,10 +113,8 @@ xueivulp ares revih'l</p>
 <p><%= output.toString() %></p> <!-- Affiche la chaîne inversée -->
 
 
-
 <h2>Exercice 6 : Consonnes et voyelles</h2>
 <p>Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte</p>
-
 <%
     String voyelles = "aeiouyAEIOUY";
     int voyellesNbre = 0; 
