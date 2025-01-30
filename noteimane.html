@@ -1768,45 +1768,54 @@ public class Main {
   }
 }
 */ 
-          //losange
- public class Main {
-    public static void main(String[] args) {
-        int Val = 5;
+          //losange 1
+public class Main {
+  public static void main(String[] args) {
+    
+    int Val = 5;
 
+    // Partie supérieure du losange
+    for (int i = 0; i < Val; i++) {
+      // Affichage des espaces avant les étoiles (pour centrer)
+      for (int j = 0; j < Val - i - 1; j++) {
+        System.out.print(" ");  // Affiche un espace
+      }
 
-        for (int i = 0; i < Val; i++) {
+      // Affichage des étoiles pour la partie gauche
+      for (int k = 0; k < i + 1; k++) {
+        System.out.print("*");  // Affiche une étoile
+      }
 
-            for (int j = 0; j < Val - i; j++) {
-                System.out.print(" ");
-            }
+      // Affichage des étoiles pour la partie droite
+      for (int l = 0; l < i; l++) {
+        System.out.print("*");  // Affiche une étoile
+      }
 
-            for (int k = 0; k < i + 1; k++) {
-                System.out.print("");
-            }
-            for (int l = 0; l < i + 1; l++) {
-                System.out.print("");
-            }
-            System.out.println();
-        }
-
-        // Partie inférieure
-        for (int i = Val - 1; i >= 0; i--) {
-
-            for (int j = 0; j < Val - i; j++) {
-                System.out.print(" ");
-            }
-
-            for (int k = 0; k < i + 1; k++) {
-                System.out.print("");
-            }
-            for (int l = 0; l < i + 1; l++) {
-                System.out.print("");
-            }
-
-            System.out.println();
-        }
+      System.out.println("");  // Passe à la ligne suivante
     }
+
+    // Partie inférieure du losange
+    for (int i = Val - 1; i >= 1; i--) {
+      // Affichage des espaces avant les étoiles (pour centrer)
+      for (int j = 0; j < Val - i; j++) {
+        System.out.print(" ");  // Affiche un espace
+      }
+
+      // Affichage des étoiles pour la partie gauche
+      for (int k = 0; k < i; k++) {
+        System.out.print("*");  // Affiche une étoile
+      }
+
+      // Affichage des étoiles pour la partie droite
+      for (int l = 0; l < i - 1; l++) {
+        System.out.print("*");  // Affiche une étoile
+      }
+
+      System.out.println("");  // Passe à la ligne suivante
+    }
+  }
 }
+
  //losange 2
 
 public class Main {
