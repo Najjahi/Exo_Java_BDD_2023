@@ -100,12 +100,12 @@ Lhvrsr lvex</p>
 Exemple : L'hiver sera pluvieux</br>
 xueivulp ares revih'l</p>
 <%
-    StringBuilder output = new StringBuilder(); // Déclare la variable StringBuilder pour stocker l'inversée
+    StringBuilder outputVerlan = new StringBuilder(); // Déclare la variable StringBuilder pour stocker l'inversée
 
     // Boucle pour parcourir la chaîne de la fin vers le début
     for (int i = chaine.length() - 1; i >= 0; i--) { 
         char chr = chaine.charAt(i); 
-        output.append(chr); // Ajoute chaque caractère à la variable output
+        outputVerlan.append(chr); // Ajoute chaque caractère à la variable outputVerlan
     }
 %>
 
