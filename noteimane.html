@@ -1579,6 +1579,94 @@ Exercice 7 : La valeur le plus proche de 0 (2° version) Trouvez la valeur la pl
         }
     %>
 
+********************fonction**************************
+                        
+#include <stdio.h>
+/* 
+// Fonction récursive qui incrémente le compteur jusqu'à atteindre la limite
+int compteur(int n, int result) {
+    if (n > 5) {
+        return result;
+    }
+    return compteur(n + 1, result + 1); // Appel récursif en incrémentant
+}
+
+int main() {
+    int result = compteur(1, 0); // Appel initial avec n=1 et result=0
+    printf("Le résultat du compteur récursif est : %d\n", result);
+    return 0;
+}
+
+//Exercice : Écrire un programme  qui demande à l'utilisateur d'entrer un nombre entier positif, puis calcule sa factorielle en utilisant une fonction récursive. 
+
+int factorielle(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+    return n * factorielle(n - 1);
+}
+
+int main() {
+    int num;
+    printf("entrer l'entier: ");
+    scanf("%d", &num);
+    printf("La factorielle de %d est %d\n", num, factorielle(num));
+    return 0;
+}
+
+//Exercice 2 : Table de multiplication Ecrire un programme de table de multiplication utilisant un algorithme récursif
+
+void table_multiplication(int n, int i) {
+    if (i > 10) return;
+    printf("%d x %d = %d\n", n, i, n * i);
+    table_multiplication(n, i + 1);
+}
+
+int main() {
+    int num;
+    scanf("%d", &num);  // Lire un nombre entier
+    table_multiplication(num, 1);  // Appel initial avec i = 1
+    return 0;
+}
+//Exercice bis : La deuxième valeur saisie par l'utilisateur précisera la limite de la table multiplication
+void table_multipli(int n, int i, int limite) {
+    if (i > limite) return;  
+    printf("%d x %d = %d\n", n, i, n * i);  
+    table_multiplication(n, i + 1, limite);  
+}
+
+int main() {
+    int num, limite;
+    printf("Entrez un nombre entier pour la table de multiplication : ");
+    scanf("%d", &num);
+
+    printf("Jusqu'à quel nombre voulez-vous afficher la table de multiplication ? ");
+    scanf("%d", &limite);
+
+    table_multiplication(num, 1, limite);
+
+    return 0;
+}
+
+void TableMul(int n, int start, int stop) {
+    
+    if (start > stop) {return;}
+    
+    printf("%d * %d = %d \n", n, start, n*start);
+    TableMul(n, start+1, stop);
+    
+}
+
+int main() {
+    int num, limt;
+    printf("entrer l'entier: ");
+    scanf("%d", &num);
+    printf("entrer la limite: ");
+    scanf("%d", &limt);
+    TableMul(num, 1, limt);
+    return 0;
+}*/
+
                         
 
 En cas d'égalité entre un chiffre positif et négatif, affichez le chiffre positif
