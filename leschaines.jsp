@@ -55,6 +55,17 @@ o</br>
 u</br>
 r</p>
 
+<% 
+                           
+             for (int i = 0; i < chaine.length(); i++) {
+                char chr = chaine.charAt(i);
+                result.append(chr).append("<br>");
+               
+         } 
+    %>
+<p>affichage verticale de la chaîne est : </p>
+<p><%= output.toString() %></p>
+
 <h2>Exercice 3 : Retour à la ligne</h2>
 <p>La présence d'un espace provoque un retour à la ligne </br>
 Exemple : L'hiver sera pluvieux</br>
