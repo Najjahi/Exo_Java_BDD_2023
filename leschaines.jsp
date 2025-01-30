@@ -37,7 +37,7 @@
 
         <% 
                 StringBuilder output = new StringBuilder();  
-                for (int j = 0; j < chaine.length(); j++) { %>
+                for (int i = 0; i < chaine.length(); i++) { 
                 char count = chaine.charAt(i);
                 if(count == 'e'){
                     count++;
