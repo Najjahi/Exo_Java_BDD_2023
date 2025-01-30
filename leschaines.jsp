@@ -105,16 +105,24 @@ xueivulp ares revih'l</p>
 <%
     String voyelles = "aeiouyAEIOUY";
     int voyellesNbre = 0; 
+    int consonnesNbre = 0;
 
+    // Vérifie chaque caractère de la chaîne
     for (int l = 0; l < chaine.length(); l++) {
         char chr = chaine.charAt(l);
-        if (voyelles.indexOf(chr) != -1) { // Vérifie si le caractère est une voyelle
+        // Vérifie si le caractère est une voyelle
+        if (voyelles.indexOf(chr) != -1) {
             voyellesNbre++; 
+        } 
+        // Vérifie si le caractère est une consonne (lettre non voyelle)
+        else if (Character.isLetter(chr)) {
+            consonnesNbre++;
         }
     }
 %>
 
 <p>Nombre de voyelles : <%= voyellesNbre %></p>
+<p>Nombre de consonnes : <%= consonnesNbre %></p>
 
 
 <% } %>
