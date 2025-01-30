@@ -71,6 +71,29 @@ Exemple : L'hiver sera pluvieux</br>
 L'hiver</br>
 sera</br>
 pluvieux</p>
+<h2>Exercice 3 : Retour à la ligne</h2>
+<p>La présence d'un espace provoque un retour à la ligne</p>
+
+<%
+    String texte = "L'hiver sera pluvieux"; // Exemple de texte
+    StringBuilder texteAvecRetour = new StringBuilder(); 
+
+    // On parcourt chaque caractère du texte
+    for (int i = 0; i < texte.length(); i++) {
+        char chr = texte.charAt(i);
+        
+        // Si on rencontre un espace, on ajoute un saut de ligne
+        if (chr == ' ') {
+            texteAvecRetour.append("<br>");
+        } else {
+            texteAvecRetour.append(chr);
+        }
+    }
+%>
+
+<p>Voici le texte avec un retour à la ligne après chaque espace :</p>
+<p><%= texteAvecRetour.toString() %></p>
+
 
 <h2>Exercice 4 : Afficher une lettre sur deux</h2>
 <p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>
