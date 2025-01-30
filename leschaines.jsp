@@ -97,7 +97,8 @@ pluvieux</p>
 <p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>
 Exemple : L'hiver sera pluvieux</br>
 Lhvrsr lvex</p>
-<%
+<%    
+     result.setLength(0);
      char chr = chaine.charAt(i);               
      for (int i = 0; i < chaine.length(); i++) {
         if (i % 2 == 0) { 
@@ -116,6 +117,7 @@ Exemple : L'hiver sera pluvieux</br>
 xueivulp ares revih'l</p>
 
  <%
+    result.setLength(0);
     char chr = chaine.charAt(i);                
     for (int i = chaine.length() - 1; i >= 0; i--) { 
         
@@ -128,7 +130,8 @@ xueivulp ares revih'l</p>
 <h2>Exercice 6 : Consonnes et voyelles</h2>
 <p>Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte</p>
 
-<%
+<%    
+    result.setLength(0);
     String voyelles = "aeiouyAEIOUY";
     int voyellesNbre = 0; 
     for (int l = 0; l < chaine.length(); l++) {
