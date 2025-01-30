@@ -1665,8 +1665,26 @@ int main() {
     scanf("%d", &limt);
     TableMul(num, 1, limt);
     return 0;
-}*/
+}
+    
+ #include <stdio.h>
+#include <string.h>
+
+void afficher_inverse(const char* chaine, int index) {
+    if (index < 0) return;  // Condition d'arrêt de la récursion
+    printf("%c", chaine[index]);
+    afficher_inverse(chaine, index - 1);  // Appel récursif pour afficher le caractère précédent
+}
+
+int main() {
+    char chaine1[] = "La maison bleue du village";
+    afficher_inverse(chaine1, strlen(chaine1) - 1);  // On commence avec l'indice du dernier caractère
+    return 0;
+}
+   
+    
+*/
 
                         
 
-En cas d'égalité entre un chiffre positif et négatif, affichez le chiffre positif
+
