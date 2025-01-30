@@ -99,6 +99,19 @@ Lhvrsr lvex</p>
 <p>Ecrire le programme afin d'afficher le texte en verlant </br>
 Exemple : L'hiver sera pluvieux</br>
 xueivulp ares revih'l</p>
+<%
+    StringBuilder output = new StringBuilder(); // Déclare la variable StringBuilder pour stocker l'inversée
+
+    // Boucle pour parcourir la chaîne de la fin vers le début
+    for (int i = chaine.length() - 1; i >= 0; i--) { 
+        char chr = chaine.charAt(i); 
+        output.append(chr); // Ajoute chaque caractère à la variable output
+    }
+%>
+
+<p>Affichage de la phrase en verlan est :</p>
+<p><%= output.toString() %></p> <!-- Affiche la chaîne inversée -->
+
 
 <h2>Exercice 6 : Consonnes et voyelles</h2>
 <p>Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte</p>
