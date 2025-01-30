@@ -74,20 +74,19 @@ pluvieux</p>
 <h2>Exercice 3 : Retour à la ligne</h2>
 <p>La présence d'un espace provoque un retour à la ligne</p>
 
-<% 
-        
-        for(int i = 0; i < chaine.length(); i++){%>
-            char chr = chaine.charAt(i);
-            <% if(chr == ' '){%>
-                 output.append("<br>"); 
+<%
+    StringBuilder output = new StringBuilder(); // Déclaration de output
+    for (int i = 0; i < chaine.length(); i++) {
+        char chr = chaine.charAt(i);
+        if (chr == ' ') {
+            output.append("<br>"); // Ajout du retour à la ligne lorsqu'on rencontre un espace
         } else {
-            output.append(chr); 
+            output.append(chr); // Ajout du caractère normal
         }
     }
 %>
-    <p>affichage verticale de la chaîne est :</p>
-    <p><%= output.toString() %></p>
-
+<p>Affichage avec retour à la ligne pour chaque espace :</p>
+<p><%= output.toString() %></p>
 
 
 
