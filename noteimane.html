@@ -1768,7 +1768,46 @@ public class Main {
   }
 }
 */ 
-    
+          //losange
+ public class Main {
+    public static void main(String[] args) {
+        int Val = 5;
+
+
+        for (int i = 0; i < Val; i++) {
+
+            for (int j = 0; j < Val - i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int k = 0; k < i + 1; k++) {
+                System.out.print("");
+            }
+            for (int l = 0; l < i + 1; l++) {
+                System.out.print("");
+            }
+            System.out.println();
+        }
+
+        // Partie inférieure
+        for (int i = Val - 1; i >= 0; i--) {
+
+            for (int j = 0; j < Val - i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int k = 0; k < i + 1; k++) {
+                System.out.print("");
+            }
+            for (int l = 0; l < i + 1; l++) {
+                System.out.print("");
+            }
+
+            System.out.println();
+        }
+    }
+}
+   
 */
 
                         
