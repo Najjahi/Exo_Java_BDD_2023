@@ -36,10 +36,11 @@
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
 <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
 
-        <% 
+        <%         
+                char count = chaine.charAt(j);
                 StringBuilder output = new StringBuilder();  
                 for (int j = 0; j < chaine.length(); j++) { %>
-                char count = chaine.charAt(i);
+                
                 if(count == 'e'){
                     count++;
                 } 
@@ -59,9 +60,9 @@ u</br>
 r</p>
 
 <% 
-                           
+             char chr = chaine.charAt(i);              
              for (int i = 0; i < chaine.length(); i++) {
-                char chr = chaine.charAt(i);
+                
                 result.append(chr).append("<br>");
                
          } 
@@ -77,9 +78,9 @@ sera</br>
 pluvieux</p>
 
 <% 
-        
-        for(int i = 0; i < chaine.length(); i++){
             char chr = chaine.charAt(i);
+            for(int i = 0; i < chaine.length(); i++){
+            
             if(chr == ' '){
                  output.append("<br>"); 
         } else {
@@ -97,10 +98,10 @@ pluvieux</p>
 Exemple : L'hiver sera pluvieux</br>
 Lhvrsr lvex</p>
 <%
-                   
-    for (int i = 0; i < chaine.length(); i++) {
+     char chr = chaine.charAt(i);               
+     for (int i = 0; i < chaine.length(); i++) {
         if (i % 2 == 0) { 
-            char chr = chaine.charAt(i);
+           
             output.append(chr); 
         }
     }
@@ -115,9 +116,9 @@ Exemple : L'hiver sera pluvieux</br>
 xueivulp ares revih'l</p>
 
  <%
-                   
+    char chr = chaine.charAt(i);                
     for (int i = chaine.length() - 1; i >= 0; i--) { 
-        char chr = chaine.charAt(i); 
+        
         output.append(chr); 
     %>
 
