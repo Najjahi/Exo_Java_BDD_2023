@@ -95,20 +95,21 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;***</br>&nbsp;****</br>*****</p>
 <p>
- 
-    <% for (int i = 0; i < cpt; i++) { %>
-            
-            <% for (int j = i+1; j < cpt; j++) { %>
-                 <%= " " %>  
-           <% } %> 
-            
-             <% for (int k= i; k>= 0; k--) { %>
-                <%= "*" %> 
-             <% } %>
+  <% for (int i = 1; i <= cpt; i++) { %>
+        
+  
+    <% for (int k = 1; k <= cpt-i; k++) { %>
+      &nbsp; 
+      <% } %>
+  
+  
+    <% for (int j= 1; j<= i; j++) { %>
+      *
+  <% } %>          
+              
      <br>
-    <% } %> 
-</p>
-
+       <% } %> 
+    </p> 
 
 <h2>Exercice 6 : Le demi losange</h2>
 <p>Ecrire le code afin de produire un losange</p>
