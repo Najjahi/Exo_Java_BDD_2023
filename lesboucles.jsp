@@ -117,29 +117,35 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
  <p>
-     <% for (int i = 0; i < cpt; i++) { %>
+    <!-- Partie croissante -->
+    <% 
+        for (int i = 1; i <= cpt; i++) {
+            // Affiche les espaces pour aligner les étoiles à gauche
+            for (int j = 1; j <= cpt - i; j++) {
+                out.print("&nbsp;"); // "nbsp;" est l'entité HTML pour un espace non sécable
+            }
             
-           <% for (int j = i+1; j < cpt ; j++) {  %> 
-                 <%= " " %>  
-            <% } %> 
+            for (int j = 1; j <= i; j++) {
+                out.print("*");
+            }
             
-            for (int j = i; j >= i; j--) {
-                <%= "*" %> 
-             <% } %>
- <% for (int i = 0; i < cpt; i++) { %>
-            
-           <% for (int j = 0; j < i ; j++) {  %> 
-                 <%= " " %>  
-            <% } %> 
-            
-            for (int j = i; j < cpt; j++) {
-                <%= "*" %> 
-             <% } %>
-         <br>
-        <% } %> 
-</p>
-
-                
+            out.print("<br>");
+        }
+        
+        // Partie décroissante
+        for (int i = cpt - 1; i >= 1; i--) {
+            // Affiche les espaces pour aligner les étoiles à gauche
+            for (int j = 1; j <= cpt - i; j++) {
+                out.print("&nbsp;");
+            }
+            // Affiche les étoiles
+            for (int j = 1; j <= i; j++) {
+                out.print("*");
+            }
+            // Ajoute un saut de ligne après chaque ligne d'étoiles
+            out.print("<br>");
+        }
+    %>
 <h2>Exercice 7 : La table de multiplication</h2>
 <p>Ecrire le code afin de créser une table de multiplication</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
