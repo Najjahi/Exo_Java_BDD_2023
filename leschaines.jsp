@@ -35,18 +35,16 @@
         
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
 <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
-
-        <%         
-                char count = chaine.charAt(j);
-                StringBuilder output = new StringBuilder();  
-                for (int j = 0; j < chaine.length(); j++) { %>
-                
-                if(count == 'e'){
-                    count++;
-                } 
-          } 
+    <%
+    int count = 0; // Déclaration du compteur en dehors de la boucle
+    for (int i = 0; i < chaine.length(); i++) { 
+        if (chaine.charAt(i) == 'e') {
+            count++; // On incrémente correctement le compteur
+        } 
+    } 
     %>
-<p>Le nombre de lettres 'e' dans la chaîne est :  <%= count %> </p>
+<p>Le nombre de lettres 'e' dans la chaîne est : <%= count %></p>
+     
 
 <h2>Exercice 2 : Affichage verticale</h2>
 <p>Ecrire le programme pour afficher le texte en vertical</br>
@@ -59,16 +57,16 @@ o</br>
 u</br>
 r</p>
 
-<% 
-             char chr = chaine.charAt(i);              
-             for (int i = 0; i < chaine.length(); i++) {
-                
-                result.append(chr).append("<br>");
-               
-         } 
-    %>
-<p>affichage verticale de la chaîne est : </p>
-<p><%= output.toString() %></p>
+<%
+    StringBuilder result = new StringBuilder(); // Déclaration de la variable
+    for (int i = 0; i < chaine.length(); i++) {
+        char chr = chaine.charAt(i);
+        result.append(chr).append("<br>"); // Ajout du caractère et saut de ligne HTML
+    }
+%>
+<p>Votre texte affiché en vertical :</p>
+<p><%= result.toString() %></p>
+
 
 <h2>Exercice 3 : Retour à la ligne</h2>
 <p>La présence d'un espace provoque un retour à la ligne </br>
@@ -77,19 +75,19 @@ L'hiver</br>
 sera</br>
 pluvieux</p>
 
-<% 
-            char chr = chaine.charAt(i);
-            for(int i = 0; i < chaine.length(); i++){
-            
-            if(chr == ' '){
-                 output.append("<br>"); 
+<%
+    StringBuilder output = new StringBuilder(); // Déclaration de output
+    for (int i = 0; i < chaine.length(); i++) {
+        char chr = chaine.charAt(i);
+        if (chr == ' ') {
+            output.append("<br>"); // Ajout du retour à la ligne lorsqu'on rencontre un espace
         } else {
-            output.append(chr); 
+            output.append(chr); // Ajout du caractère normal
         }
     }
 %>
-    <p>affichage verticale de la chaîne est :</p>
-    <p><%= output.toString() %></p>
+<p>Affichage avec retour à la ligne pour chaque espace :</p>
+<p><%= output.toString() %></p>
 
 
 
@@ -117,37 +115,47 @@ Exemple : L'hiver sera pluvieux</br>
 xueivulp ares revih'l</p>
 
  <%
-    result.setLength(0);
-    char chr = chaine.charAt(i);                
+    StringBuilder outputVerlan = new StringBuilder(); // Déclare la variable StringBuilder pour stocker l'inversée
+
+    // Boucle pour parcourir la chaîne de la fin vers le début
     for (int i = chaine.length() - 1; i >= 0; i--) { 
-        
-        output.append(chr); 
-    %>
+        char chr = chaine.charAt(i); 
+        outputVerlan.append(chr); // Ajoute chaque caractère à la variable outputVerlan
+    }
+%>
 
 <p>Affichage de la phrase en verlan est :</p>
-<p><%= output.toString() %></p> <!-- Afficher la chaîne inversée --> 
+<p><%= output.toString() %></p> <!-- Affiche la chaîne inversée -->
+
+
 
 <h2>Exercice 6 : Consonnes et voyelles</h2>
 <p>Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte</p>
 
-<%    
-    result.setLength(0);
+<%
     String voyelles = "aeiouyAEIOUY";
     int voyellesNbre = 0; 
+    int consonnesNbre = 0;
+
+    // Vérifie chaque caractère de la chaîne
     for (int l = 0; l < chaine.length(); l++) {
         char chr = chaine.charAt(l);
-        for (int k = 0; k < voyelles.length(); k++) { 
-            char voy = voyelles.charAt(k);
-            if (chr == voy) {
-                voyellesNbre += 1; 
-            }
+        // Vérifie si le caractère est une voyelle
+        if (voyelles.indexOf(chr) != -1) {
+            voyellesNbre++; 
+        } 
+        // Vérifie si le caractère est une consonne (lettre non voyelle)
+        else if (Character.isLetter(chr)) {
+            consonnesNbre++;
         }
     }
-    
 %>
 
 <p>Nombre de voyelles : <%= voyellesNbre %></p>
-<p><a href="index.html">Retour au sommaire</a></p>
+<p>Nombre de consonnes : <%= consonnesNbre %></p>
 
+
+<% } %>
+<p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
