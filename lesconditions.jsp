@@ -109,7 +109,7 @@ Exemple :</br>
         <% } %>
      <% } %>
 
-<h2>Exercice 3</h2>
+
 
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
