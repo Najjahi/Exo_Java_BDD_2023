@@ -74,25 +74,21 @@ pluvieux</p>
 <h2>Exercice 3 : Retour à la ligne</h2>
 <p>La présence d'un espace provoque un retour à la ligne</p>
 
-<%
-    String texte = "L'hiver sera pluvieux"; // Exemple de texte
-    StringBuilder texteAvecRetour = new StringBuilder(); 
-
-    // On parcourt chaque caractère du texte
-    for (int i = 0; i < texte.length(); i++) {
-        char chr = texte.charAt(i);
+<% 
         
-        // Si on rencontre un espace, on ajoute un saut de ligne
-        if (chr == ' ') {
-            texteAvecRetour.append("<br>");
+        for(int i = 0; i < chaine.length(); i++){%>
+            char chr = chaine.charAt(i);
+            <% if(chr == ' '){%>
+                 output.append("<br>"); 
         } else {
-            texteAvecRetour.append(chr);
+            output.append(chr); 
         }
     }
 %>
+    <p>affichage verticale de la chaîne est :</p>
+    <p><%= output.toString() %></p>
 
-<p>Voici le texte avec un retour à la ligne après chaque espace :</p>
-<p><%= texteAvecRetour.toString() %></p>
+
 
 
 <h2>Exercice 4 : Afficher une lettre sur deux</h2>
