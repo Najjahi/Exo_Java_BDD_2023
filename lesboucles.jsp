@@ -72,15 +72,19 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>
  <% 
-    // Upper half including the middle line
-    for (int j = 1; j <= cpt; j++) { 
-        for (int i = 1; i <= j; i++) {
-            out.print("*");  
+    for (int j = 1; j <= cpt; j++) {
+        // Affichage des espaces avant les étoiles pour aligner à droite
+        for (int i = 1; i <= cpt - j; i++) {
+            out.print("&nbsp;"); // Espaces
         }
-        out.print("<br>"); 
+        // Affichage des étoiles
+        for (int i = 1; i <= j; i++) {
+            out.print("*"); // Etoiles
+        }
+        // Passer à la ligne suivante
+        out.println("<br>");
     }
-%> 
-
+%>
 </p>
 <h2>Exercice 5 : Triangle isocele</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la droite</p>
