@@ -113,26 +113,21 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
  <p>
+
  <% 
     for (int j = 1; j <= cpt; j++) { 
-%>
-    <%
+    
         for (int i = 1; i <= j; i++) {
             out.print("&nbsp;");
         }
-    %>
-<% 
-    }
+      }
     
     for (int j = 1; j <= cpt; j++) { 
-%>
-    <%
+
         for (int i = j; i <= cpt; i++) {
             out.print("&nbsp;");
         }
-    %>
-<% 
-    }
+       }
 %>
 
     </p> 
