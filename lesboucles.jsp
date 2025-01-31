@@ -92,7 +92,15 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;***</br>&nbsp;****</br>*****</p>
 <p>
-  <% 
+ 
+    </p> 
+
+<h2>Exercice 6 : Le demi losange</h2>
+<p>Ecrire le code afin de produire un losange</p><p>Exemple si l'utilisateur saisie le valeur 5</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
+<p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
+ <p>
+ <% 
     // Upper half including the middle line
     for (int j = 1; j <= cpt; j++) { 
         for (int i = 1; i <= j; i++) {
@@ -109,32 +117,7 @@
         out.print("<br>");  
     }
 %>
-    </p> 
-
-<h2>Exercice 6 : Le demi losange</h2>
-<p>Ecrire le code afin de produire un losange</p><p>Exemple si l'utilisateur saisie le valeur 5</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
-<p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
- <p>
-
- <% 
-    for (int j = 1; j <= cpt; j++) { 
-        for (int i = 1; i <= j ; i++) {
-            out.print("*");  
-            
-        }
-        out.print("&nbsp;"); 
-        out.println();  
-    }
-    
-    for (int j = 1; j < cpt; j++) {  // Moins 1 pour éviter la répétition de la ligne centrale
-        for (int i = j; i <= cpt; i++) {
-            out.print("*");
-        }
-          
-        out.print("&nbsp;");  
-        out.println();  
-    }
+ 
 %>
 
 
@@ -147,8 +130,19 @@
 <p>5 x 3 = 15</p>
 <p>5 x 4 = 20</p>
 <p>5 x 5 = 25</p>
+<p>
+ <% 
+    int number = 5; 
+%>
+<% 
+    for (int i = 1; i <= 10; i++) {
+%>
+        <p><%= number + " x " + i + " = " + (number * i) %></p>
+<% 
+    }
+%>
 
-
+</p>
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
