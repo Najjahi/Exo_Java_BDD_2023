@@ -116,9 +116,9 @@
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
  <p>
  <% 
-    for (int i = 0; i <= cpt; i++) {
+    for (int i = 0; i < cpt; i++) {
         
-        for (int j = i+1; i <= cpt - j; i++) {
+        for (int j = i + 1; i <= cpt - j; i++) {
             out.print("&nbsp;"); 
         }
          for (int j = i; j >= 0; i--) {
