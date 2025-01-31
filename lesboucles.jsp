@@ -106,15 +106,14 @@
     }
 %>
     </p> 
-     
-
-    </p> 
+      
 
 <h2>Exercice 6 : Le demi losange</h2>
 <p>Ecrire le code afin de produire un losange</p><p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
  <p>
+ <% 
   for (int j = cpt - 1; j >= 1; j--) {  
         // Espaces avant les étoiles pour aligner à gauche
         for (int i = 1; i <= cpt - j; i++) {
@@ -126,7 +125,39 @@
         }
         out.print("<br>");  // Nouvelle ligne après chaque ligne d'étoiles
     }
+%>
    </p> 
+ <p> 
+    <% 
+        int cpt = 5; // Taille du losange
+    
+        // Upper half including the middle line
+        for (int j = 1; j <= cpt; j++) { 
+            // Espaces avant les étoiles pour aligner à gauche
+            for (int i = 1; i <= cpt - j; i++) {
+                out.print("&nbsp;"); // Espaces
+            }
+            // Imprimer les étoiles
+            for (int i = 1; i <= j; i++) {
+                out.print("*");
+            }
+            out.print("<br>"); // Nouvelle ligne après chaque ligne d'étoiles
+        }
+        
+        // Lower half excluding the middle line
+        for (int j = cpt - 1; j >= 1; j--) {  
+            // Espaces avant les étoiles pour aligner à gauche
+            for (int i = 1; i <= cpt - j; i++) {
+                out.print("&nbsp;"); // Espaces
+            }
+            // Imprimer les étoiles
+            for (int i = 1; i <= j; i++) {
+                out.print("*");
+            }
+            out.print("<br>");  // Nouvelle ligne après chaque ligne d'étoiles
+        }
+    %>
+ </p> 
 <h2>Exercice 7 : La table de multiplication</h2>
 <p>Ecrire le code afin de créser une table de multiplication</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
