@@ -1858,7 +1858,71 @@ public class Main {
   }
 }
 */
+           //losange avec explication
+```
+public class Main {
+    public static void main(String[] args) {
+        int Val = 5;
+        line(Val * 2, 0); // Appelle la fonction `line()` pour générer un motif en fonction de `Val`
+    }
 
+    /**
+     * Fonction récursive pour afficher les lignes du motif.
+     * @param valMax Nombre total de lignes à afficher (2 fois `Val` dans ce cas).
+     * @param i Indice de la ligne actuelle.
+     */
+    private static void line(int valMax, int i) {
+        // Condition d'arrêt : Si `i` atteint `valMax`, on arrête la récursion.
+        if (i >= valMax) {
+            return;
+        }
+        
+        // Définit une valeur centrale (moitié de `valMax`) pour gérer la symétrie.
+        int valMaxNormale = valMax / 2;
+        
+        // Si on est dans la première moitié du motif
+        if (i < valMaxNormale) {
+            // Affiche des espaces avant les étoiles pour centrer le motif
+            printChar(valMaxNormale - i - 1, 0, " ");
+            // Affiche les étoiles en doublon pour créer un motif symétrique
+            printChar(valMaxNormale, valMaxNormale - i, "**");
+        } 
+        // Si on est dans la deuxième moitié du motif (inversion)
+        else {
+            // Affiche des espaces pour réaligner le motif dans la seconde moitié
+            printChar(valMaxNormale, valMaxNormale - (i - valMaxNormale), " ");
+            // Affiche les étoiles en réduisant progressivement leur nombre
+            printChar(valMaxNormale - (i - valMaxNormale) - 1, 0, "**");
+        }
+        
+        // Passe à la ligne suivante
+        System.out.println("");
+
+        // Appelle récursivement `line()` pour dessiner la ligne suivante
+        line(valMax, i + 1);
+    }
+
+    /**
+     * Fonction récursive pour afficher un caractère donné un certain nombre de fois.
+     * @param valMax Nombre total de caractères à afficher.
+     * @param i Indice actuel de l'affichage.
+     * @param print Chaîne de caractères à afficher (peut être un espace " " ou "**").
+     */
+    private static void printChar(int valMax, int i, String print) {
+        // Condition d'arrêt : Si `i` dépasse `valMax`, on arrête la récursion.
+        if (i > valMax) {
+            return;
+        }
+        
+        // Affiche la chaîne de caractères spécifiée (`print`)
+        System.out.print(print);
+
+        // Appelle récursivement `printChar()` pour afficher le caractère suivant
+        printChar(valMax, i + 1, print);
+    }
+}
+
+```
                         
 
 
