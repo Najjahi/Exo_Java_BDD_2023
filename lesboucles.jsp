@@ -118,20 +118,20 @@
  <% 
     for (int i = 0; i < cpt; i++) {
         
-        for (int j = i + 1; i <= cpt - j; i++) {
+        for (int j = i + 1; j < cpt ; j++) {
             out.print("&nbsp;"); 
         }
-         for (int j = i; j >= 0; i--) {
+         for (int j = i; j >= 0; j--) {
             out.print("*"); 
         }
          out.println("<br>");
     }
-    for (int i = 0; i<cpt 1; i++) {
-         for (int j = 0; j < i; i++) {
+    for (int i = 0; i<cpt ; i++) {
+         for (int j = 0; j < i; j++) {
             out.print("&nbsp;"); 
         }
         
-        for (int j = i; j <cpt; i++) {
+        for (int j = i; j <cpt; j++) {
             out.print("*"); 
         }
          out.println("<br>");
