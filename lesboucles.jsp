@@ -116,48 +116,33 @@
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
  <p>
  <% 
-  for (int j = cpt - 1; j >= 1; j--) {  
-        // Espaces avant les étoiles pour aligner à gauche
+    for (int j = 1; j <= cpt; j++) {
+        // Affichage des espaces avant les étoiles pour aligner à droite
         for (int i = 1; i <= cpt - j; i++) {
             out.print("&nbsp;"); // Espaces
         }
-        // Imprimer les étoiles
+        // Affichage des étoiles
         for (int i = 1; i <= j; i++) {
-            out.print("*");
+            out.print("*"); // Etoiles
         }
-        out.print("<br>");  // Nouvelle ligne après chaque ligne d'étoiles
+        // Passer à la ligne suivante
+        out.println("<br>");
+    }
+    for (int j = cpt; j >= 1; j--) {
+        // Affichage des espaces avant les étoiles pour aligner à droite
+        for (int i = 1; i <= cpt - j; i++) {
+            out.print("&nbsp;"); // Espaces
+        }
+        // Affichage des étoiles
+        for (int i = 1; i <= j; i++) {
+            out.print("*"); // Etoiles
+        }
+        // Passer à la ligne suivante
+        out.println("<br>");
     }
 %>
    </p> 
- <p> 
-    <% 
-        // Upper half including the middle line
-        for (int j = 1; j <= cpt; j++) { 
-            // Espaces avant les étoiles pour aligner à gauche
-            for (int i = 1; i <= cpt - j; i++) {
-                out.print("&nbsp;"); // Espaces
-            }
-            // Imprimer les étoiles
-            for (int i = 1; i <= j; i++) {
-                out.print("*");
-            }
-            out.print("<br>"); // Nouvelle ligne après chaque ligne d'étoiles
-        }
-        
-        // Lower half excluding the middle line
-        for (int j = cpt - 1; j >= 1; j--) {  
-            // Espaces avant les étoiles pour aligner à gauche
-            for (int i = 1; i <= cpt - j; i++) {
-                out.print("&nbsp;"); // Espaces
-            }
-            // Imprimer les étoiles
-            for (int i = 1; i <= j; i++) {
-                out.print("*");
-            }
-            out.print("<br>");  // Nouvelle ligne après chaque ligne d'étoiles
-        }
-    %>
- </p> 
+ 
 <h2>Exercice 7 : La table de multiplication</h2>
 <p>Ecrire le code afin de créser une table de multiplication</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
