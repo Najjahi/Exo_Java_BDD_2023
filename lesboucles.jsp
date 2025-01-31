@@ -92,7 +92,24 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;***</br>&nbsp;****</br>*****</p>
 <p>
- 
+ <p>
+  <% for (int i = 1; i <= cpt; i++) { %>
+        
+  
+    <% for (int k = 1; k <= cpt-i; k++) { %>
+      &nbsp; 
+      <% } %>
+  
+  
+    <% for (int j= 1; j<= i; j++) { %>
+      *
+  <% } %>          
+              
+     <br>
+       <% } %> 
+    </p> 
+     
+
     </p> 
 
 <h2>Exercice 6 : Le demi losange</h2>
