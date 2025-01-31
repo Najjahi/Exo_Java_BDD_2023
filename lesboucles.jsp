@@ -129,8 +129,6 @@
    </p> 
  <p> 
     <% 
-        int cpt = 5; // Taille du losange
-    
         // Upper half including the middle line
         for (int j = 1; j <= cpt; j++) { 
             // Espaces avant les étoiles pour aligner à gauche
