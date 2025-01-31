@@ -1923,6 +1923,69 @@ public class Main {
 }
 
 ```
-                        
+ //losange avec while
+public class Main {
+  public static void main(String[] args) {
+
+    int Val = 5;
+
+    
+    int i = 0;
+    while (i < Val) {
+     
+      int j = 0;  // Espaces avant les étoiles
+      while (j < Val - i) {
+        System.out.print(" ");
+        j++;
+      }
+
+      
+      int k = 0;  // Étoiles à gauche
+      while (k < i + 1) {
+        System.out.print("*");
+        k++;
+      }
+
+      
+      int l = 0;    // Étoiles à droite
+      while (l < i + 1) {
+        System.out.print("*");
+        l++;
+      }
+
+      System.out.println();
+      i++;
+    }
+
+    // Partie inférieure du motif (pyramide inversée)
+    i = Val-1;
+    while (i >= 0) {
+      // Espaces avant les étoiles
+      int j = 0;
+      while (j < Val - i) {
+        System.out.print(" ");
+        j++;
+      }
+
+      // Étoiles à gauche
+      int k = 0;
+      while (k < i + 1) {
+        System.out.print("*");
+        k++;
+      }
+
+      // Étoiles à droite
+      int l = 0;
+      while (l < i + 1) {
+        System.out.print("*");
+        l++;
+      }
+
+      System.out.println();
+      i--;
+    }
+  }
+}
+
 
 
