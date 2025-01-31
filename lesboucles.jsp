@@ -50,6 +50,7 @@
             for (int i = 1; i <= cpt - j; i++) {
                 out.print("&nbsp;"); // Espaces
             } 
+        }
     %> 
 </p>
 
