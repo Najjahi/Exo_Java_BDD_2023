@@ -44,17 +44,13 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>*</br>**</br>***</br>****</br>*****</p>
  <p>
-    <% for (int i = 1; i <= cpt; i++) { %>
-            
-            <% for (int j = 1; j <= cpt - i; j++) {%>
-                 <%= " " %>  
-             <% } %>  
-            
-            <% for (int j = 1; j <= i; j++) {%>
-                <%= "*" %> 
-             <% } %>
-        <br>
-    <% } %> 
+    <% 
+        for (int j = cpt - 1; j >= 1; j--) {  
+            // Espaces avant les étoiles pour aligner à gauche
+            for (int i = 1; i <= cpt - j; i++) {
+                out.print("&nbsp;"); // Espaces
+            } 
+    %> 
 </p>
 
 <h2>Exercice 3 : Triangle rectangle inversé</h2>
