@@ -116,29 +116,25 @@
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
  <p>
  <% 
-    for (int j = 1; j <= cpt; j++) {
-        // Affichage des espaces avant les étoiles pour aligner à droite
-        for (int i = 1; i <= cpt - j; i++) {
-            out.print("&nbsp;"); // Espaces
+    for (int i = 0; i <= cpt; i++) {
+        
+        for (int j = i+1; i <= cpt - j; i++) {
+            out.print("&nbsp;"); 
         }
-        // Affichage des étoiles
-        for (int i = 1; i <= j; i++) {
-            out.print("*"); // Etoiles
+         for (int j = i; j >= 0; i--) {
+            out.print("*"); 
         }
-        // Passer à la ligne suivante
-        out.println("<br>");
+         out.println("<br>");
     }
-    for (int j = cpt; j >= 1; j--) {
-        // Affichage des espaces avant les étoiles pour aligner à droite
-        for (int i = 1; i <= cpt - j; i++) {
-            out.print("&nbsp;"); // Espaces
+    for (int i = 0; i<cpt 1; i++) {
+         for (int j = 0; j < i; i++) {
+            out.print("&nbsp;"); 
         }
-        // Affichage des étoiles
-        for (int i = 1; i <= j; i++) {
-            out.print("*"); // Etoiles
+        
+        for (int j = i; j <cpt; i++) {
+            out.print("*"); 
         }
-        // Passer à la ligne suivante
-        out.println("<br>");
+         out.println("<br>");
     }
 %>
    </p> 
