@@ -116,19 +116,21 @@
 
  <% 
     for (int j = 1; j <= cpt; j++) { 
-        for (int i = 1; i <= cpt - j; i++) {
-            out.print("&nbsp;"); // Espaces pour aligner les étoiles
+        for (int i = 1; i <= j ; i++) {
+            out.print("*");  
+            
         }
-        out.print("*");  // Afficher l'étoile
-        out.println();  // Passer à la ligne suivante
+        out.print("&nbsp;"); 
+        out.println();  
     }
     
     for (int j = 1; j < cpt; j++) {  // Moins 1 pour éviter la répétition de la ligne centrale
-        for (int i = 1; i <= j + 1; i++) {
-            out.print("&nbsp;");  // Espaces pour aligner les étoiles
+        for (int i = j; i <= cpt; i++) {
+            out.print("*");
         }
-        out.print("*");  // Afficher l'étoile
-        out.println();  // Passer à la ligne suivante
+          
+        out.print("&nbsp;");  
+        out.println();  
     }
 %>
 
