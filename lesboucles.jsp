@@ -94,20 +94,21 @@
 <p>
  <p>
  <% 
-    for (int j = 1; j <= cpt; j++) {
-        // Affichage des espaces avant les étoiles pour aligner à droite
-        for (int i = 1; i <= j ; i++) {
+     for (int j = 1; j <= cpt; j++) {
+        // Affichage des espaces pour centrer les étoiles
+        for (int i = 1; i <= cpt - j; i++) {
             out.print("&nbsp;"); // Espaces
         }
-    }
+
         // Affichage des étoiles
-     for (int j = 1; j <= cpt; j++) {
-        for (int i = j; i <= cpt; i++) {
+        for (int i = 1; i <= (2 * j - 1); i++) {
             out.print("*"); // Etoiles
         }
+
+        out.println(); // Nouvelle ligne après chaque ligne du triangle
     }
 %>
-    </p> 
+</p> 
       
 
 <h2>Exercice 6 : Le demi losange</h2>
