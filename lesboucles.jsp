@@ -73,17 +73,20 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>
 
-   <%  for (int i = 0; i < cpt; i++) { %>
-        
-        <% for (int j = 0; j <cpt - i; j++) { %>
-             <%= " " %>
-       <%  } %>
-       
-       <%  for (int k = 0; k < i + 1; k++) { %>
+  <%  
+    for (int i = 0; i < cpt; i++) { 
+%>
+        <% for (int j = 0; j < cpt - i - 1; j++) { %>
+            <%= " " %>
+        <% } %>
+
+        <% for (int k = 0; k < i + 1; k++) { %>
             <%= "*" %>
-         <%  } %>
+        <% } %>
+
         <br>
-   <%  } %>
+<%  } %>
+
 
 
 </p>
