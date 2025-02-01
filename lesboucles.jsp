@@ -100,7 +100,7 @@
                  <%= " " %>
             <%  } %>
             // Affichage des étoiles
-            <%for (int k = 1; k <= i; k++) {  %>
+            <%for (int j = 1; j= i; j++) {  %>
                  <%= "*" %>
            <%  } %>
              <br>
@@ -122,8 +122,8 @@
 <p>5 x 5 = 25</p>
 <p> 
  <%   int number = 5;  %>
-<% for (int i = 1; i <= 10; i++) { %>
-        <p><%= number + " x " + i + " = " + (number * i) %></p>
+<% for (int j = 1; j <= 10; j++) { %>
+        <p><%= number + " x " + j + " = " + (number * j) %></p>
 <%  } %>
 </p>
 
