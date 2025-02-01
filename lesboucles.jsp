@@ -72,19 +72,17 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>
- <%
-        for (int i = 1; i <= cpt; i++) {
-            // Affichage des espaces avant les étoiles
-            for (int j = 1; j <= cpt - i; j++) {
-                out.print("&nbsp;");
-            }
-            // Affichage des étoiles
-            for (int j = 1; j <= i; j++) {
-                out.print("*");
-            }
-            out.println("<br>");
-        }
-    %>
+ <%  for (int i = 1; i <= cpt; i++) {%>
+           
+           <%  for (int j = 1; j <= cpt - i; j++) {%>
+                <%= " " %> 
+           <%  } %>
+            
+           <%  for (int j = 1; j <= i; j++) { %>
+                 <%= "*" %> 
+           <%  } %>
+         <br>
+       <%  }    %>
   
 </p>
 <h2>Exercice 5 : Triangle isocele</h2>
@@ -93,21 +91,18 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;***</br>&nbsp;****</br>*****</p>
 <p>
  <p>
- <% 
-     for (int j = 1; j <= cpt; j++) {
-        // Affichage des espaces pour centrer les étoiles
-        for (int i = 1; i <= cpt - j; i++) {
-            out.print("&nbsp;"); // Espaces
-        }
+ <%  for (int j = 1; j <= cpt; j++) { %>
+      
+       <%  for (int i = 1; i <= cpt - j; i++) { %>
+            <%= " " %> 
+      <%   } %>
 
-        // Affichage des étoiles
-        for (int i = 1; i <= (2 * j - 1); i++) {
-            out.print("*"); // Etoiles
-        }
+        <%  for (int i = 1; i <= (2 * j - 1); i++) {  %>
+           <%= "*" %> 
+       <%  } %>
 
         out.println(); // Nouvelle ligne après chaque ligne du triangle
-    }
-%>
+  <%  } %>
 </p> 
       
 
