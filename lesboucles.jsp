@@ -155,7 +155,7 @@
              <br>  <%-- Nouvelle ligne --%>
         <%  } %>
     <%  } %>
-<%  } %>
+
 </p>
 <h2>Exercice 7 : La table de multiplication</h2>
 <p>Ecrire le code afin de créser une table de multiplication</p>
