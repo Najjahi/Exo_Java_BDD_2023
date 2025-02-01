@@ -159,7 +159,7 @@
 <% for (int j = 1; j <= 10; j++) { %>
         <p><%= number + " x " + j + " = " + (number * j) %></p>
 <%  } %>
-</p>
+
 
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
