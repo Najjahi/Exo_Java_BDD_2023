@@ -72,20 +72,20 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>
- <% 
-    for (int j = 1; j <= cpt; j++) {
-        // Affichage des espaces avant les étoiles pour aligner à droite
-        for (int i = 1; i <= cpt - j; i++) {
-            out.print("&nbsp;"); // Espaces
+  <%
+        int n = 5;  // Taille du triangle
+        for (int i = 1; i <= n; i++) {
+            // Affichage des espaces avant les étoiles
+            for (int j = 1; j <= n - i; j++) {
+                out.print(" ");
+            }
+            // Affichage des étoiles
+            for (int j = 1; j <= i; j++) {
+                out.print("*");
+            }
+            out.println();
         }
-        // Affichage des étoiles
-        for (int i = 1; i <= j; i++) {
-            out.print("*"); // Etoiles
-        }
-        // Passer à la ligne suivante
-        out.println("<br>");
-    }
-%>
+  %>
 </p>
 <h2>Exercice 5 : Triangle isocele</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la droite</p>
