@@ -155,11 +155,15 @@
 <p>5 x 4 = 20</p>
 <p>5 x 5 = 25</p>
 <p>
- <%   int number = 5;  %>
-<% for (int j = 1; j <= 10; j++) { %>
-        <%= number + " x " + j + " = " + (number * j) %></p>
-<%  } %>
-
+<% 
+   int number = 5;  
+   for (int j = 1; j <= 10; j++) { 
+%>
+    <p><%= number + " x " + j + " = " + (number * j) %></p>
+<% 
+   } 
+%>
+</p>
 
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
