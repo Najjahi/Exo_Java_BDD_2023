@@ -72,20 +72,18 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>
-<%
-    
-    for (int i = 0; i < cpt; i++) {
+
+   <%  for (int i = 0; i < cpt; i++) { %>
         // Affichage des espaces avant les étoiles (augmente à chaque ligne)
-        for (int j = 0; j <cpt - i; j++) {
-            out.print("&nbsp;");
+        <% for (int j = 0; j <cpt - i; j++) { %>
+             <%= " " %>
         }
         // Affichage des étoiles (augmente à chaque ligne)
-        for (int k = 0; k < i + 1; k++) {
-            out.print("*");
-        }
-        out.println("<br>");
-    }
-%>
+       <%  for (int k = 0; k < i + 1; k++) { %>
+            <%= "*" %>
+         <%  } %>
+        <br>
+   <%  } %>
 
 
 </p>
