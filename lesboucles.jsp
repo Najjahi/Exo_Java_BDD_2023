@@ -117,9 +117,9 @@
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
 <p>
  
-         <% for (int i = 1; i <= Val; i++) { %>
+         <% for (int i = 1; i <= cpt; i++) { %>
             
-            <% for (int j = 0; j < Val - i; j++) { %>   <%-- Espaces avant les étoiles --%>
+            <% for (int j = 0; j <cpt - i; j++) { %>   <%-- Espaces avant les étoiles --%>
                  <%= "&nbsp;" %>
            <%  } %>
             
@@ -136,9 +136,9 @@
              <br>  <%-- Nouvelle ligne --%>
        <%  } %>
        
-        <% for (int i = Val - 1; i >= 1; i--) {  %>  <%--Partie inférieure --%>
+        <% for (int i = cpt - 1; i >= 1; i--) {  %>  <%--Partie inférieure --%>
             
-            for (int j = 0; j < Val - i; j++) { %>    <%-- Espaces avant les étoiles --%>
+            for (int j = 0; j < cpt - i; j++) { %>    <%-- Espaces avant les étoiles --%>
                  <%= "&nbsp;" %>
            <%  } %>
             
