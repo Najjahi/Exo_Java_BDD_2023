@@ -75,17 +75,18 @@
 <%
     
     for (int i = 1; i <= cpt; i++) {
-        // Affichage des espaces avant les étoiles (diminue à chaque ligne)
-        for (int j = 1; j <= i - 1; j++) {
+        // Affichage des espaces avant les étoiles (augmente à chaque ligne)
+        for (int j = 1; j <= cpt - i; j++) {
             out.print("&nbsp;");
         }
-        // Affichage des étoiles (diminue à chaque ligne)
-        for (int j = 1; j <= cpt - i + 1; j++) {
+        // Affichage des étoiles (augmente à chaque ligne)
+        for (int j = 1; j <= i; j++) {
             out.print("*");
         }
         out.println("<br>");
     }
 %>
+
 
 </p>
 
