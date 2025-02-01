@@ -74,12 +74,12 @@
 <p>
  <%  for (int i = 1; i <= cpt; i++) {%>
            
-           <%  for (int j = 1; j <= cpt - i; j++) {%>
-                <%= " " %> 
+           <%  for (int j = 1; j <i; j++) {%>
+                <%= "*" %> 
            <%  } %>
             
-           <%  for (int j = 1; j <= i; j++) { %>
-                 <%= "*" %> 
+           <%  for (int j = 1; j <= cpt-1; j++) { %>
+                 <%= " " %> 
            <%  } %>
          <br>
        <%  }    %>
@@ -101,7 +101,7 @@
            <%= "*" %> 
        <%  } %>
 
-        out.println(); // Nouvelle ligne après chaque ligne du triangle
+        <br>
   <%  } %>
 </p> 
       
