@@ -116,45 +116,35 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
 <p>
-          <% for (int i = 1; i <= cpt; i++) { %>
-            
-            <% for (int j = 0; j <cpt - i; j++) { %>   <%-- Espaces avant les étoiles --%>
-                 <%= "&nbsp;" %>
-           <%  } %>
-            
-            <% for (int k = 0; k < i; k++) { %>   <%-- Étoiles à gauche --%>
-                <%= "*" %>
-           <%  } %>
-           
-             <%= "&nbsp;" %>         <%-- Espaces entre les groupes d'étoiles --%>
-           
-            <% for (int k = 0; k < i; k++) { %>      <%-- Étoiles à droite --%>
-               <%= "*" %>
-           <%  } %>
-           
-             <br>  <%-- Nouvelle ligne --%>
-       <%  } %>
-       
-        <% for (int i = cpt - 1; i >= 1; i--) {  %>  <%--Partie inférieure --%>
-            
-            for (int j = 0; j < cpt - i; j++) { %>    <%-- Espaces avant les étoiles --%>
-                 <%= "&nbsp;" %>
-           <%  } %>
-            
-            <% for (int k = 0; k < i; k++) {  %>   <%-- Étoiles à gauche --%>
-                <%= "*" %>
-           <%  } %>
-          
-             <%= "&nbsp;" %>    <%-- Espaces entre les groupes d'étoiles --%>
-           
-            <% for (int k = 0; k < i; k++) { %>   <%-- Étoiles à droite --%>
-                <%= "*" %>
-            <%  } %>
-            
-             <br>  <%-- Nouvelle ligne --%>
-        <%  } %>
-    <%  } %>
-
+   <p>
+    <% for (int i = 1; i <= cpt; i++) { %>
+        <% for (int j = 0; j < cpt - i; j++) { %>   <%-- Espaces avant les étoiles --%>
+            <%= "&nbsp;" %>
+        <% } %>
+        <% for (int k = 0; k < i; k++) { %>   <%-- Étoiles à gauche --%>
+            <%= "*" %>
+        <% } %>
+        <%= "&nbsp;" %>         <%-- Espaces entre les groupes d'étoiles --%>
+        <% for (int k = 0; k < i; k++) { %>      <%-- Étoiles à droite --%>
+            <%= "*" %>
+        <% } %>
+        <br>  <%-- Nouvelle ligne --%>
+    <% } %>
+    <% for (int i = cpt - 1; i >= 1; i--) {  %>  <%--Partie inférieure --%>
+        <% for (int j = 0; j < cpt - i; j++) { %>    <%-- Espaces avant les étoiles --%>
+            <%= "&nbsp;" %>
+        <% } %>
+        <% for (int k = 0; k < i; k++) {  %>   <%-- Étoiles à gauche --%>
+            <%= "*" %>
+        <% } %>
+        <%= "&nbsp;" %>    <%-- Espaces entre les groupes d'étoiles --%>
+        <% for (int k = 0; k < i; k++) { %>   <%-- Étoiles à droite --%>
+            <%= "*" %>
+        <% } %>
+        <br>  <%-- Nouvelle ligne --%>
+    <% } %>
+<% } %>
+</p>
 </p>
 <h2>Exercice 7 : La table de multiplication</h2>
 <p>Ecrire le code afin de créser une table de multiplication</p>
