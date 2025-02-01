@@ -74,11 +74,11 @@
 <p>
 
    <%  for (int i = 0; i < cpt; i++) { %>
-        // Affichage des espaces avant les étoiles (augmente à chaque ligne)
+        
         <% for (int j = 0; j <cpt - i; j++) { %>
              <%= " " %>
        <%  } %>
-        // Affichage des étoiles (augmente à chaque ligne)
+       
        <%  for (int k = 0; k < i + 1; k++) { %>
             <%= "*" %>
          <%  } %>
@@ -95,11 +95,11 @@
 <p>
   <%
         for (int k = 1; k <= cpt; k++) {  %>
-            // Affichage des espaces avant les étoiles
+           
             <%for (int j = 1; j <= cpt - k; j++) {  %>
                  <%= " " %>
             <%  } %>
-            // Affichage des étoiles
+           
             <%for (int j = 1; j<= k; j++) {  %>
                  <%= "*" %>
            <%  } %>
