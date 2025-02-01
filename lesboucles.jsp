@@ -73,7 +73,7 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>
 <%
-    int cpt = 5;  // Taille du triangle
+    
     for (int i = 1; i <= cpt; i++) {
         // Affichage des espaces avant les étoiles (diminue à chaque ligne)
         for (int j = 1; j <= i - 1; j++) {
