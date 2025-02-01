@@ -74,13 +74,13 @@
 <p>
 <%
     
-    for (int i = 1; i <= cpt; i++) {
+    for (int i = 0; i < cpt; i++) {
         // Affichage des espaces avant les étoiles (augmente à chaque ligne)
-        for (int j = 1; j <= cpt - i; j++) {
+        for (int j = 0; j <cpt - i; j++) {
             out.print("&nbsp;");
         }
         // Affichage des étoiles (augmente à chaque ligne)
-        for (int j = 1; j <= i; j++) {
+        for (int k = 0; k < i + 1; k++) {
             out.print("*");
         }
         out.println("<br>");
