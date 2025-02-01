@@ -77,7 +77,7 @@
         // Affichage des espaces avant les étoiles (augmente à chaque ligne)
         <% for (int j = 0; j <cpt - i; j++) { %>
              <%= " " %>
-        }
+       <%  } %>
         // Affichage des étoiles (augmente à chaque ligne)
        <%  for (int k = 0; k < i + 1; k++) { %>
             <%= "*" %>
