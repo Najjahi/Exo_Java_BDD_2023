@@ -94,13 +94,13 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;***</br>&nbsp;****</br>*****</p>
 <p>
   <%
-        for (int i = 1; i <= cpt; i++) {  %>
+        for (int k = 1; k <= cpt; k++) {  %>
             // Affichage des espaces avant les étoiles
-            <%for (int j = 1; j <= cpt - i; j++) {  %>
+            <%for (int j = 1; j <= cpt - k; j++) {  %>
                  <%= " " %>
             <%  } %>
             // Affichage des étoiles
-            <%for (int j = 1; j<= i; j++) {  %>
+            <%for (int j = 1; j<= k; j++) {  %>
                  <%= "*" %>
            <%  } %>
              <br>
