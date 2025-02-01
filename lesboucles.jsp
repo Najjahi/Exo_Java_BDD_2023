@@ -115,32 +115,48 @@
 <p>Ecrire le code afin de produire un losange</p><p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
- <%  
-    for (int i = 0; i < cpt; i++) { 
-%>
-        <% for (int j = 0; j < cpt - i - 1; j++) { %>
-             <%= "&nbsp;" %>
-        <% } %>
-
-        <% for (int k = 0; k < i + 1; k++) { %>
-            <%= "*" %>
-        <% } %>
-
-        <br>
-<%  } %> 
-<%  for (int i = 0; i < cpt; i++) { %>
-        <% for (int j = 0; j < i; j++) { %>
-            <%= "&nbsp;" %>
-        <% } %>
-
-        <% for (int k = 0; k < cpt - i; k++) { %>
-            <%= "*" %>
-        <% } %>
-
-        <br>
+<p>
+ 
+         <% for (int i = 1; i <= Val; i++) {
+            
+            <% for (int j = 0; j < Val - i; j++) { %>   <%-- Espaces avant les étoiles --%>
+                 <%= "&nbsp;" %>
+           <%  } %>
+            
+            <% for (int k = 0; k < i; k++) { %>   <%-- Étoiles à gauche --%>
+                <%= "*" %>
+           <%  } %>
+           
+             <%= "&nbsp;" %>         <%-- Espaces entre les groupes d'étoiles --%>
+           
+            <% for (int k = 0; k < i; k++) { %>      <%-- Étoiles à droite --%>
+               <%= "*" %>
+           <%  } %>
+           
+            System.out.println();            <%-- Nouvelle ligne --%>
+       <%  } %>
+       
+        <% for (int i = Val - 1; i >= 1; i--) {  %>  <%--Partie inférieure --%>
+            
+            for (int j = 0; j < Val - i; j++) { %>    <%-- Espaces avant les étoiles --%>
+                 <%= "&nbsp;" %>
+           <%  } %>
+            
+            <% for (int k = 0; k < i; k++) {  %>   <%-- Étoiles à gauche --%>
+                <%= "*" %>
+           <%  } %>
+          
+             <%= "&nbsp;" %>    <%-- Espaces entre les groupes d'étoiles --%>
+           
+            <% for (int k = 0; k < i; k++) { %>   <%-- Étoiles à droite --%>
+                <%= "*" %>
+            <%  } %>
+            
+             <br>  <%-- Nouvelle ligne --%>
+        <%  } %>
+    <%  } %>
 <%  } %>
 
- 
 <h2>Exercice 7 : La table de multiplication</h2>
 <p>Ecrire le code afin de créser une table de multiplication</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
