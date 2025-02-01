@@ -116,19 +116,18 @@
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
  <p>
   <%
-            
-            for (int i = 1; i <= cpt; i++) {
-                // Affichage des espaces avant les étoiles
-                for (int j = 1; j <= cpt - i; j++) {
-                    out.print(" ");
-                }
-                // Affichage des étoiles
-                for (int j = 1; j <= i; j++) {
-                    out.print("*");
-                }
-                out.println();
+        for (int i = 1; i <= cpt; i++) {
+            // Affichage des espaces avant les étoiles
+            for (int j = 1; j <= cpt - i; j++) {
+                out.print("&nbsp;");
             }
-        %>
+            // Affichage des étoiles
+            for (int j = 1; j <= i; j++) {
+                out.print("*");
+            }
+            out.println("<br>");
+        }
+    %>
    </p> 
  
 <h2>Exercice 7 : La table de multiplication</h2>
