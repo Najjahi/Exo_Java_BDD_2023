@@ -72,9 +72,9 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>
- <%  for (int j = 1; j <= cpt; j++) {%>
+ <%  for (int i = 1; i <= cpt; i++) {%>
            
-           <%  for (int i = 1; i <= cpt - j; i++) {%>
+           <%  for (int j = 1; j <= cpt - i; j++) {%>
                 <%= " " %> 
            <%  } %>
             
