@@ -72,19 +72,21 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>
-<% for (int i = 1; i <= cpt; i++) { %>
-      
+<%
+   
+    for (int i = 1; i <= cpt; i++) {
+        // Affichage des espaces avant les étoiles
+        for (int j = 1; j <= cpt - i; j++) {
+            out.print("&nbsp;");
+        }
+        // Affichage des étoiles
+        for (int j = 1; j <= i; j++) {
+            out.print("*");
+        }
+        out.println("<br>");
+    }
+%>
 
-  <% for (int k = 1; k <= ((cpt-i)*2); k++) { %>
-    <%= " " %> 
-  <% } %>
-  
-  <% for (int j= 1; j<= i; j++) { %>
-     <%= "*" %> 
-  <% } %>
-
-<br>         
-<% } %> 
 </p>
 
 <h2>Exercice 5 : Triangle isocele</h2>
