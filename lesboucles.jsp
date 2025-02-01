@@ -117,9 +117,9 @@
  <p>
   <%
             
-            for (int i = 1; i <= n; i++) {
+            for (int i = 1; i <= cpt; i++) {
                 // Affichage des espaces avant les étoiles
-                for (int j = 1; j <= n - i; j++) {
+                for (int j = 1; j <= cpt - i; j++) {
                     out.print(" ");
                 }
                 // Affichage des étoiles
