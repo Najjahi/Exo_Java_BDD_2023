@@ -159,7 +159,7 @@
    int number = 5;  
    for (int j = 1; j <= 10; j++) { 
 %>
-   <%= number + " x " + j + " = " + (number * j) %></p>
+   <%= number + " x " + j + " = " + (number * j) %>
 <% 
    } 
 %>
