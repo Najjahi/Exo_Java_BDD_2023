@@ -73,10 +73,10 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>
   <%
-        int n = 5;  // Taille du triangle
-        for (int i = 1; i <= n; i++) {
+        
+        for (int i = 1; i <= cpt; i++) {
             // Affichage des espaces avant les étoiles
-            for (int j = 1; j <= n - i; j++) {
+            for (int j = 1; j <= cpt - i; j++) {
                 out.print(" ");
             }
             // Affichage des étoiles
