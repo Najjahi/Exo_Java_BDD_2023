@@ -94,17 +94,17 @@
 <p>
  <p>
  <% 
-    for (int i = 1; i <= cpt; i++) {
+    for (int j = 1; j <= cpt; j++) {
         // Affichage des espaces avant les étoiles pour aligner à droite
-        for (int j = 1; j <= cpt - i; j++) {
+        for (int i = 1; i <= j ; i++) {
             out.print("&nbsp;"); // Espaces
         }
+    }
         // Affichage des étoiles
-        for (int k = 1; k <= i; k++) {
+     for (int j = 1; j <= cpt; j++) {
+        for (int i = j; i <= cpt; i++) {
             out.print("*"); // Etoiles
         }
-        // Passer à la ligne suivante
-        out.println("<br>");
     }
 %>
     </p> 
