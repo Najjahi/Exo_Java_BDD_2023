@@ -115,28 +115,20 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
  <p>
- <% 
-    for (int i = 0; i < cpt; i++) {
-        
-        for (int j = i + 1; j < cpt ; j++) {
-            out.print("&nbsp;"); 
-        }
-         for (int j = i; j >= 0; j--) {
-            out.print("*"); 
-        }
-         out.println("<br>");
-    }
-    for (int i = 0; i<cpt ; i++) {
-         for (int j = 0; j < i; j++) {
-            out.print("&nbsp;"); 
-        }
-        
-        for (int j = i; j <cpt; j++) {
-            out.print("*"); 
-        }
-         out.println("<br>");
-    }
-%>
+  <%
+            
+            for (int i = 1; i <= n; i++) {
+                // Affichage des espaces avant les étoiles
+                for (int j = 1; j <= n - i; j++) {
+                    out.print(" ");
+                }
+                // Affichage des étoiles
+                for (int j = 1; j <= i; j++) {
+                    out.print("*");
+                }
+                out.println();
+            }
+        %>
    </p> 
  
 <h2>Exercice 7 : La table de multiplication</h2>
