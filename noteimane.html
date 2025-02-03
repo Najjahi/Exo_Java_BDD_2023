@@ -1746,8 +1746,32 @@ public class Main {
     }
   }
 }
+// ISOCELE 123456
+          public class TriangleIsosceleTexte {
 
- // triangle isocele
+    public static void main(String[] args) {
+        int hauteur = 6;  // Tu peux ajuster la hauteur du triangle ici
+
+        // Dessiner le triangle isocèle
+        for (int i = 1; i <= hauteur; i++) {
+            // Afficher les espaces avant les étoiles
+            for (int j = i; j < hauteur; j++) {
+                System.out.print(" ");
+            }
+            // Afficher les étoiles séparées par des espaces
+            for (int k = 1; k <= i; k++) {
+                System.out.print("*");
+                if (k < i) {
+                    System.out.print(" "); // Ajouter un espace entre les étoiles
+                }
+            }
+            // Passer à la ligne suivante
+            System.out.println();
+        }
+    }
+}
+
+ // triangle isocele 1357
 public class Main {
   public static void main(String[] args) {
     
