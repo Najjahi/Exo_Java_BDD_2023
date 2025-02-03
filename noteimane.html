@@ -1770,6 +1770,44 @@ public class Main {
         }
     }
 }
+// sapin
+public class MyClass {
+
+    public static void main(String[] args) {
+        int hauteurTriangle = 5;  // Hauteur du triangle
+        int tailleCarre = 3;  // Taille du carré
+
+        // Dessiner le triangle isocèle
+        for (int i = 1; i <= hauteurTriangle; i++) {
+            // Afficher les espaces avant les étoiles pour centrer le triangle
+            for (int j = i; j < hauteurTriangle; j++) {
+                System.out.print(" ");
+            }
+            // Afficher les étoiles séparées par des espaces
+            for (int k = 1; k <= i; k++) {
+                System.out.print("*");
+                if (k < i) {
+                    System.out.print(" "); // Ajouter un espace entre les étoiles
+                }
+            }
+            // Passer à la ligne suivante
+            System.out.println();
+        }
+
+        // Dessiner le carré 3x3 décalé de 2 espaces vers la droite
+        for (int i = 0; i < tailleCarre; i++) {
+            // Afficher deux espaces avant chaque ligne du carré pour le décaler à droite
+            System.out.print("  ");
+            // Afficher les étoiles séparées par des espaces pour le carré
+            for (int j = 0; j < tailleCarre; j++) {
+                System.out.print("* ");
+            }
+            // Passer à la ligne suivante après chaque ligne du carré
+            System.out.println();
+        }
+    }
+}
+
 
  // triangle isocele 1357
 public class Main {
