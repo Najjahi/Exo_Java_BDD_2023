@@ -2067,6 +2067,189 @@ public class Main {
   }
 
   }
-}*/
+}
+//sapin fonction recursives
+      import java.util.Scanner;
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Entrez la hauteur du triangle : ");
+        int t = scanner.nextInt();  // Lire un entier pour la hauteur du triangle
+
+        System.out.print("Entrez la taille du carré : ");
+        int c = scanner.nextInt();  
+        
+        for (int i = 1; i <= t; i++) {
+            
+            for (int j = i; j < t; j++) { // Afficher les espaces avant les étoiles pour centrer le triangle
+                System.out.print(" ");
+            }
+            
+            for (int k = 1; k <= i; k++) { // Afficher les étoiles séparées par des espaces
+                System.out.print("*");
+                if (k < i) {
+                    System.out.print(" "); // Ajouter un espace entre les étoiles
+                }
+            }
+            
+            System.out.println(); // Passer à la ligne suivante
+        }
+
+        for (int i = 0; i < c; i++) {  // Dessiner le carré 3x3 décalé de 3 espaces vers la droite
+            
+            System.out.print("   "); // Afficher 3 espaces avant chaque ligne du carré 
+            
+            for (int j = 0; j < c; j++) { // Afficher les étoiles séparées par des espaces pour le carré
+                System.out.print("* ");
+            }
+            
+            System.out.println(); // Passer à la ligne suivante après chaque ligne du carré
+        }
+
+        scanner.close();
+    }
+}
+//fonction recursive
+import java.util.Scanner;
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Entrez la hauteur du triangle : ");
+        int t = scanner.nextInt();  // Lire un entier pour la hauteur du triangle
+
+        System.out.print("Entrez la taille du carré : ");
+        int c = scanner.nextInt();  
+
+        // Dessiner le triangle
+        dessinerTriangle(t, 1);
+
+        // Dessiner le carré
+        dessinerCarre(c, 0);
+
+        scanner.close();
+    }
+
+    // Fonction récursive pour dessiner le triangle isocèle
+    public static void dessinerTriangle(int hauteur, int i) {
+        if (i > hauteur) {
+            return;  // Condition d'arrêt de la récursion
+        }
+
+        // Afficher les espaces avant les étoiles pour centrer le triangle
+        afficherEspaces(hauteur - i);
+
+        // Afficher les étoiles séparées par des espaces
+        afficherEtoiles(i);
+
+        // Passer à la ligne suivante
+        System.out.println();
+
+        // Appel récursif pour la ligne suivante
+        dessinerTriangle(hauteur, i + 1);
+    }
+// Fonction pour afficher des espaces
+    public static void afficherEspaces(int n) {
+        if (n > 0) {
+            System.out.print(" ");
+            afficherEspaces(n - 1);  // Appel récursif pour afficher les espaces
+        }
+    }
+
+    // Fonction pour afficher des étoiles séparées par des espaces
+    public static void afficherEtoiles(int n) {
+        if (n > 0) {
+            System.out.print("*");
+            if (n > 1) {
+                System.out.print(" ");
+            }
+            afficherEtoiles(n - 1);  // Appel récursif pour afficher les étoiles
+        }
+    }
+
+    // Fonction récursive pour dessiner le carré décalé
+    public static void dessinerCarre(int taille, int i) {
+        if (i == taille) {
+            return;  // Condition d'arrêt de la récursion
+        }
+
+        // Afficher trois espaces avant chaque ligne du carré pour le décaler à droite
+        afficherEspaces(3);
+
+        // Afficher les étoiles séparées par des espaces pour le carré
+        afficherEtoiles(taille);
+
+        // Passer à la ligne suivante
+        System.out.println();
+
+        // Appel récursif pour la ligne suivante
+        dessinerCarre(taille, i + 1);
+    }
+}
+// sapin avec while
+import java.util.Scanner;
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Entrez la hauteur du triangle : ");
+        int t = scanner.nextInt();  // Lire un entier pour la hauteur du triangle
+
+        System.out.print("Entrez la taille du carré : ");
+        int c = scanner.nextInt();  
+         
+        dessinerTriangle(t); // Dessiner le triangle
+        
+        dessinerCarre(c);  // Dessiner le carré
+
+        scanner.close();
+    }
+    public static void dessinerTriangle(int hauteur) { // f pour dessiner le triangle isocèle 
+        int i = 1;
+        while (i <= hauteur) {  //  dessiner chaque ligne
+            afficherEspaces(hauteur - i); // Afficher les espaces avant les étoiles
+            afficherEtoiles(i);  // Afficher les étoiles séparées par des espaces
+            System.out.println(); 
+            i++; 
+        }
+    }
+    public static void afficherEspaces(int n) { // Fonction pour afficher des espaces
+        while (n > 0) {  // Afficher les espaces avec while
+            System.out.print(" ");
+            n--;  
+        }
+    }
+    public static void afficherEtoiles(int n) { // Fonction pour afficher des étoiles séparées par des espaces
+        while (n > 0) {  // Afficher les étoiles avec while
+            System.out.print("*");
+            if (n > 1) {  // Ajouter un espace entre les étoiles, sauf après la dernière étoile
+                System.out.print(" ");
+            }
+            n--;  // Décrémenter le compteur pour afficher une étoile de moins
+        }
+    }
+    public static void dessinerCarre(int taille) { // Fonction pour dessiner le carré 
+        int i = 0;
+        while (i < taille) {  //  dessiner chaque ligne du carré
+            afficherEspaces(3);  // Afficher trois espaces avant chaque ligne du carré 
+            afficherEtoiles(taille);  // Afficher les étoiles séparées par des espaces pour le carré
+            System.out.println(); 
+            i++; 
+        }
+    }
+}
+
+      
+      */
 
 
