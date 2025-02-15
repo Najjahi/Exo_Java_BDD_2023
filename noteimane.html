@@ -94,7 +94,7 @@ int main() {
 }
 
 /**##############################//Les conditions
-    
+ // Exercice 1 : Précisez si le chiffre aléatoire est < 50 et pair ou impai   
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -116,36 +116,16 @@ int main() {
     } else {
         printf("Le nombre est égal à 50.\n");
     }
-
-    return 0;
-}
-
-/**##############################// Exercice 1 : Précisez si le chiffre aléatoire est pair ou impair
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-int main() {
-    // Initialiser le générateur de nombres aléatoires
-    srand(time(NULL)); // Utiliser le temps actuel comme graine
-
-    // Générer un nombre aléatoire entre 1 et 100
-    int nombre = (rand() % 100) + 1;
-
-    printf("Le nombre généré est : %d\n", nombre);
-
-    // Vérifier si le nombre est pair ou impair
-    if (nombre % 2 == 0) {  // ou  if ((nombre / 2) * 2 == nombre) 
+     if (nombre % 2 == 0) {  // ou  if ((nombre / 2) * 2 == nombre) 
         printf("Le nombre est pair.\n");
     
     } else {
         
         printf("Le nombre est impair.\n");
     }
-    
-
     return 0;
 }
+
 
 /**##############################
 #include <stdio.h>
@@ -270,13 +250,10 @@ int main() {
         else {
             printf("Vous avez gagné.\n\n");
             printf("Vous avez gagné en %d essais !\n\n", nombre_essais); { break; } 
-        }
-            
-         
-        }
-
+        }         
+        } 
     return 0;
-} */
+} 
 
 /**############################## boucle dans une boucle  #############################
 #include <stdio.h>
@@ -289,17 +266,13 @@ int main(void)
   scanf("%d", &valuser); 
   
   for(int i=1; i<=valuser; i++){
-   
-    
+      
     for(int j=1; j<=valuser; j++){
     printf("%s", "*");
-    
   }
   puts("");
- 
   }
-  
-    
+     
     return 0;
 }*/
 
@@ -438,28 +411,6 @@ int main(void)
      return 0;
 }
 
-/*############################## table de multiplication  #############################
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(void)
-{
-  int valuser;    
-  printf("Veuillez saisir un chiffre : ");
-  scanf("%d", &valuser); 
-  
- 
-  for(int i=1; i<=10; i++){
-        
-        printf("   %d x %d = %d", valuser, i , valuser * i);
-       
-    puts("");
-  }
-
-    return 0;
-}
-
-
 /*############################## table de multiplication ajustée  #############################
 
 #include <stdio.h>
@@ -483,66 +434,7 @@ int main(void)
 }
 
 
-/*############################## afficher une ligne de 1 et une ligne de 0  #############################
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(void)
-{
-  int valuser;    
-  printf("Veuillez saisir un chiffre : ");
-  scanf("%d", &valuser); 
-  
-  for(int i=1; i<=valuser; i++){
-      
-      if(i % 2 ==0) {
-          for(int i=1; i<=valuser; i++){
-        printf("%s", "0");
-        }
-      }
-        else {
-             for(int i=1; i<=valuser; i++){
-            printf("%s", "1");
-        }
-      }
-       
-    puts("");
-  }
-
-    return 0;
-}
-                 
-/*############################## afficher une ligne de 1 et une ligne de 0  Jordan #############################
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(void)
-{
-  int valuser;    
-  printf("Veuillez saisir un chiffre : ");
-  scanf("%d", &valuser); 
-  
-  int stars;
-
-    for(int i=1; i<=valuser; i++){
-
-        if(i%2==0){
-            stars=0;
-        }else{
-            stars=1;
-        }
-
-        for(int j=1; j<=valuser; j++){
-            printf("%d",stars);
-        }
-        puts("");
-    }
-
-    return 0;
-}
-
-/*############################## correction boris ######################### 
+/*############################## afficher une ligne de 1 et une ligne de 0  correction boris ######################### 
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -697,65 +589,7 @@ if (isalpha(c)) {
     return 0;
 }
 
-    //Exercice 3 : Affichez uniquement les consonnes. façon 2 
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>  // Pour la fonction isalpha()
-
-int main() {
-    char chaine1[] = "La maison bleue du village";
-   
-    char voyelles[] = "aeiouyAEIOUY";
-
-    for (int i = strlen(chaine1) - 1; i >= 0; i--) {
-        char c = chaine1[i];
-
-        // Vérifier si le caractère est une lettre
-        if (isalpha(c)) {
-            // Vérifier si le caractère est une voyelle
-            int est_voyelle = 0;  // Flag pour savoir si c'est une voyelle
-
-            for (int j = 0; voyelles[j] != '\0'; j++) {
-                if (c == voyelles[j]) {
-                    est_voyelle = 1;  // Si c'est une voyelle, changer le flag
-                    break;
-                }
-            }
-
-            // Si ce n'est pas une voyelle, c'est une consonne
-            if (!est_voyelle) {
-                printf("La valeur de i = %d et la lettre correspond à cet indice est la consonne %c \n", i, c);
-            }
-        }
-    }
-
-    return 0;
-}
-
-//Exercice 3 : Affichez uniquement les consonnes.
-    #include <stdio.h>
-#include <string.h>
-
-int main() {
-    char chaine1[] = "La maison bleue du village";
-   
-    // Boucle pour parcourir la chaîne à l'envers
-    for (int i = strlen(chaine1) - 1; i >= 0; i--) {
-        char c = chaine1[i];
-        
-        // Vérification si le caractère est une consonne
-        if ((c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z') && 
-            !(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y' ||
-              c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'Y')) {
-            // Si c'est une consonne, on l'affiche
-            printf("La valeur de i = %d et la lettre correspond à cet indice est la consonne %c \n", i, c);
-        }
-    }
-
-    return 0;
-}
-
-//Exercice 3 : Affichez uniquement les consonnes. façon Boris
+    //Exercice 3 : Affichez uniquement les consonnes. façon  Boris
 
 #include <stdio.h>
 #include <string.h>
@@ -772,15 +606,13 @@ int main() {
         }
         
         if (flag == 1){flag=0;}
-        else {printf("%c", chaine1[i]);}
-        
-     }
-        
+        else {printf("%c", chaine1[i]);}        
+     }           
     return 0;
 }
 // Exercice 4 : Le palindrome Dites nous si votre chaine de caractères est un palindrome ou non. Exemple de palindrome RADAR, LAVAL, etc..
 
-    #include <stdio.h>
+ #include <stdio.h>
 #include <string.h>
 
 int main() {
@@ -791,8 +623,7 @@ int main() {
     for(int i=strlen(chaine1); i>=0; i--){
         chaine2[i] = chaine1[strlen(chaine1) - i -1];
     }
-    
-    
+       
     for(int i=0; i<=strlen(chaine1); i++){
         if(chaine2[i]==chaine1[i]){cpt++;}
     }
@@ -802,8 +633,7 @@ int main() {
         
     return 0;
 }
-//Exercice 1 : Fonction carré
-Créer une fonction qui calcul le carré de l'argument saisie par l'utilisateur
+//Exercice 1 : Fonction carré Créer une fonction qui calcul le carré de l'argument saisie par l'utilisateur
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -817,49 +647,7 @@ int main(int compteur_arguments, char *valeur_argument[])
     return 0;
 }
 
-    //Exercice 2 : Faites la somme de 2 arguments saisie par l'utilisateur
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(int compteur_arguments, char *valeur_argument[])
-{
-    printf("compteur_arguments est la quantité d'argument saisie par l'utilisateur : %d\n", compteur_arguments);
-    
-    printf("Le premier argument saisie par l'utilisateur est : %s\n", valeur_argument[1]);
-    printf("Le deuxieme argument saisie par l'utilisateur est : %s\n", valeur_argument[2]);
-    
-    int Valeur1 = atoi(valeur_argument[1]); 
-    int Valeur2 = atoi(valeur_argument[2]); 
-    
-    int somme = Valeur1 + Valeur2;
-    
-    printf("atoi() est utilisé pour convertir %d en entier\n ", Valeur1, Valeur2);
-    printf("La somme des des arguments de %d et %d est %d\n ", Valeur1, Valeur2, somme);
-    return 0;
-}
-
-Exercice 3 : Faites la sommes de tous les arguments saisie par l'utilisateur
-    #include <stdio.h>
-    #include <stdlib.h>
-
-int main(int compteur_arguments, char *valeur_argument[])
-{   
-    int somme = 0;
-    
-    for (int i = 1; i < compteur_arguments; i++) {
-        int valeur = atoi(valeur_argument[i]);  
-        somme += valeur;  
-        printf("L'argument %d est : %s, converti en entier : %d\n", i, valeur_argument[i], valeur);
-    }
-
-   printf("La somme totale des arguments est : %d\n", somme);
-    
-    
-    return 0;
-}
-
-Exercice 3 : Faites la sommes de tous les arguments saisie par l'utilisateur facon boris
+   Exercice 3 : Faites la sommes de tous les arguments saisie par l'utilisateur facon boris
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -875,28 +663,8 @@ int main(int compteur_arguments, char *valeur_argument[])
     printf("La somme des arguments est égale à %d", somme_valeurs);
 
     return 0;
-}
+}  
 
-
-//Exercice 4 : Trouvez le plus grand des arguments
-#include <stdio.h>
-#include <stdlib.h>
-  
-    int main(int compteur_arguments, char *valeur_argument[]) {  
-    int max_valeur = atoi(valeur_argument[1]);
-
-    for (int i = 2; i < compteur_arguments; i++) {
-        
-        int valeur_courante = atoi(valeur_argument[i]);
-        
-        if (valeur_courante > max_valeur) {
-            max_valeur = valeur_courante; 
-        }
-    }
-
-    printf("Le plus grand nombre parmi les arguments est : %d\n", max_valeur);
-    return 0;
-}
 // Exercice 4 : Trouvez le plus grand des arguments boris
 
 #include <stdio.h>
@@ -912,38 +680,6 @@ int main(int compteur_arguments, char *valeur_argument[])
     }
     
     printf("La valeur la plus grande est  %d", reference);
-
-    return 0;
-}
-
-//Exercice 5 : Trouver la valeur la plus proche de 0 que la saisie soit positive ou négative
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(int compteur_arguments, char *valeur_argument[])
-{
-    // Vérifier s'il y a des arguments
-    if (compteur_arguments < 2) {
-        printf("Erreur : Veuillez fournir au moins un argument.\n");
-        return 1;
-    }
-
-    // Initialiser la référence avec la première valeur (en valeur absolue)
-    int reference = abs(atoi(valeur_argument[1]));  // abs() permet de rendre le nombre positif
-    
-    // Parcourir les autres arguments
-    for (int i = 2; i < compteur_arguments; i++) {
-        // Convertir l'argument en entier
-        int current_value = abs(atoi(valeur_argument[i])); // Prendre la valeur absolue
-
-        // Trouver la valeur la plus proche de zéro
-        if (current_value < reference) {
-            reference = current_value;
-        }
-    }
-    
-    // Afficher la valeur la plus proche de zéro
-    printf("La valeur la plus proche de 0 est : %d\n", reference);
 
     return 0;
 }
@@ -968,28 +704,7 @@ printf("Voici le résultat: %d\n", reference);
 return 0;
 }
 
-// //Exercice 5 : Trouver la valeur la plus proche de 0 que la saisie soit positive ou négative Any
-    
-#include <stdio.h>
-#include <stdlib.h>
 
-int main(int compteur_arguments, char valeur_argument[])
-{
-     int reference = atoi(valeur_argument[1]);
-
-    for (int i = 2; i < compteur_arguments; i++) {
-        int value = atoi(valeur_argument[i]);
-
- 
-        if (value value < reference * reference) {
-            reference = value;
-        }
-    }
-
-    printf("La valeur la plus proche de zéro est %d\n", reference);
-
-    return 0;
-}
  /*****************************************************/
 //ERCE 1 carre d etoiles 
 <% 
